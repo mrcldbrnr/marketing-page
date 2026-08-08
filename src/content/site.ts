@@ -4,11 +4,11 @@
  */
 
 export const siteConfig = {
-  name: "Acme",
+  name: "myown",
   /** Used as the `%s | <tagline>` metadata template and in the footer. */
   tagline: "Software für moderne Teams",
   description:
-    "Acme hilft Teams, ihre Arbeit zu planen, umzusetzen und auszuliefern – ohne Tool-Chaos.",
+    "myown hilft Teams, ihre Arbeit zu planen, umzusetzen und auszuliefern – ohne Tool-Chaos.",
   /**
    * Canonical production URL, without trailing slash.
    * On Vercel this is set automatically, see `src/lib/metadata.ts`.
