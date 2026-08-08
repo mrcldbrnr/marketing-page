@@ -114,5 +114,5 @@ export const cta = {
   title: "Bereit, es auszuprobieren?",
   description: "Starte kostenlos oder lass dir in 20 Minuten zeigen, wie es für dich aussieht.",
   primaryCta: { label: "Kostenlos starten", href: "/kontakt" },
-  secondaryCta: { label: "Preise ansehen", href: "/preise" },
+  secondaryCta: { label: "Funktionen ansehen", href: "/#funktionen" },
 };

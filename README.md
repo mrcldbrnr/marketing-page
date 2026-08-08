@@ -21,7 +21,7 @@ npm run lint    # ESLint
 
 | Bereich | Inhalt |
 | --- | --- |
-| Seiten | `/`, `/preise`, `/ueber-uns`, `/kontakt`, `/impressum`, `/datenschutz`, 404 |
+| Seiten | `/`, `/ueber-uns`, `/kontakt`, `/impressum`, `/datenschutz`, 404 |
 | Landing-Sections | Hero, Logo-Cloud, Funktionen, Testimonials, FAQ, CTA |
 | Shell | Sticky Header mit Mobile-Menü, Footer, Skip-Link |
 | SEO | Metadata-Helper mit Canonicals, `sitemap.xml`, `robots.txt`, OG-Image |
@@ -34,7 +34,6 @@ Sämtliche Texte liegen in `src/content/` — die Komponenten enthalten keine Co
 
 - `site.ts` – Name, Beschreibung, Kontaktdaten, Navigation, Footer
 - `landing.ts` – Startseite (Hero, Funktionen, Testimonials, FAQ, CTA)
-- `pricing.ts` – Preispläne
 
 Farben und Abstände: `src/app/globals.css` (Tailwind v4 hat keine
 `tailwind.config.js`). Die Brand-Farbe ist die `--color-brand-*`-Skala.

@@ -27,7 +27,7 @@ export function getBaseUrl(): string {
 type PageMetadataInput = {
   title: string;
   description?: string;
-  /** Path relative to the site root, e.g. "/preise". */
+  /** Path relative to the site root, e.g. "/ueber-uns". */
   path: string;
   /** Set for pages that should stay out of the index (thank-you pages, etc.). */
   noIndex?: boolean;

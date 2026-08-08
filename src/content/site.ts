@@ -35,7 +35,6 @@ export type NavItem = {
 /** Primary navigation, rendered in the header and the mobile menu. */
 export const mainNav: NavItem[] = [
   { label: "Funktionen", href: "/#funktionen" },
-  { label: "Preise", href: "/preise" },
   { label: "Über uns", href: "/ueber-uns" },
   { label: "Kontakt", href: "/kontakt" },
 ];
@@ -46,7 +45,6 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
     title: "Produkt",
     items: [
       { label: "Funktionen", href: "/#funktionen" },
-      { label: "Preise", href: "/preise" },
       { label: "FAQ", href: "/#faq" },
     ],
   },
