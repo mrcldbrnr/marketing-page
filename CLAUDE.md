@@ -21,6 +21,34 @@ npm run lint     # ESLint (next/core-web-vitals + typescript)
 There is no test suite yet. `npm run build` type-checks the whole project, so it is
 the primary verification step.
 
+## Commit, push, deploy — standing instruction
+
+The repository owner has authorised this permanently (2026-08-08): **every change you
+make is committed and pushed automatically. Do not ask for permission each time.**
+
+After each coherent unit of work:
+
+1. `npm run build` — must pass.
+2. `npm run lint` — must pass.
+3. If the change is visible in the UI, verify it in the browser.
+4. Stage the related files, commit, `git push` to `main`.
+
+**`main` is the production branch.** Pushing triggers a production deployment through
+Vercel's GitHub integration (`mrcldbrnr/marketing-page`) — there is no staging branch
+and no manual approval, so the push *is* the release. That is why steps 1–3 are not
+optional: a broken commit is a broken live site. If the build or lint fails, fix it
+before pushing rather than pushing and following up.
+
+Conventions:
+
+- Commit messages in German, short and descriptive, matching the existing history
+  (e.g. `Ansprache auf du anpassen`). End every message with:
+  `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>`
+- One commit per logical change — do not bundle unrelated edits.
+- Never commit secrets. `.env.local` is gitignored; only `.env.example` is tracked.
+- This automation covers work in this repository. It is not authorisation for other
+  outward-facing actions (opening PRs, changing Vercel settings, publishing elsewhere).
+
 ## Architecture
 
 ```
@@ -109,7 +137,8 @@ Keep new routes consistent with that.
 ## Deployment (Vercel)
 
 Zero-config: Vercel detects Next.js, `npm run build` is the build command. No
-`vercel.json` is needed unless redirects or headers get added.
+`vercel.json` is needed unless redirects or headers get added. Deploys are triggered by
+pushes to `main` — see "Commit, push, deploy" above.
 
 `getBaseUrl()` in `src/lib/metadata.ts` resolves absolute URLs in this order:
 `NEXT_PUBLIC_SITE_URL` → `VERCEL_PROJECT_PRODUCTION_URL` (production) → `VERCEL_URL`
