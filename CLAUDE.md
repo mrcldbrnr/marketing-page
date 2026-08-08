@@ -47,7 +47,7 @@ This is the most important convention here. Components contain **no marketing co
 Everything a marketer would want to change lives in `src/content/`:
 
 - `site.ts` — brand name, description, contact details, header/footer navigation
-- `landing.ts` — hero, logos, features, testimonials, FAQ, closing CTA
+- `landing.ts` — hero, features, testimonials, FAQ, closing CTA
 
 Sections import their own content module directly, so `app/page.tsx` stays a plain
 list of sections. **When asked to change wording, edit `src/content/` — not the

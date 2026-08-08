@@ -13,11 +13,6 @@ export const hero = {
   note: "Keine Kreditkarte nötig · 14 Tage testen",
 };
 
-export const logos = {
-  title: "Vertraut von Teams bei",
-  items: ["Northwind", "Globex", "Initech", "Umbrella", "Soylent"],
-};
-
 export const features = {
   eyebrow: "Funktionen",
   title: "Gebaut für den Alltag, nicht für die Demo",

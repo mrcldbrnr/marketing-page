@@ -22,7 +22,7 @@ npm run lint    # ESLint
 | Bereich | Inhalt |
 | --- | --- |
 | Seiten | `/`, `/ueber-uns`, `/kontakt`, `/impressum`, `/datenschutz`, 404 |
-| Landing-Sections | Hero, Logo-Cloud, Funktionen, Testimonials, FAQ, CTA |
+| Landing-Sections | Hero, Funktionen, Testimonials, FAQ, CTA |
 | Shell | Sticky Header mit Mobile-Menü, Footer, Skip-Link |
 | SEO | Metadata-Helper mit Canonicals, `sitemap.xml`, `robots.txt`, OG-Image |
 | Formular | Kontaktformular mit Server Action, Validierung und Honeypot |
@@ -52,6 +52,6 @@ ausgenommen.
   `src/app/kontakt/actions.ts` als TODO markiert.
 - `/impressum` und `/datenschutz` enthalten Platzhaltertext und müssen vor dem
   Livegang durch geprüfte Inhalte ersetzt werden.
-- Logo, Produkt-Screenshot und Kundenlogos sind Platzhalter.
+- Logo und Produkt-Screenshot sind Platzhalter.
 
 Konventionen und Architektur für die Arbeit mit Claude Code: siehe [CLAUDE.md](CLAUDE.md).
