@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Design tokens
+   Static tokens live in `@theme`. Tokens that change between colour schemes
+   are declared as plain CSS variables below and mapped in `@theme inline`,
+   so the utilities resolve at runtime instead of being inlined at build time.
+--------------------------------------------------------------------------- */
+
+@theme {
+  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  /* Brand scale — swap these for the real brand colours. */
+  --color-brand-50: oklch(0.97 0.014 254);
+  --color-brand-100: oklch(0.94 0.03 254);
+  --color-brand-200: oklch(0.89 0.055 254);
+  --color-brand-300: oklch(0.81 0.09 254);
+  --color-brand-400: oklch(0.71 0.14 254);
+  --color-brand-500: oklch(0.62 0.19 254);
+  --color-brand-600: oklch(0.55 0.21 254);
+  --color-brand-700: oklch(0.48 0.19 254);
+  --color-brand-800: oklch(0.4 0.15 254);
+  --color-brand-900: oklch(0.34 0.11 254);
+  --color-brand-950: oklch(0.24 0.08 254);
+
+  /* Vertical rhythm shared by every <Section>. */
+  --spacing-section: 6rem;
+  --spacing-section-lg: 8rem;
+}
+
+:root {
+  --background: oklch(1 0 0);
+  --surface: oklch(0.985 0.002 250);
+  --foreground: oklch(0.19 0.01 250);
+  --muted: oklch(0.52 0.015 250);
+  --border: oklch(0.92 0.005 250);
+  --accent: var(--color-brand-600);
+  --accent-foreground: oklch(1 0 0);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: oklch(0.16 0.008 250);
+    --surface: oklch(0.2 0.01 250);
+    --foreground: oklch(0.97 0.003 250);
+    --muted: oklch(0.68 0.015 250);
+    --border: oklch(0.29 0.012 250);
+    --accent: var(--color-brand-400);
+    --accent-foreground: oklch(0.18 0.02 254);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Anchor links land below the sticky header instead of behind it. */
+  :target {
+    scroll-margin-top: 6rem;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: var(--color-accent-foreground);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
