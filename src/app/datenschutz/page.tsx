@@ -17,7 +17,7 @@ export default function PrivacyPage() {
       <Prose className="mt-8">
         <p className="rounded-xl border border-border bg-surface p-4 text-sm">
           <strong>Platzhalter.</strong> Diese Seite enthält Beispieltext und ist keine
-          Rechtsberatung. Erstelle eine auf eure tatsächliche Datenverarbeitung zugeschnittene
+          Rechtsberatung. Erstelle eine auf deine tatsächliche Datenverarbeitung zugeschnittene
           Erklärung (revDSG, ggf. DSGVO) und lass sie prüfen.
         </p>
 
@@ -35,7 +35,7 @@ export default function PrivacyPage() {
 
         <h2>Zweck und Rechtsgrundlage</h2>
         <p>
-          Ergänze hier, zu welchem Zweck ihr die Daten bearbeitet und worauf sich die Bearbeitung
+          Ergänze hier, zu welchem Zweck du die Daten bearbeitest und worauf sich die Bearbeitung
           stützt.
         </p>
 

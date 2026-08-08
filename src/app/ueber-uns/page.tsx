@@ -29,8 +29,8 @@ export default function AboutPage() {
 
         <div className="mt-10 flex flex-col gap-4 text-lg leading-relaxed text-muted text-pretty">
           <p>
-            Ersetze diesen Text durch eure Geschichte: Wie ist das Unternehmen entstanden, welches
-            Problem habt ihr selbst erlebt, und was macht euren Ansatz anders?
+            Ersetze diesen Text durch deine Geschichte: Wie ist das Unternehmen entstanden, welches
+            Problem hast du selbst erlebt, und was macht deinen Ansatz anders?
           </p>
           <p>
             Ein zweiter Absatz eignet sich gut für Werte oder Arbeitsweise – konkret formuliert,

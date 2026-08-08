@@ -5,9 +5,9 @@
 
 export const hero = {
   eyebrow: "Neu: Automatisierte Workflows",
-  title: "Alles, was dein Team braucht. An einem Ort.",
+  title: "Alles, was du hast. An einem Ort.",
   description:
-    "Von der Idee bis zum Release: plane, priorisiere und liefere in einem Tool, das dein Team wirklich gern benutzt.",
+    "Von der Idee bis zum Release: plane, priorisiere und liefere in einem Tool, das du wirklich gern benutzt.",
   primaryCta: { label: "Kostenlos starten", href: "/kontakt" },
   secondaryCta: { label: "Funktionen ansehen", href: "#funktionen" },
   note: "Keine Kreditkarte nötig · 14 Tage testen",
@@ -48,7 +48,7 @@ export const features = {
     },
     {
       title: "Offene Schnittstellen",
-      description: "REST-API, Webhooks und fertige Integrationen für die Tools, die ihr schon habt.",
+      description: "REST-API, Webhooks und fertige Integrationen für die Tools, die du schon hast.",
       icon: "plug",
     },
     {
@@ -93,9 +93,9 @@ export const faq = {
         "Die meisten Teams sind in unter einer Stunde startklar. Für Migrationen aus bestehenden Systemen unterstützen wir kostenlos.",
     },
     {
-      question: "Wo liegen unsere Daten?",
+      question: "Wo liegen meine Daten?",
       answer:
-        "In Rechenzentren in der Schweiz oder der EU – ihr wählt die Region bei der Einrichtung.",
+        "In Rechenzentren in der Schweiz oder der EU – du wählst die Region bei der Einrichtung.",
     },
     {
       question: "Kann ich jederzeit kündigen?",
@@ -105,14 +105,14 @@ export const faq = {
     {
       question: "Gibt es Rabatte für Non-Profits?",
       answer:
-        "Ja, gemeinnützige Organisationen und Bildungseinrichtungen erhalten 50 % Rabatt. Meldet euch einfach bei uns.",
+        "Ja, gemeinnützige Organisationen und Bildungseinrichtungen erhalten 50 % Rabatt. Melde dich einfach bei uns.",
     },
   ],
 };
 
 export const cta = {
   title: "Bereit, es auszuprobieren?",
-  description: "Starte kostenlos oder lass dir in 20 Minuten zeigen, wie es für dein Team aussieht.",
+  description: "Starte kostenlos oder lass dir in 20 Minuten zeigen, wie es für dich aussieht.",
   primaryCta: { label: "Kostenlos starten", href: "/kontakt" },
   secondaryCta: { label: "Preise ansehen", href: "/preise" },
 };
