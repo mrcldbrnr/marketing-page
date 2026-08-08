@@ -10,7 +10,9 @@ const base =
   "disabled:pointer-events-none disabled:opacity-50";
 
 const variants: Record<Variant, string> = {
-  primary: "bg-accent text-accent-foreground hover:opacity-90",
+  // Schwarz im Light Mode; im Dark Mode invertiert (weiss auf dunkel), da ein
+  // schwarzer Button auf dunklem Grund nicht lesbar wäre.
+  primary: "bg-foreground text-background hover:opacity-90",
   secondary: "border border-border bg-background text-foreground hover:bg-surface",
   ghost: "text-foreground hover:bg-surface",
 };
