@@ -9,7 +9,7 @@ import { submitContactForm, type ContactFormState } from "@/app/kontakt/actions"
 const initialState: ContactFormState = { status: "idle" };
 
 const fieldClass =
-  "w-full rounded-xl border border-border bg-background px-4 py-2.5 text-foreground " +
+  "w-full rounded-2xl border border-border bg-background px-4 py-2.5 text-foreground " +
   "placeholder:text-muted focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 
 export function ContactForm() {
@@ -19,7 +19,7 @@ export function ContactForm() {
     return (
       <div
         role="status"
-        className="rounded-2xl border border-accent bg-accent/5 p-6 text-center leading-relaxed"
+        className="rounded-3xl border border-accent bg-accent/5 p-6 text-center leading-relaxed"
       >
         {state.message}
       </div>

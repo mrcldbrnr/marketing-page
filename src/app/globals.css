@@ -8,21 +8,20 @@
 --------------------------------------------------------------------------- */
 
 @theme {
-  --font-sans: var(--font-geist-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, sans-serif;
 
-  /* Brand scale — swap these for the real brand colours. */
-  --color-brand-50: oklch(0.97 0.014 254);
-  --color-brand-100: oklch(0.94 0.03 254);
-  --color-brand-200: oklch(0.89 0.055 254);
-  --color-brand-300: oklch(0.81 0.09 254);
-  --color-brand-400: oklch(0.71 0.14 254);
-  --color-brand-500: oklch(0.62 0.19 254);
-  --color-brand-600: oklch(0.55 0.21 254);
-  --color-brand-700: oklch(0.48 0.19 254);
-  --color-brand-800: oklch(0.4 0.15 254);
-  --color-brand-900: oklch(0.34 0.11 254);
-  --color-brand-950: oklch(0.24 0.08 254);
+  /* Brand scale, anchored on the myown app's pure #0000ff accent (600). */
+  --color-brand-50: oklch(0.97 0.02 264);
+  --color-brand-100: oklch(0.93 0.045 264);
+  --color-brand-200: oklch(0.87 0.08 264);
+  --color-brand-300: oklch(0.78 0.13 264);
+  --color-brand-400: oklch(0.68 0.19 264);
+  --color-brand-500: oklch(0.58 0.25 264);
+  --color-brand-600: oklch(0.452 0.313 264);
+  --color-brand-700: oklch(0.4 0.28 264);
+  --color-brand-800: oklch(0.32 0.22 264);
+  --color-brand-900: oklch(0.26 0.16 264);
+  --color-brand-950: oklch(0.18 0.1 264);
 
   /* Vertical rhythm shared by every <Section>. */
   --spacing-section: 6rem;
@@ -30,24 +29,24 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --surface: oklch(0.985 0.002 250);
-  --foreground: oklch(0.19 0.01 250);
-  --muted: oklch(0.52 0.015 250);
-  --border: oklch(0.92 0.005 250);
+  --background: oklch(0.985 0 0);
+  --surface: oklch(1 0 0);
+  --foreground: oklch(0.145 0 0);
+  --muted: oklch(0.556 0 0);
+  --border: oklch(0.83 0 0);
   --accent: var(--color-brand-600);
   --accent-foreground: oklch(1 0 0);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: oklch(0.16 0.008 250);
-    --surface: oklch(0.2 0.01 250);
-    --foreground: oklch(0.97 0.003 250);
-    --muted: oklch(0.68 0.015 250);
-    --border: oklch(0.29 0.012 250);
+    --background: oklch(0.16 0 0);
+    --surface: oklch(0.21 0 0);
+    --foreground: oklch(0.97 0 0);
+    --muted: oklch(0.65 0 0);
+    --border: oklch(0.32 0 0);
     --accent: var(--color-brand-400);
-    --accent-foreground: oklch(0.18 0.02 254);
+    --accent-foreground: oklch(0.18 0.02 264);
   }
 }
 

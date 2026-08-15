@@ -19,7 +19,7 @@ export function Hero() {
             </span>
           ) : null}
 
-          <h1 className="text-4xl font-semibold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+          <h1 className="text-4xl font-extrabold tracking-tight text-balance sm:text-5xl lg:text-6xl">
             {hero.title}
           </h1>
 
@@ -40,7 +40,7 @@ export function Hero() {
         </div>
 
         {/* Product shot placeholder — replace with next/image once artwork exists. */}
-        <div className="mx-auto mt-16 aspect-[16/9] w-full max-w-4xl rounded-2xl border border-border bg-surface shadow-sm">
+        <div className="mx-auto mt-16 aspect-[16/9] w-full max-w-4xl rounded-3xl border border-border bg-surface">
           <div className="flex h-full items-center justify-center text-sm text-muted">
             Screenshot / Produktvideo
           </div>

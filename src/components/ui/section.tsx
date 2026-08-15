@@ -62,7 +62,7 @@ export function SectionHeading({
       {eyebrow ? (
         <span className="text-sm font-semibold tracking-wide text-accent uppercase">{eyebrow}</span>
       ) : null}
-      <Heading className="text-3xl font-semibold tracking-tight text-balance sm:text-4xl">
+      <Heading className="text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">
         {title}
       </Heading>
       {description ? (

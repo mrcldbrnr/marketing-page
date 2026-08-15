@@ -10,7 +10,7 @@ export function Testimonials() {
         {testimonials.items.map((item) => (
           <li
             key={item.author}
-            className="flex flex-col gap-6 rounded-2xl border border-border bg-background p-6"
+            className="flex flex-col gap-6 rounded-3xl border border-border bg-background p-6"
           >
             <blockquote className="leading-relaxed text-pretty">“{item.quote}”</blockquote>
             <div className="mt-auto flex items-center gap-3">

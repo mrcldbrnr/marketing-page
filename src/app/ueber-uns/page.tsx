@@ -43,7 +43,7 @@ export default function AboutPage() {
           {stats.map((stat) => (
             <div key={stat.label} className="flex flex-col gap-1">
               <dt className="sr-only">{stat.label}</dt>
-              <dd className="text-3xl font-semibold tracking-tight">{stat.value}</dd>
+              <dd className="text-3xl font-extrabold tracking-tight">{stat.value}</dd>
               <p className="text-sm text-muted">{stat.label}</p>
             </div>
           ))}
