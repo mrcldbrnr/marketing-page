@@ -26,11 +26,23 @@ export function SiteHeader() {
     return path !== "/" && path !== "" && pathname.startsWith(path);
   };
 
+  // The header is pinned to a fixed white background regardless of colour
+  // scheme, so every colour inside it is pinned to its light-mode value too
+  // (arbitrary values instead of the `foreground`/`accent`/`background`
+  // tokens, which would otherwise flip to their dark-mode variants and
+  // become unreadable against the white bar).
+  const navLinkClass = (active: boolean) =>
+    cn(
+      "rounded-full px-4 py-2 text-[21px] font-semibold transition-colors",
+      "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ff]",
+      active ? "bg-[#0000ff]/10 text-[#0a0a0a]" : "text-[#0000ff] hover:text-[#0a0a0a]",
+    );
+
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/80 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-[#cbcbcb] bg-white">
       <Container width="default">
         <div className="relative flex h-16 items-center gap-6">
-          <Logo className="shrink-0" />
+          <Logo tone="light" className="shrink-0" />
 
           <nav
             aria-label="Hauptnavigation"
@@ -41,11 +53,7 @@ export function SiteHeader() {
                 key={item.href}
                 href={item.href}
                 aria-current={isActive(item.href) ? "page" : undefined}
-                className={cn(
-                  "rounded-full px-4 py-2 text-[21px] font-semibold transition-colors",
-                  "focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent",
-                  isActive(item.href) ? "bg-accent/10 text-foreground" : "text-accent hover:text-foreground",
-                )}
+                className={navLinkClass(isActive(item.href))}
               >
                 {item.label}
               </Link>
@@ -54,7 +62,7 @@ export function SiteHeader() {
 
           <div className="ml-auto flex items-center gap-2">
             <div className="hidden md:block">
-              <ButtonLink href="/kontakt" size="sm">
+              <ButtonLink href="/kontakt" size="sm" className="bg-[#0a0a0a] text-white">
                 Demo buchen
               </ButtonLink>
             </div>
@@ -64,7 +72,7 @@ export function SiteHeader() {
               onClick={() => setOpen((value) => !value)}
               aria-expanded={open}
               aria-controls="mobile-nav"
-              className="-mr-2 rounded-md p-2 text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:hidden"
+              className="-mr-2 rounded-md p-2 text-[#0a0a0a] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#0000ff] md:hidden"
             >
               <span className="sr-only">{open ? "Menü schliessen" : "Menü öffnen"}</span>
               <MenuIcon open={open} />
@@ -74,7 +82,7 @@ export function SiteHeader() {
       </Container>
 
       {open ? (
-        <div id="mobile-nav" className="border-t border-border bg-background md:hidden">
+        <div id="mobile-nav" className="border-t border-[#cbcbcb] bg-white md:hidden">
           <Container width="default">
             <nav aria-label="Hauptnavigation mobil" className="flex flex-col gap-1 py-4">
               {mainNav.map((item) => (
@@ -84,15 +92,16 @@ export function SiteHeader() {
                   aria-current={isActive(item.href) ? "page" : undefined}
                   // Hash links on the current page don't change the pathname.
                   onClick={() => setOpen(false)}
-                  className={cn(
-                    "rounded-full px-4 py-2.5 text-[21px] font-semibold transition-colors",
-                    isActive(item.href) ? "bg-accent/10 text-foreground" : "text-accent hover:text-foreground",
-                  )}
+                  className={navLinkClass(isActive(item.href))}
                 >
                   {item.label}
                 </Link>
               ))}
-              <ButtonLink href="/kontakt" onClick={() => setOpen(false)} className="mt-3 w-full">
+              <ButtonLink
+                href="/kontakt"
+                onClick={() => setOpen(false)}
+                className="mt-3 w-full bg-[#0a0a0a] text-white"
+              >
                 Demo buchen
               </ButtonLink>
             </nav>
