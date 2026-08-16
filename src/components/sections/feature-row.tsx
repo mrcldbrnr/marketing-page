@@ -18,22 +18,22 @@ export function FeatureRow({ feature, index }: FeatureRowProps) {
         <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">{feature.title}</h2>
       </div>
 
-      <div className="mt-10 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
-        <div className={flip ? "lg:order-2" : undefined}>
+      <div className="mt-10 grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
+        <div className={flip ? "lg:order-2 lg:col-span-5" : "lg:col-span-5"}>
           <p className="leading-relaxed text-muted text-pretty">{feature.description}</p>
           <div className="mt-6">
             <FeatureContentBlock content={feature.content} />
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl lg:col-span-7">
           <Image
             src={feature.visualSrc}
             alt={feature.visualCaption}
             fill
             unoptimized={feature.visualSrc.endsWith(".gif")}
             className="object-cover object-top"
-            sizes="(min-width: 1024px) 50vw, 100vw"
+            sizes="(min-width: 1024px) 58vw, 100vw"
           />
         </div>
       </div>
