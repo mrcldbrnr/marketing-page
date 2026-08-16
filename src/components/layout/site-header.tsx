@@ -62,7 +62,11 @@ export function SiteHeader() {
 
           <div className="ml-auto flex items-center gap-2">
             <div className="hidden md:block">
-              <ButtonLink href="/kontakt" size="sm" className="bg-[#0a0a0a] text-white">
+              <ButtonLink
+                href="/kontakt"
+                size="sm"
+                className="bg-[#0a0a0a] text-white hover:bg-[#0000ff] hover:text-white"
+              >
                 Demo buchen
               </ButtonLink>
             </div>
@@ -100,7 +104,7 @@ export function SiteHeader() {
               <ButtonLink
                 href="/kontakt"
                 onClick={() => setOpen(false)}
-                className="mt-3 w-full bg-[#0a0a0a] text-white"
+                className="mt-3 w-full bg-[#0a0a0a] text-white hover:bg-[#0000ff] hover:text-white"
               >
                 Demo buchen
               </ButtonLink>

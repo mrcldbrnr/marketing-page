@@ -11,8 +11,9 @@ const base =
 
 const variants: Record<Variant, string> = {
   // Schwarz im Light Mode; im Dark Mode invertiert (weiss auf dunkel), da ein
-  // schwarzer Button auf dunklem Grund nicht lesbar wäre.
-  primary: "bg-foreground text-background hover:opacity-90",
+  // schwarzer Button auf dunklem Grund nicht lesbar wäre. Hover wechselt zur
+  // Brand-Farbe (Akzent-Blau) statt nur abzudunkeln.
+  primary: "bg-foreground text-background hover:bg-accent hover:text-accent-foreground",
   secondary: "border border-border bg-background text-foreground hover:bg-surface",
   ghost: "text-foreground hover:bg-surface",
 };
