@@ -12,11 +12,14 @@ export function FeatureRow({ feature, index }: FeatureRowProps) {
 
   return (
     <div className="border-t border-border py-16 first:border-t-0 first:pt-0 lg:py-20">
-      <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+      <div className="mx-auto max-w-2xl text-center">
+        <p className="text-sm font-semibold text-muted">Funktion {String(index + 1).padStart(2, "0")}</p>
+        <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">{feature.title}</h2>
+      </div>
+
+      <div className="mt-10 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
         <div className={flip ? "lg:order-2" : undefined}>
-          <p className="text-sm font-semibold text-muted">Funktion {String(index + 1).padStart(2, "0")}</p>
-          <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">{feature.title}</h2>
-          <p className="mt-3 leading-relaxed text-muted text-pretty">{feature.description}</p>
+          <p className="leading-relaxed text-muted text-pretty">{feature.description}</p>
           <div className="mt-6">
             <FeatureContentBlock content={feature.content} />
           </div>
