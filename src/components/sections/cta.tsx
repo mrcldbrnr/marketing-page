@@ -20,7 +20,9 @@ export function Cta({
   return (
     <Section>
       <div className="flex flex-col items-center gap-6 rounded-3xl border border-border bg-surface px-6 py-16 text-center">
-        <h2 className="max-w-2xl text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">{title}</h2>
+        <h2 className="max-w-2xl text-[2rem] font-extrabold tracking-tight text-balance sm:text-[2.375rem]">
+          {title}
+        </h2>
         {description ? (
           <p className="max-w-xl text-lg leading-relaxed text-muted text-pretty">{description}</p>
         ) : null}

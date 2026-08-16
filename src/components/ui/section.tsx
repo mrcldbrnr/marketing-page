@@ -62,7 +62,15 @@ export function SectionHeading({
       {eyebrow ? (
         <span className="text-sm font-semibold tracking-wide text-accent uppercase">{eyebrow}</span>
       ) : null}
-      <Heading className="text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">
+      <Heading
+        className={cn(
+          "font-extrabold tracking-tight text-balance",
+          // h2 is 2px larger than h1 at every breakpoint (kept as a separate
+          // class list rather than a shared one, since they must scale
+          // independently).
+          Heading === "h2" ? "text-[2rem] sm:text-[2.375rem]" : "text-3xl sm:text-4xl",
+        )}
+      >
         {title}
       </Heading>
       {description ? (
