@@ -15,6 +15,8 @@ export type FeatureContent =
   | { kind: "sumList"; items: string[]; note: string };
 
 export type Feature = {
+  /** Short kicker label shown above the title, e.g. "Gegenstände erfassen". */
+  kicker: string;
   title: string;
   description: string;
   visualCaption: string;
@@ -30,6 +32,7 @@ export const funktionen = {
 
   features: [
     {
+      kicker: "Gegenstände erfassen",
       title: "Alles, was dir gehört. An einem Ort.",
       description: "Gegenstände können mit genau so vielen Informationen erfasst werden, wie benötigt.",
       visualCaption: "UI-Screenshot oder beispielhafte Detailkarte eines Gegenstands",
@@ -52,6 +55,7 @@ export const funktionen = {
       },
     },
     {
+      kicker: "Suchfunktion",
       title: "Weiss, wo deine Sachen sind.",
       description:
         "Die Suche berücksichtigt alle erfassten Felder und zeigt bereits während der Eingabe passende Treffer.",
@@ -63,6 +67,7 @@ export const funktionen = {
       },
     },
     {
+      kicker: "Dashboard",
       title: "Sieh, was deine Aufmerksamkeit braucht.",
       description: "Das Dashboard zeigt relevante Gegenstände als grosse Kacheln.",
       visualCaption: "UI-Screenshot des Dashboards mit Kacheln",
@@ -79,6 +84,7 @@ export const funktionen = {
       },
     },
     {
+      kicker: "Standorte",
       title: "Jeder Gegenstand hat seinen Platz.",
       description: "Standorte werden zweistufig erfasst.",
       visualCaption: "UI-Screenshot der Standort-Auswahl",
@@ -94,6 +100,7 @@ export const funktionen = {
       },
     },
     {
+      kicker: "Verknüpfungen",
       title: "Was zusammengehört, bleibt zusammen.",
       description: "Gegenstände können miteinander verknüpft werden.",
       visualCaption: "UI-Screenshot verknüpfter Gegenstände",
@@ -110,6 +117,7 @@ export const funktionen = {
       },
     },
     {
+      kicker: "Packlisten",
       title: "Pack, was du schon hast.",
       description: "Packlisten werden direkt aus dem bestehenden Inventar erstellt.",
       visualCaption: "UI-Screenshot einer Packliste mit Fortschritt",
@@ -128,6 +136,7 @@ export const funktionen = {
       },
     },
     {
+      kicker: "Zustand und Status",
       title: "Bereit, wenn du es brauchst.",
       description: "Zustand und Status werden getrennt geführt.",
       visualCaption: "UI-Screenshot von Zustand- und Status-Badges",
@@ -145,6 +154,7 @@ export const funktionen = {
       },
     },
     {
+      kicker: "Archiv",
       title: "Auch Dinge, die nicht mehr da sind, bleiben nachvollziehbar.",
       description: "Gegenstände können als Aussortiert markiert werden.",
       visualCaption: "UI-Screenshot der Aussortiert-Markierung",
@@ -155,6 +165,7 @@ export const funktionen = {
       },
     },
     {
+      kicker: "Kaufwerte",
       title: "Wissen, was du investiert hast.",
       description: "myown zeigt die Summe der hinterlegten Kaufpreise.",
       visualCaption: "UI-Screenshot der Kaufwert-Übersicht",

@@ -13,7 +13,7 @@ export function FeatureRow({ feature, index }: FeatureRowProps) {
   return (
     <div className="border-t border-border py-16 first:border-t-0 first:pt-0 lg:py-20">
       <div className="mx-auto max-w-2xl text-center">
-        <p className="text-sm font-semibold text-muted">Funktion {String(index + 1).padStart(2, "0")}</p>
+        <p className="text-sm font-semibold tracking-wide text-accent uppercase">{feature.kicker}</p>
         <h2 className="mt-2 text-2xl font-extrabold tracking-tight text-balance sm:text-3xl">{feature.title}</h2>
       </div>
 
