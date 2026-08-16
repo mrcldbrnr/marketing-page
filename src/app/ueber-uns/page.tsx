@@ -18,7 +18,7 @@ const stats = [
 export default function AboutPage() {
   return (
     <>
-      <Section containerWidth="narrow">
+      <Section containerWidth="narrow" className="pt-[2.25rem] lg:pt-[4.25rem]">
         <SectionHeading
           as="h1"
           eyebrow="Über uns"

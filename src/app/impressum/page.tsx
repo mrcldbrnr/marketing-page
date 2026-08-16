@@ -11,7 +11,7 @@ export const metadata = createMetadata({
 
 export default function ImprintPage() {
   return (
-    <Section containerWidth="narrow">
+    <Section containerWidth="narrow" className="pt-[2.25rem] lg:pt-[4.25rem]">
       <SectionHeading as="h1" title="Impressum" align="left" />
 
       <Prose className="mt-8">

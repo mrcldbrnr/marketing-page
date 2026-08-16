@@ -11,7 +11,7 @@ export const metadata = createMetadata({
 
 export default function ContactPage() {
   return (
-    <Section>
+    <Section className="pt-[2.25rem] lg:pt-[4.25rem]">
       <SectionHeading
         as="h1"
         eyebrow="Kontakt"

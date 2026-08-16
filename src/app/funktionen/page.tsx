@@ -14,7 +14,7 @@ export const metadata = createMetadata({
 export default function FeaturesPage() {
   return (
     <>
-      <Section containerWidth="wide">
+      <Section containerWidth="wide" className="pt-[2.25rem] lg:pt-[4.25rem]">
         <SectionHeading
           as="h1"
           eyebrow="Funktionen"

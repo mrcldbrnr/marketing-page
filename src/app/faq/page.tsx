@@ -11,7 +11,7 @@ export const metadata = createMetadata({
 export default function FaqPage() {
   return (
     <>
-      <Faq headingLevel="h1" />
+      <Faq headingLevel="h1" className="pt-[2.25rem] lg:pt-[4.25rem]" />
       <Cta />
     </>
   );
