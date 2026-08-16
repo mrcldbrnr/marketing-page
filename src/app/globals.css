@@ -12,7 +12,10 @@
 
   /* Brand scale, anchored on the myown app's pure #0000ff accent (600). */
   --color-brand-50: oklch(0.97 0.02 264);
-  --color-brand-100: oklch(0.93 0.045 264);
+  /* Mixed directly from the logo's #0000ff rather than derived via oklch —
+     oklch's hue drifts visibly at this lightness/chroma, reading closer to
+     cyan than the logo's indigo-blue once rendered to sRGB. */
+  --color-brand-100: color-mix(in srgb, #0000ff 12%, white);
   --color-brand-200: oklch(0.87 0.08 264);
   --color-brand-300: oklch(0.78 0.13 264);
   --color-brand-400: oklch(0.68 0.19 264);
