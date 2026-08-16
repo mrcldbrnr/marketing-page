@@ -13,12 +13,6 @@ export function Hero() {
 
       <Container>
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          {hero.eyebrow ? (
-            <span className="rounded-full border border-border bg-surface px-3 py-1 text-sm text-muted">
-              {hero.eyebrow}
-            </span>
-          ) : null}
-
           <h1 className="text-4xl font-extrabold tracking-tight text-balance sm:text-5xl lg:text-6xl">
             {hero.title}
           </h1>

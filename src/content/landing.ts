@@ -4,10 +4,9 @@
  */
 
 export const hero = {
-  eyebrow: "Neu: Automatisierte Workflows",
-  title: "Alles, was du hast. An einem Ort.",
+  title: "Alles, was du hast. Bereit, wenn du es brauchst.",
   description:
-    "Von der Idee bis zum Release: plane, priorisiere und liefere in einem Tool, das du wirklich gern benutzt.",
+    "myown bringt Ordnung in deine Sachen und Ruhe in deinen Kopf. Du weisst, was du besitzt, wo es liegt und ob es bereit ist, wenn du es brauchst.",
   primaryCta: { label: "Kostenlos starten", href: "/kontakt" },
   secondaryCta: { label: "Funktionen ansehen", href: "#funktionen" },
   note: "Keine Kreditkarte nötig · 14 Tage testen",
