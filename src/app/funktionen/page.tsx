@@ -15,14 +15,12 @@ export default function FeaturesPage() {
   return (
     <>
       <Section containerWidth="wide">
-        <div className="mx-auto max-w-3xl">
-          <SectionHeading
-            as="h1"
-            align="left"
-            title={funktionen.intro.title}
-            description={funktionen.intro.description}
-          />
-        </div>
+        <SectionHeading
+          as="h1"
+          eyebrow="Funktionen"
+          title={funktionen.intro.title}
+          description={funktionen.intro.description}
+        />
 
         <div className="mt-16 flex flex-col">
           {funktionen.features.map((feature, index) => (
