@@ -4,9 +4,10 @@ import { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/cn";
-import { mainNav } from "@/content/site";
+import { mainNav, siteConfig } from "@/content/site";
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button";
+import { Icon } from "@/components/ui/icon";
 import { Logo } from "@/components/layout/logo";
 
 export function SiteHeader() {
@@ -63,11 +64,14 @@ export function SiteHeader() {
           <div className="ml-auto flex items-center gap-2">
             <div className="hidden md:block">
               <ButtonLink
-                href="/kontakt"
+                href={siteConfig.appUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 size="sm"
                 className="bg-[#0a0a0a] text-white hover:bg-[#0000ff] hover:text-white"
               >
-                Demo buchen
+                myown jetzt live testen
+                <Icon name="external" className="size-4" />
               </ButtonLink>
             </div>
 
@@ -102,11 +106,14 @@ export function SiteHeader() {
                 </Link>
               ))}
               <ButtonLink
-                href="/kontakt"
+                href={siteConfig.appUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="mt-3 w-full bg-[#0a0a0a] text-white hover:bg-[#0000ff] hover:text-white"
               >
-                Demo buchen
+                myown jetzt live testen
+                <Icon name="external" className="size-4" />
               </ButtonLink>
             </nav>
           </Container>

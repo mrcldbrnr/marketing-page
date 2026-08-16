@@ -48,6 +48,8 @@ Everything a marketer would want to change lives in `src/content/`:
 
 - `site.ts` — brand name, description, contact details, header/footer navigation
 - `landing.ts` — hero, features, testimonials, FAQ, closing CTA
+- `pricing.ts` — plans shown on `/preisplan`
+- `why.ts` — differentiators shown on `/warum-myown`
 
 Sections import their own content module directly, so `app/page.tsx` stays a plain
 list of sections. **When asked to change wording, edit `src/content/` — not the
@@ -102,7 +104,8 @@ Merge incoming `className` props with `cn()` from `@/lib/cn` so callers can over
 4. Add the route to `src/app/sitemap.ts`.
 5. Add it to `mainNav` and/or `footerNav` in `src/content/site.ts` if it should be linked.
 
-German URL segments are used deliberately (`/ueber-uns`, `/kontakt`, `/impressum`).
+German URL segments are used deliberately (`/preisplan`, `/warum-myown`, `/ueber-uns`,
+`/kontakt`, `/impressum`).
 Keep new routes consistent with that.
 
 ## Deployment (Vercel)

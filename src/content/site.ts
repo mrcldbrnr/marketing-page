@@ -14,6 +14,8 @@ export const siteConfig = {
    * On Vercel this is set automatically, see `src/lib/metadata.ts`.
    */
   url: "https://example.com",
+  /** Live app instance the header CTA links to. */
+  appUrl: "https://web-app-zeta-ruddy-63.vercel.app",
   locale: "de_CH",
   /** Shown in the footer and used by the contact page. */
   contact: {
@@ -35,8 +37,9 @@ export type NavItem = {
 /** Primary navigation, rendered in the header and the mobile menu. */
 export const mainNav: NavItem[] = [
   { label: "Funktionen", href: "/funktionen" },
-  { label: "Über uns", href: "/ueber-uns" },
-  { label: "Kontakt", href: "/kontakt" },
+  { label: "Preisplan", href: "/preisplan" },
+  { label: "Warum myown", href: "/warum-myown" },
+  { label: "FAQ", href: "/faq" },
 ];
 
 /** Footer link groups. Add or remove groups freely — the layout adapts. */
@@ -45,12 +48,14 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
     title: "Produkt",
     items: [
       { label: "Funktionen", href: "/funktionen" },
-      { label: "FAQ", href: "/#faq" },
+      { label: "Preisplan", href: "/preisplan" },
+      { label: "FAQ", href: "/faq" },
     ],
   },
   {
     title: "Unternehmen",
     items: [
+      { label: "Warum myown", href: "/warum-myown" },
       { label: "Über uns", href: "/ueber-uns" },
       { label: "Kontakt", href: "/kontakt" },
     ],

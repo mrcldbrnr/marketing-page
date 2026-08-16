@@ -1,14 +1,19 @@
 import { Section, SectionHeading } from "@/components/ui/section";
 import { faq } from "@/content/landing";
 
+type FaqProps = {
+  /** Pass "h1" when this section carries the page title (the /faq page). */
+  headingLevel?: "h1" | "h2";
+};
+
 /**
  * Uses native <details>/<summary> — accessible and keyboard-operable without
  * any client-side JavaScript.
  */
-export function Faq() {
+export function Faq({ headingLevel = "h2" }: FaqProps) {
   return (
     <Section id="faq" containerWidth="narrow">
-      <SectionHeading eyebrow={faq.eyebrow} title={faq.title} />
+      <SectionHeading as={headingLevel} eyebrow={faq.eyebrow} title={faq.title} />
 
       <div className="mt-12 divide-y divide-border border-y border-border">
         {faq.items.map((item) => (
