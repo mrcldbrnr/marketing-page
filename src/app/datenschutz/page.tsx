@@ -14,7 +14,7 @@ export default function PrivacyPage() {
     <Section containerWidth="narrow" className="pt-[2.25rem] lg:pt-[4.25rem]">
       <SectionHeading as="h1" title="Datenschutzerklärung" align="left" />
 
-      <Prose className="mt-8">
+      <Prose className="mt-18">
         <p className="rounded-xl border border-border bg-surface p-4 text-sm">
           <strong>Platzhalter.</strong> Diese Seite enthält Beispieltext und ist keine
           Rechtsberatung. Erstelle eine auf deine tatsächliche Datenverarbeitung zugeschnittene

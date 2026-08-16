@@ -16,7 +16,7 @@ export default function WhyPage() {
       <Section className="pt-[2.25rem] lg:pt-[4.25rem]">
         <SectionHeading as="h1" eyebrow={why.eyebrow} title={why.title} description={why.description} />
 
-        <ul className="mt-16 grid gap-8 sm:grid-cols-2">
+        <ul className="mt-26 grid gap-8 sm:grid-cols-2">
           {why.reasons.map((reason) => (
             <li
               key={reason.title}

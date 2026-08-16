@@ -14,7 +14,7 @@ export default function ImprintPage() {
     <Section containerWidth="narrow" className="pt-[2.25rem] lg:pt-[4.25rem]">
       <SectionHeading as="h1" title="Impressum" align="left" />
 
-      <Prose className="mt-8">
+      <Prose className="mt-18">
         <p className="rounded-xl border border-border bg-surface p-4 text-sm">
           <strong>Platzhalter.</strong> Diese Seite enthält Beispieltext. Ergänze die tatsächlichen
           Angaben deines Unternehmens und lass sie rechtlich prüfen, bevor die Website live geht.

@@ -20,7 +20,7 @@ export default function PricingPage() {
           eyebrow="Preisplan"
           title={pricing.title}
           description={pricing.description}
-          className="mb-16"
+          className="mb-26"
         />
         <PricingPlans />
       </Section>

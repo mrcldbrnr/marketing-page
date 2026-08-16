@@ -27,7 +27,7 @@ export default function AboutPage() {
           align="left"
         />
 
-        <div className="mt-10 flex flex-col gap-4 text-lg leading-relaxed text-muted text-pretty">
+        <div className="mt-20 flex flex-col gap-4 text-lg leading-relaxed text-muted text-pretty">
           <p>
             Ersetze diesen Text durch deine Geschichte: Wie ist das Unternehmen entstanden, welches
             Problem hast du selbst erlebt, und was macht deinen Ansatz anders?

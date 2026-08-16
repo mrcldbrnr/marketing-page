@@ -21,7 +21,7 @@ export default function ContactPage() {
         className="max-w-3xl"
       />
 
-      <div className="mt-12 grid gap-12 lg:grid-cols-[1fr_20rem]">
+      <div className="mt-22 grid gap-12 lg:grid-cols-[1fr_20rem]">
         <ContactForm />
 
         <aside className="flex flex-col gap-6 rounded-3xl border border-border bg-surface p-6 text-sm">

@@ -16,7 +16,9 @@ export function Faq({ headingLevel = "h2", className }: FaqProps) {
     <Section id="faq" containerWidth="narrow" className={className}>
       <SectionHeading as={headingLevel} eyebrow={faq.eyebrow} title={faq.title} />
 
-      <div className="mt-12 divide-y divide-border border-y border-border">
+      <div
+        className={`${headingLevel === "h1" ? "mt-22" : "mt-12"} divide-y divide-border border-y border-border`}
+      >
         {faq.items.map((item) => (
           <details key={item.question} className="group py-5">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">

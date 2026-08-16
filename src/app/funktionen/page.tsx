@@ -22,7 +22,7 @@ export default function FeaturesPage() {
           description={funktionen.intro.description}
         />
 
-        <div className="mt-16 flex flex-col">
+        <div className="mt-26 flex flex-col">
           {funktionen.features.map((feature, index) => (
             <FeatureRow key={feature.title} feature={feature} index={index} />
           ))}
