@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { StatusBadge } from "@/components/ui/status-badge";
 import type { Feature } from "@/content/funktionen";
 
@@ -25,10 +26,15 @@ export function FeatureRow({ feature, index }: FeatureRowProps) {
           </div>
         </div>
 
-        <div className="aspect-[4/3] w-full rounded-3xl border border-border bg-surface">
-          <div className="flex h-full items-center justify-center p-6 text-center text-sm text-muted">
-            {feature.visualCaption}
-          </div>
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-surface">
+          <Image
+            src={feature.visualSrc}
+            alt={feature.visualCaption}
+            fill
+            unoptimized={feature.visualSrc.endsWith(".gif")}
+            className="object-cover object-top"
+            sizes="(min-width: 1024px) 50vw, 100vw"
+          />
         </div>
       </div>
     </div>

@@ -19,6 +19,9 @@ export type Feature = {
   kicker: string;
   title: string;
   description: string;
+  /** Path under /public to the real UI screenshot. */
+  visualSrc: string;
+  /** Alt text for the screenshot. */
   visualCaption: string;
   content: FeatureContent;
 };
@@ -35,7 +38,8 @@ export const funktionen = {
       kicker: "Gegenstände erfassen",
       title: "Alles, was dir gehört. An einem Ort.",
       description: "Gegenstände können mit genau so vielen Informationen erfasst werden, wie benötigt.",
-      visualCaption: "UI-Screenshot oder beispielhafte Detailkarte eines Gegenstands",
+      visualSrc: "/screenshots/funktion1_erfassen.png",
+      visualCaption: "Detailkarte eines erfassten Gegenstands in myown",
       content: {
         kind: "bulletsWithNote",
         items: [
@@ -59,7 +63,8 @@ export const funktionen = {
       title: "Weiss, wo deine Sachen sind.",
       description:
         "Die Suche berücksichtigt alle erfassten Felder und zeigt bereits während der Eingabe passende Treffer.",
-      visualCaption: "UI-Screenshot der Suche mit Live-Treffern",
+      visualSrc: "/screenshots/funktion2_suche.gif",
+      visualCaption: "Live-Suche im Inventar von myown",
       content: {
         kind: "bulletsWithExample",
         items: ["Kategorie", "Standort", "Zustand", "Status", "Kaufpreis", "Kaufdatum", "Marke / Hersteller"],
@@ -70,7 +75,8 @@ export const funktionen = {
       kicker: "Dashboard",
       title: "Sieh, was deine Aufmerksamkeit braucht.",
       description: "Das Dashboard zeigt relevante Gegenstände als grosse Kacheln.",
-      visualCaption: "UI-Screenshot des Dashboards mit Kacheln",
+      visualSrc: "/screenshots/funktion3_dashboard.png",
+      visualCaption: "Dashboard mit Kacheln, die Aufmerksamkeit brauchen",
       content: {
         kind: "statusExamples",
         items: [
@@ -87,7 +93,8 @@ export const funktionen = {
       kicker: "Standorte",
       title: "Jeder Gegenstand hat seinen Platz.",
       description: "Standorte werden zweistufig erfasst.",
-      visualCaption: "UI-Screenshot der Standort-Auswahl",
+      visualSrc: "/screenshots/funktion4_standorte.png",
+      visualCaption: "Zweistufige Standort-Verwaltung in den Einstellungen",
       content: {
         kind: "pairs",
         arrow: "→",
@@ -103,7 +110,8 @@ export const funktionen = {
       kicker: "Verknüpfungen",
       title: "Was zusammengehört, bleibt zusammen.",
       description: "Gegenstände können miteinander verknüpft werden.",
-      visualCaption: "UI-Screenshot verknüpfter Gegenstände",
+      visualSrc: "/screenshots/funktion5_verknuepfen.png",
+      visualCaption: "Dialog zum Verknüpfen zweier Gegenstände",
       content: {
         kind: "pairs",
         arrow: "↔",
@@ -120,7 +128,8 @@ export const funktionen = {
       kicker: "Packlisten",
       title: "Pack, was du schon hast.",
       description: "Packlisten werden direkt aus dem bestehenden Inventar erstellt.",
-      visualCaption: "UI-Screenshot einer Packliste mit Fortschritt",
+      visualSrc: "/screenshots/funktion6_packliste.png",
+      visualCaption: "Packliste mit Fortschrittsanzeige",
       content: {
         kind: "bulletsWithProgress",
         items: [
@@ -139,7 +148,8 @@ export const funktionen = {
       kicker: "Zustand und Status",
       title: "Bereit, wenn du es brauchst.",
       description: "Zustand und Status werden getrennt geführt.",
-      visualCaption: "UI-Screenshot von Zustand- und Status-Badges",
+      visualSrc: "/screenshots/funktion7_zustand-status.png",
+      visualCaption: "Gegenstand mit separat ausgewiesenem Zustand und Status",
       content: {
         kind: "badgeGroups",
         groups: [
@@ -157,7 +167,8 @@ export const funktionen = {
       kicker: "Archiv",
       title: "Auch Dinge, die nicht mehr da sind, bleiben nachvollziehbar.",
       description: "Gegenstände können als Aussortiert markiert werden.",
-      visualCaption: "UI-Screenshot der Aussortiert-Markierung",
+      visualSrc: "/screenshots/funktion8_archiv.png",
+      visualCaption: "Liste aussortierter Gegenstände mit Grund",
       content: {
         kind: "bulletsWithNote",
         items: ["Verkauft", "Verschenkt", "Verloren", "Gestohlen", "Zerstört", "Entsorgt"],
@@ -168,7 +179,8 @@ export const funktionen = {
       kicker: "Kaufwerte",
       title: "Wissen, was du investiert hast.",
       description: "myown zeigt die Summe der hinterlegten Kaufpreise.",
-      visualCaption: "UI-Screenshot der Kaufwert-Übersicht",
+      visualSrc: "/screenshots/funktion9_wert.png",
+      visualCaption: "Kaufpreissumme, nach Kategorie gefiltert",
       content: {
         kind: "sumList",
         items: ["gesamtes Inventar", "nach Kategorien"],
