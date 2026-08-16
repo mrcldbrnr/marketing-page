@@ -1,22 +1,43 @@
 import { Section } from "@/components/ui/section";
 import { ButtonLink } from "@/components/ui/button";
-import { cta } from "@/content/landing";
+import { Icon } from "@/components/ui/icon";
+import { cta as defaultCta } from "@/content/landing";
 
-export function Cta() {
+type CtaProps = {
+  title?: string;
+  description?: string;
+  primaryCta?: { label: string; href: string; external?: boolean };
+  /** Pass `null` to hide the secondary button entirely. */
+  secondaryCta?: { label: string; href: string } | null;
+};
+
+export function Cta({
+  title = defaultCta.title,
+  description = defaultCta.description,
+  primaryCta = defaultCta.primaryCta,
+  secondaryCta = defaultCta.secondaryCta,
+}: CtaProps = {}) {
   return (
     <Section>
       <div className="flex flex-col items-center gap-6 rounded-3xl border border-border bg-surface px-6 py-16 text-center">
-        <h2 className="max-w-2xl text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">
-          {cta.title}
-        </h2>
-        <p className="max-w-xl text-lg leading-relaxed text-muted text-pretty">{cta.description}</p>
+        <h2 className="max-w-2xl text-3xl font-extrabold tracking-tight text-balance sm:text-4xl">{title}</h2>
+        {description ? (
+          <p className="max-w-xl text-lg leading-relaxed text-muted text-pretty">{description}</p>
+        ) : null}
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-          <ButtonLink href={cta.primaryCta.href} size="lg">
-            {cta.primaryCta.label}
+          <ButtonLink
+            href={primaryCta.href}
+            size="lg"
+            {...(primaryCta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
+          >
+            {primaryCta.label}
+            {primaryCta.external ? <Icon name="external" className="size-4" /> : null}
           </ButtonLink>
-          <ButtonLink href={cta.secondaryCta.href} size="lg" variant="secondary">
-            {cta.secondaryCta.label}
-          </ButtonLink>
+          {secondaryCta ? (
+            <ButtonLink href={secondaryCta.href} size="lg" variant="secondary">
+              {secondaryCta.label}
+            </ButtonLink>
+          ) : null}
         </div>
       </div>
     </Section>
