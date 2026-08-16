@@ -2,10 +2,16 @@ import { Section, SectionHeading } from "@/components/ui/section";
 import { Icon, type IconName } from "@/components/ui/icon";
 import { features } from "@/content/landing";
 
-export function Features() {
+type FeaturesProps = {
+  /** Pass "h1" when this section carries the page title (the /funktionen page). */
+  headingLevel?: "h1" | "h2";
+};
+
+export function Features({ headingLevel = "h2" }: FeaturesProps) {
   return (
     <Section id="funktionen">
       <SectionHeading
+        as={headingLevel}
         eyebrow={features.eyebrow}
         title={features.title}
         description={features.description}
