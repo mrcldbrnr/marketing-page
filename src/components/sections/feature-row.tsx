@@ -26,7 +26,7 @@ export function FeatureRow({ feature, index }: FeatureRowProps) {
           </div>
         </div>
 
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-surface">
+        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
           <Image
             src={feature.visualSrc}
             alt={feature.visualCaption}
