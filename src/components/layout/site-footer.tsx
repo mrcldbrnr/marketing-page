@@ -10,20 +10,6 @@ export function SiteFooter() {
         <div className="grid gap-12 py-16 md:grid-cols-[1.5fr_2fr]">
           <div className="flex flex-col gap-4">
             <Logo tone="dark" />
-            <p className="max-w-xs text-sm leading-relaxed text-white">{siteConfig.description}</p>
-            <div className="flex gap-4 text-sm text-white">
-              {siteConfig.social.map((item) => (
-                <a
-                  key={item.href}
-                  href={item.href}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="hover:text-white/70"
-                >
-                  {item.label}
-                </a>
-              ))}
-            </div>
           </div>
 
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">

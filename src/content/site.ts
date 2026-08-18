@@ -23,10 +23,6 @@ export const siteConfig = {
     phone: "+41 44 000 00 00",
     address: "Musterstrasse 1, 8000 Zürich",
   },
-  social: [
-    { label: "LinkedIn", href: "https://linkedin.com/company/example" },
-    { label: "GitHub", href: "https://github.com/example" },
-  ],
 } as const;
 
 export type NavItem = {
