@@ -13,7 +13,6 @@ export type Plan =
       interval: string;
       description: string;
       features: string[];
-      cta: { label: string; href: string };
     }
   | {
       kind: "pro";
@@ -51,7 +50,6 @@ export const pricing = {
         "Kaufwert-Übersicht",
         "Gegenstände aussortieren",
       ],
-      cta: { label: "Jetzt kostenlos starten", href: "/kontakt" },
     },
     {
       kind: "pro",

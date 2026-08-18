@@ -14,7 +14,7 @@ export const metadata = createMetadata({
 export default function PricingPage() {
   return (
     <>
-      <Section containerWidth="wide" className="pt-[2.25rem] lg:pt-[4.25rem]">
+      <Section containerWidth="wide" className="pt-[2.25rem] pb-[60px] lg:pt-[4.25rem] lg:pb-[60px]">
         <SectionHeading
           as="h1"
           eyebrow="Preisplan"
@@ -30,6 +30,7 @@ export default function PricingPage() {
         description={pricing.cta.description}
         primaryCta={{ label: pricing.cta.label, href: siteConfig.appUrl, external: true }}
         secondaryCta={null}
+        className="pt-[60px] lg:pt-[60px]"
       />
     </>
   );

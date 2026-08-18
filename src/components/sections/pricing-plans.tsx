@@ -45,14 +45,6 @@ export function PricingPlans() {
                 ))}
               </ul>
             </div>
-
-            <ButtonLink
-              href={plan.cta.href}
-              variant="primary"
-              className="mt-auto w-full bg-[#0000ff] text-white hover:bg-accent hover:text-accent-foreground"
-            >
-              {plan.cta.label}
-            </ButtonLink>
           </div>
         ) : (
           <div key={plan.name} className="flex flex-col gap-6 rounded-3xl border border-border bg-surface p-8">
