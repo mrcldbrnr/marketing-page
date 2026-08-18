@@ -31,7 +31,7 @@ export function Usecases() {
                 <h2 className="mt-2 text-[1.625rem] font-extrabold tracking-tight text-balance sm:text-[2rem]">
                   {usecase.title}
                 </h2>
-                <blockquote className="mt-4 border-l-2 border-accent pl-4 leading-relaxed text-muted text-pretty">
+                <blockquote className="mt-4 border-l-2 border-accent pl-4 text-[1.5rem] leading-relaxed text-[#0000ff] text-pretty">
                   «{usecase.quote}»
                 </blockquote>
                 <ul className="mt-6 flex flex-col gap-2.5 text-sm">

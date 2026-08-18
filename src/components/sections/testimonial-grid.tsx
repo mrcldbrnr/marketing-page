@@ -9,7 +9,7 @@ export function TestimonialGrid() {
           className="flex flex-col gap-6 rounded-3xl border-2 border-[#0000ff] bg-white p-10 text-[#0000ff]"
         >
           <blockquote className="text-[1.75rem] leading-snug font-semibold text-pretty">«{item.quote}»</blockquote>
-          <p className="mt-auto text-[1.125rem]">{item.author}</p>
+          <p className="mt-auto text-[1.125rem] text-black">{item.author}</p>
         </li>
       ))}
     </ul>
