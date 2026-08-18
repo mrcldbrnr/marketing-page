@@ -27,13 +27,15 @@ export function Usecases() {
           <div key={usecase.title} className="border-t border-border py-16 first:border-t-0 first:pt-0 lg:py-20">
             <div className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
               <div className={flip ? "lg:order-2 lg:col-span-5" : "lg:col-span-5"}>
-                <p className="text-sm font-semibold tracking-wide text-accent uppercase">{usecase.persona}</p>
-                <h2 className="mt-2 text-[1.625rem] font-extrabold tracking-tight text-balance sm:text-[2rem]">
+                <h2 className="text-[1.625rem] font-extrabold tracking-tight text-balance sm:text-[2rem]">
                   {usecase.title}
                 </h2>
-                <blockquote className="mt-4 border-l-2 border-accent pl-4 text-[1.5rem] leading-relaxed text-[#0000ff] text-pretty">
-                  «{usecase.quote}»
-                </blockquote>
+                <div className="mt-4 border-l-2 border-accent pl-4">
+                  <blockquote className="text-[1.5rem] leading-relaxed text-[#0000ff] text-pretty">
+                    «{usecase.quote}»
+                  </blockquote>
+                  <p className="mt-3 text-[18px] text-black">Vorname Nachname, Bezeichnung</p>
+                </div>
                 <ul className="mt-6 flex flex-col gap-2.5 text-sm">
                   {usecase.benefits.map((benefit) => (
                     <li key={benefit} className="flex items-start gap-3">
