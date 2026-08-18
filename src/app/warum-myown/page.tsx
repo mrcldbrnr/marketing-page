@@ -4,6 +4,7 @@ import { TestimonialGrid } from "@/components/sections/testimonial-grid";
 import { PressMentions } from "@/components/sections/press-mentions";
 import { Cta } from "@/components/sections/cta";
 import { why } from "@/content/why";
+import { pricing } from "@/content/pricing";
 import { siteConfig } from "@/content/site";
 import { createMetadata } from "@/lib/metadata";
 
@@ -30,7 +31,7 @@ export default function WhyPage() {
         </div>
       </Section>
 
-      <Section>
+      <Section className="pb-[60px] lg:pb-[60px]">
         <p className="text-center text-sm font-semibold tracking-wide text-accent uppercase">Medienberichte</p>
         <div className="mt-10">
           <PressMentions />
@@ -38,10 +39,11 @@ export default function WhyPage() {
       </Section>
 
       <Cta
-        title={why.cta.title}
-        description=""
-        primaryCta={{ label: why.cta.label, href: siteConfig.appUrl, external: true }}
-        secondaryCta={{ label: why.cta.secondaryLabel, href: "/funktionen" }}
+        title={pricing.cta.title}
+        description={pricing.cta.description}
+        primaryCta={{ label: pricing.cta.label, href: siteConfig.appUrl, external: true }}
+        secondaryCta={{ label: "Alle Funktionen ansehen", href: "/funktionen" }}
+        className="pt-[60px] lg:pt-[60px]"
       />
     </>
   );

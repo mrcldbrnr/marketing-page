@@ -85,10 +85,4 @@ export const why = {
     { outlet: "Everyday", quote: "Weniger suchen, weniger merken: So funktioniert digitales Besitzmanagement." },
     { outlet: "Future Home", quote: "Ein digitaler Überblick über die Dinge, die unseren Alltag begleiten." },
   ] satisfies PressMention[],
-
-  cta: {
-    title: "Überzeuge dich selbst: myown kostenlos testen!",
-    label: "myown jetzt live testen",
-    secondaryLabel: "Alle Funktionen ansehen",
-  },
 } as const;
