@@ -112,10 +112,12 @@ function FeatureContentBlock({ content }: { content: Feature["content"] }) {
               </li>
             ))}
           </ul>
-          <div>
-            <p className="text-sm font-semibold text-muted">{content.secondaryTitle}</p>
-            <BulletList items={content.secondaryItems} />
-          </div>
+          {content.secondaryTitle && content.secondaryItems ? (
+            <div>
+              <p className="text-sm font-semibold text-muted">{content.secondaryTitle}</p>
+              <BulletList items={content.secondaryItems} />
+            </div>
+          ) : null}
         </div>
       );
 
@@ -167,7 +169,7 @@ function FeatureContentBlock({ content }: { content: Feature["content"] }) {
               </div>
             </div>
           ))}
-          <p className="text-sm text-muted">{content.note}</p>
+          {content.note ? <p className="text-sm text-muted">{content.note}</p> : null}
         </div>
       );
 

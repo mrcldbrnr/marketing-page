@@ -8,10 +8,15 @@
 export type FeatureContent =
   | { kind: "bulletsWithNote"; items: string[]; note: string }
   | { kind: "bulletsWithExample"; items: string[]; example: { search: string; hit: string; location: string } }
-  | { kind: "statusExamples"; items: { label: string; status: string }[]; secondaryTitle: string; secondaryItems: string[] }
+  | {
+      kind: "statusExamples";
+      items: { label: string; status: string }[];
+      secondaryTitle?: string;
+      secondaryItems?: string[];
+    }
   | { kind: "pairs"; pairs: { from: string; to: string }[]; arrow: "→" | "↔"; note?: string }
   | { kind: "bulletsWithProgress"; items: string[]; example: { label: string; done: number; total: number } }
-  | { kind: "badgeGroups"; groups: { label: string; kind: "zustand" | "status"; values: string[] }[]; note: string }
+  | { kind: "badgeGroups"; groups: { label: string; kind: "zustand" | "status"; values: string[] }[]; note?: string }
   | { kind: "sumList"; items: string[]; note: string };
 
 export type Feature = {
@@ -30,14 +35,14 @@ export const funktionen = {
   intro: {
     title: "Alles, was du brauchst, um deine Sachen im Blick zu behalten.",
     description:
-      "myown hilft dir, deine Dinge zu erfassen, zu finden, zu organisieren und im richtigen Moment zu nutzen.",
+      "myown hilft dir, alle deine Gegenstände zentral zu erfassen, zu organisieren und zu verwalten. So behältst du immer den Überblick und weisst jederzeit, wo was zu finden ist.",
   },
 
   features: [
     {
-      kicker: "Gegenstände erfassen",
+      kicker: "Persönliches Inventar",
       title: "Alles, was dir gehört. An einem Ort.",
-      description: "Gegenstände können mit genau so vielen Informationen erfasst werden, wie benötigt.",
+      description: "Erfasse genau diejenigen Informationen zu deinen Gegenständen, die du benötigst.",
       visualSrc: "/screenshots/funktion1_erfassen.png",
       visualCaption: "Detailkarte eines erfassten Gegenstands in myown",
       content: {
@@ -59,10 +64,10 @@ export const funktionen = {
       },
     },
     {
-      kicker: "Suchfunktion",
-      title: "Weiss, wo deine Sachen sind.",
+      kicker: "Finden statt suchen",
+      title: "Wisse, wo deine Sachen sind.",
       description:
-        "Die Suche berücksichtigt alle erfassten Felder und zeigt bereits während der Eingabe passende Treffer.",
+        "Durchsuche dein Inventar in Windeseile: Die Textsuche berücksichtigt alle erfassten Angaben und zeigt bereits während der Eingabe passende Treffer. Zudem stehen verschiedene Filter und Sortierungen zur Verfügung.",
       visualSrc: "/screenshots/funktion2_suche.gif",
       visualCaption: "Live-Suche im Inventar von myown",
       content: {
@@ -73,8 +78,9 @@ export const funktionen = {
     },
     {
       kicker: "Dashboard",
-      title: "Sieh, was deine Aufmerksamkeit braucht.",
-      description: "Das Dashboard zeigt relevante Gegenstände als grosse Kacheln.",
+      title: "Alles unter Kontrolle.",
+      description:
+        "Das Dashboard zeigt Gegenstände, die deine Aufmerksamkeit benötigen, als grosse Kacheln. Zudem bietet es einen schnellen Überblick über Kaufwert und Anzahl deines Besitzes.",
       visualSrc: "/screenshots/funktion3_dashboard.png",
       visualCaption: "Dashboard mit Kacheln, die Aufmerksamkeit brauchen",
       content: {
@@ -83,16 +89,15 @@ export const funktionen = {
           { label: "Velo", status: "In Reparatur" },
           { label: "Inlineskates", status: "Wartung notwendig" },
           { label: "Kopfhörer", status: "Defekt" },
-          { label: "ausgeliehene oder nicht verfügbare Gegenstände", status: "Ausgeliehen" },
+          { label: "Racletteofen", status: "Ausgeliehen" },
         ],
-        secondaryTitle: "Zusätzlich zeigt das Dashboard",
-        secondaryItems: ["Anzahl Gegenstände", "Kaufwerte", "Übersicht nach Kategorien"],
       },
     },
     {
       kicker: "Standorte",
       title: "Jeder Gegenstand hat seinen Platz.",
-      description: "Standorte werden zweistufig erfasst.",
+      description:
+        "Standorte können zweistufig erfasst werden. So lässt sich nicht nur erkennen, in welchem Raum etwas liegt, sondern bei Bedarf auch der genaue Aufbewahrungsort.",
       visualSrc: "/screenshots/funktion4_standorte.png",
       visualCaption: "Zweistufige Standort-Verwaltung in den Einstellungen",
       content: {
@@ -103,13 +108,13 @@ export const funktionen = {
           { from: "Keller", to: "Veloraum" },
           { from: "Büro", to: "Schublade" },
         ],
-        note: "So lässt sich nicht nur erkennen, in welchem Raum etwas liegt, sondern bei Bedarf auch der genaue Aufbewahrungsort.",
       },
     },
     {
-      kicker: "Verknüpfungen",
-      title: "Was zusammengehört, bleibt zusammen.",
-      description: "Gegenstände können miteinander verknüpft werden.",
+      kicker: "Gegenstände verknüpfen",
+      title: "Halte zusammen, was zusammengehört.",
+      description:
+        "Manche Dinge machen zusammen einfach mehr Spass. Verbinde mit wenigen Klicks Gegenstände, die gemeinsam ein absolutes Dream Team bilden.",
       visualSrc: "/screenshots/funktion5_verknuepfen.png",
       visualCaption: "Dialog zum Verknüpfen zweier Gegenstände",
       content: {
@@ -126,8 +131,8 @@ export const funktionen = {
     },
     {
       kicker: "Packlisten",
-      title: "Pack, was du schon hast.",
-      description: "Packlisten werden direkt aus dem bestehenden Inventar erstellt.",
+      title: "Pack ein, was du schon hast.",
+      description: "Erstelle Packlisten, fülle sie mit deinem bestehenden Inventar und hake ab, was du bereits eingepackt hast.",
       visualSrc: "/screenshots/funktion6_packliste.png",
       visualCaption: "Packliste mit Fortschrittsanzeige",
       content: {
@@ -135,11 +140,10 @@ export const funktionen = {
         items: [
           "Packliste erstellen",
           "Gegenstände auswählen",
-          "nach Kategorien gruppieren",
           "als eingepackt markieren",
           "Packfortschritt anzeigen",
-          "Hinweise bei nicht verfügbaren Gegenständen",
-          "verknüpfte Gegenstände als Ergänzung anzeigen",
+          "Hinweis zu nicht verfügbaren Gegenständen",
+          "verknüpfte Gegenstände als Vorschlag erhalten",
         ],
         example: { label: "Weekend Tessin", done: 8, total: 12 },
       },
@@ -147,7 +151,8 @@ export const funktionen = {
     {
       kicker: "Zustand und Status",
       title: "Bereit, wenn du es brauchst.",
-      description: "Zustand und Status werden getrennt geführt.",
+      description:
+        "Zustand und Status werden getrennt geführt. Dadurch kann ein Gegenstand z. B. in sehr gutem Zustand, aber momentan in Reparatur sein.",
       visualSrc: "/screenshots/funktion7_zustand-status.png",
       visualCaption: "Gegenstand mit separat ausgewiesenem Zustand und Status",
       content: {
@@ -160,13 +165,13 @@ export const funktionen = {
             values: ["Einsatzbereit", "Wartung notwendig", "In Reparatur", "Ausgeliehen", "Nicht verfügbar", "Aussortiert"],
           },
         ],
-        note: "Dadurch kann ein Gegenstand z. B. in sehr gutem Zustand, aber momentan in Reparatur sein.",
       },
     },
     {
       kicker: "Archiv",
       title: "Auch Dinge, die nicht mehr da sind, bleiben nachvollziehbar.",
-      description: "Gegenstände können als Aussortiert markiert werden.",
+      description:
+        "Gegenstände, die sich nicht mehr in deinem Besitz befinden, können als Aussortiert markiert werden. So bleiben dir auch diese stets in Erinnerung.",
       visualSrc: "/screenshots/funktion8_archiv.png",
       visualCaption: "Liste aussortierter Gegenstände mit Grund",
       content: {
@@ -178,7 +183,8 @@ export const funktionen = {
     {
       kicker: "Kaufwerte",
       title: "Wissen, was du investiert hast.",
-      description: "myown zeigt die Summe der hinterlegten Kaufpreise.",
+      description:
+        "myown zeigt die Summe der hinterlegten Kaufpreise. Das hilft dir beispielsweise, den Versicherungswert deines Besitzes realistisch einzuordnen.",
       visualSrc: "/screenshots/funktion9_wert.png",
       visualCaption: "Kaufpreissumme, nach Kategorie gefiltert",
       content: {
@@ -190,7 +196,9 @@ export const funktionen = {
   ] satisfies Feature[],
 
   cta: {
-    title: "Alles im Blick. Alles am richtigen Ort.",
-    label: "myown entdecken",
+    title: "Jetzt testen und kostenlos starten",
+    description:
+      "Erlebe die Funktionen von myown in unserer Live-Demo – ganz ohne Login, Anmeldung und Registrierung. Unverbindlich und garantiert kostenlos.",
+    label: "myown jetzt live testen",
   },
 } as const;

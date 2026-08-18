@@ -31,6 +31,7 @@ export default function FeaturesPage() {
 
       <Cta
         title={funktionen.cta.title}
+        description={funktionen.cta.description}
         primaryCta={{ label: funktionen.cta.label, href: siteConfig.appUrl, external: true }}
         secondaryCta={null}
       />
