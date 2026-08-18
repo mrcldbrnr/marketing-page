@@ -21,24 +21,30 @@ export function Cta({
 }: CtaProps = {}) {
   return (
     <Section className={className}>
-      <div className="flex flex-col items-center gap-6 rounded-3xl border border-border bg-surface px-6 py-16 text-center">
-        <h2 className="max-w-2xl text-[2rem] font-extrabold tracking-tight text-balance sm:text-[2.375rem]">
+      <div className="flex flex-col items-center gap-6 rounded-3xl bg-[#0000ff] px-6 py-16 text-center">
+        <h2 className="max-w-2xl text-[2rem] font-extrabold tracking-tight text-balance text-white sm:text-[2.375rem]">
           {title}
         </h2>
         {description ? (
-          <p className="max-w-xl text-lg leading-relaxed text-muted text-pretty">{description}</p>
+          <p className="max-w-xl text-lg leading-relaxed text-white text-pretty">{description}</p>
         ) : null}
         <div className="flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
           <ButtonLink
             href={primaryCta.href}
             size="lg"
+            className="border-2 border-transparent bg-white text-[#0000ff] hover:border-white hover:bg-transparent hover:text-white active:border-white active:bg-transparent active:text-white focus-visible:outline-white"
             {...(primaryCta.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
           >
             {primaryCta.label}
             {primaryCta.external ? <Icon name="external" className="size-4" /> : null}
           </ButtonLink>
           {secondaryCta ? (
-            <ButtonLink href={secondaryCta.href} size="lg" variant="secondary">
+            <ButtonLink
+              href={secondaryCta.href}
+              size="lg"
+              variant="secondary"
+              className="border-2 border-white bg-transparent text-white hover:bg-white hover:text-[#0000ff] focus-visible:outline-white"
+            >
               {secondaryCta.label}
             </ButtonLink>
           ) : null}
