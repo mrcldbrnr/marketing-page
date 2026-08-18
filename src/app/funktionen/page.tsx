@@ -14,7 +14,7 @@ export const metadata = createMetadata({
 export default function FeaturesPage() {
   return (
     <>
-      <Section containerWidth="wide" className="pt-[2.25rem] lg:pt-[4.25rem]">
+      <Section containerWidth="wide" className="pt-[2.25rem] pb-[3rem] lg:pt-[4.25rem] lg:pb-[4rem]">
         <SectionHeading
           as="h1"
           eyebrow="Funktionen"
@@ -34,6 +34,7 @@ export default function FeaturesPage() {
         description={funktionen.cta.description}
         primaryCta={{ label: funktionen.cta.label, href: siteConfig.appUrl, external: true }}
         secondaryCta={null}
+        className="pt-[3rem] lg:pt-[4rem]"
       />
     </>
   );

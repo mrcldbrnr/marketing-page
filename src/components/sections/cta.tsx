@@ -9,6 +9,7 @@ type CtaProps = {
   primaryCta?: { label: string; href: string; external?: boolean };
   /** Pass `null` to hide the secondary button entirely. */
   secondaryCta?: { label: string; href: string } | null;
+  className?: string;
 };
 
 export function Cta({
@@ -16,9 +17,10 @@ export function Cta({
   description = defaultCta.description,
   primaryCta = defaultCta.primaryCta,
   secondaryCta = defaultCta.secondaryCta,
+  className,
 }: CtaProps = {}) {
   return (
-    <Section>
+    <Section className={className}>
       <div className="flex flex-col items-center gap-6 rounded-3xl border border-border bg-surface px-6 py-16 text-center">
         <h2 className="max-w-2xl text-[2rem] font-extrabold tracking-tight text-balance sm:text-[2.375rem]">
           {title}
