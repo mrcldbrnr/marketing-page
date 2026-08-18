@@ -6,8 +6,12 @@
  */
 
 export type FeatureContent =
-  | { kind: "bulletsWithNote"; items: string[]; note: string }
-  | { kind: "bulletsWithExample"; items: string[]; example: { search: string; hit: string; location: string } }
+  | { kind: "bulletsWithNote"; items: string[]; note?: string }
+  | {
+      kind: "bulletsWithExample";
+      items: string[];
+      example?: { search: string; hit: string; location: string };
+    }
   | {
       kind: "statusExamples";
       items: { label: string; status: string }[];
@@ -17,7 +21,7 @@ export type FeatureContent =
   | { kind: "pairs"; pairs: { from: string; to: string }[]; arrow: "→" | "↔"; note?: string }
   | { kind: "bulletsWithProgress"; items: string[]; example: { label: string; done: number; total: number } }
   | { kind: "badgeGroups"; groups: { label: string; kind: "zustand" | "status"; values: string[] }[]; note?: string }
-  | { kind: "sumList"; items: string[]; note: string };
+  | { kind: "sumList"; items: string[]; note?: string };
 
 export type Feature = {
   /** Short kicker label shown above the title, e.g. "Gegenstände erfassen". */
@@ -60,7 +64,6 @@ export const funktionen = {
           "Dokumente",
           "Notizen",
         ],
-        note: "Nur der Name ist Pflicht.",
       },
     },
     {
@@ -73,7 +76,6 @@ export const funktionen = {
       content: {
         kind: "bulletsWithExample",
         items: ["Kategorie", "Standort", "Zustand", "Status", "Kaufpreis", "Kaufdatum", "Marke / Hersteller"],
-        example: { search: "Powerbank", hit: "Anker PowerCore", location: "Schlafzimmer → Schublade" },
       },
     },
     {
@@ -126,7 +128,6 @@ export const funktionen = {
           { from: "Kamera", to: "Stativ" },
           { from: "Laptop", to: "Ladegerät" },
         ],
-        note: "Verknüpfungen funktionieren beidseitig.",
       },
     },
     {
@@ -177,7 +178,6 @@ export const funktionen = {
       content: {
         kind: "bulletsWithNote",
         items: ["Verkauft", "Verschenkt", "Verloren", "Gestohlen", "Zerstört", "Entsorgt"],
-        note: "Aussortierte Gegenstände werden im aktiven Inventar ausgeblendet, bleiben aber nachvollziehbar.",
       },
     },
     {
@@ -190,7 +190,6 @@ export const funktionen = {
       content: {
         kind: "sumList",
         items: ["gesamtes Inventar", "nach Kategorien"],
-        note: "Es wird bewusst kein aktueller Zeitwert berechnet.",
       },
     },
   ] satisfies Feature[],

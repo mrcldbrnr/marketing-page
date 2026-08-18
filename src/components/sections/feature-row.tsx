@@ -79,7 +79,7 @@ function FeatureContentBlock({ content }: { content: Feature["content"] }) {
       return (
         <div className="flex flex-col gap-4">
           <BulletList items={content.items} />
-          <p className="text-sm text-muted">{content.note}</p>
+          {content.note ? <p className="text-sm text-muted">{content.note}</p> : null}
         </div>
       );
 
@@ -87,17 +87,19 @@ function FeatureContentBlock({ content }: { content: Feature["content"] }) {
       return (
         <div className="flex flex-col gap-4">
           <BulletList items={content.items} />
-          <div className="rounded-2xl border border-border bg-surface p-4 text-sm">
-            <p>
-              <span className="text-muted">Suche:</span> {content.example.search}
-            </p>
-            <p className="mt-1">
-              <span className="text-muted">Treffer:</span> {content.example.hit}
-            </p>
-            <p className="mt-1">
-              <span className="text-muted">Standort:</span> {content.example.location}
-            </p>
-          </div>
+          {content.example ? (
+            <div className="rounded-2xl border border-border bg-surface p-4 text-sm">
+              <p>
+                <span className="text-muted">Suche:</span> {content.example.search}
+              </p>
+              <p className="mt-1">
+                <span className="text-muted">Treffer:</span> {content.example.hit}
+              </p>
+              <p className="mt-1">
+                <span className="text-muted">Standort:</span> {content.example.location}
+              </p>
+            </div>
+          ) : null}
         </div>
       );
 
@@ -177,7 +179,7 @@ function FeatureContentBlock({ content }: { content: Feature["content"] }) {
       return (
         <div className="flex flex-col gap-4">
           <BulletList items={content.items} />
-          <p className="text-sm text-muted">{content.note}</p>
+          {content.note ? <p className="text-sm text-muted">{content.note}</p> : null}
         </div>
       );
 
