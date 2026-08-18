@@ -8,15 +8,17 @@ type LogoProps = {
    * "auto" (default) follows the current colour scheme via `fill-current` /
    * `fill-accent`. "light" pins the wordmark to its light-mode colours —
    * for contexts (like the header, forced to a fixed white background) that
-   * don't follow the theme.
+   * don't follow the theme. "dark" pins it to solid white, for contexts
+   * (like the footer, forced to a fixed brand-blue background) that need a
+   * monochrome light wordmark instead.
    */
-  tone?: "auto" | "light";
+  tone?: "auto" | "light" | "dark";
 };
 
 /** Wordmark, inlined as SVG (not <Image>) so its colours can follow the theme. */
 export function Logo({ className, tone = "auto" }: LogoProps) {
-  const textFill = tone === "light" ? "fill-[#0a0a0a]" : "fill-current";
-  const accentFill = tone === "light" ? "fill-[#0000ff]" : "fill-accent";
+  const textFill = tone === "light" ? "fill-[#0a0a0a]" : tone === "dark" ? "fill-white" : "fill-current";
+  const accentFill = tone === "light" ? "fill-[#0000ff]" : tone === "dark" ? "fill-white" : "fill-accent";
 
   return (
     <Link
