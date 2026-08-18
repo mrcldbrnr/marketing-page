@@ -34,7 +34,7 @@ export function Usecases() {
                   <blockquote className="text-[1.5rem] leading-relaxed text-[#0000ff] text-pretty">
                     «{usecase.quote}»
                   </blockquote>
-                  <p className="mt-3 text-[18px] text-black">Vorname Nachname, Bezeichnung</p>
+                  <p className="mt-3 text-[18px] text-black">{usecase.person}</p>
                 </div>
                 <ul className="mt-6 flex flex-col gap-2.5 text-sm">
                   {usecase.benefits.map((benefit) => (

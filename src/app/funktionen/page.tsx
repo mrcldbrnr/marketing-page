@@ -33,7 +33,7 @@ export default function FeaturesPage() {
         title={funktionen.cta.title}
         description={funktionen.cta.description}
         primaryCta={{ label: funktionen.cta.label, href: siteConfig.appUrl, external: true }}
-        secondaryCta={null}
+        secondaryCta={{ label: "Usecases entdecken", href: "/warum-myown" }}
         className="pt-[3px] lg:pt-[19px]"
       />
     </>

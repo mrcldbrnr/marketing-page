@@ -7,6 +7,7 @@ export type Usecase = {
   title: string;
   persona: string;
   quote: string;
+  person: string;
   benefits: string[];
 };
 
@@ -32,12 +33,14 @@ export const why = {
       title: "Ordnung im Keller",
       persona: "Der Organisierte",
       quote: "Ich weiss endlich, was alles in meinem Keller liegt.",
+      person: "Tom Bischofberger, Modellbauer",
       benefits: ["Standorte erfassen", "Gegenstände suchen", "nach Kategorien filtern", "Überblick behalten"],
     },
     {
       title: "Reisen ohne jedes Mal neu anzufangen",
       persona: "Die Reisende",
       quote: "Meine Packlisten beginnen nicht mehr jedes Mal bei null.",
+      person: "Lina Greter, Travel-Bloggerin",
       benefits: [
         "Gegenstände direkt aus dem Inventar auswählen",
         "Packlisten wiederverwenden",
@@ -49,12 +52,14 @@ export const why = {
       title: "Bereit fürs nächste Abenteuer",
       persona: "Der Outdoor-Fan",
       quote: "Vor dem Wochenend-Ausflug sehe ich sofort, ob Velo, Ski oder Campingausrüstung bereit sind.",
+      person: "Samuel Wetzel, Outdoor-Fan",
       benefits: ["Wartungsbedarf", "Reparaturen", "Zustand", "Status", "Dashboard «Aufmerksamkeit erforderlich»"],
     },
     {
       title: "Technik und Dokumente im Griff",
       persona: "Die Technik-Sammlerin",
       quote: "Seriennummern, Kaufpreise und Belege sind endlich an einem Ort.",
+      person: "Tamara Zimmermann, Technik-Sammlerin",
       benefits: ["Kaufpreis", "Seriennummern", "Dokumente", "Garantie", "Kaufdatum"],
     },
   ] satisfies Usecase[],
