@@ -1,6 +1,5 @@
 import { Section, SectionHeading } from "@/components/ui/section";
 import { PricingPlans } from "@/components/sections/pricing-plans";
-import { PricingComparison } from "@/components/sections/pricing-comparison";
 import { Cta } from "@/components/sections/cta";
 import { pricing } from "@/content/pricing";
 import { siteConfig } from "@/content/site";
@@ -24,10 +23,6 @@ export default function PricingPage() {
           className="mb-26"
         />
         <PricingPlans />
-      </Section>
-
-      <Section containerWidth="wide" tone="surface">
-        <PricingComparison />
       </Section>
 
       <Cta

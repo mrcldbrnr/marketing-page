@@ -27,8 +27,6 @@ export type Plan =
       cta: { label: string; href: string; note: string };
     };
 
-export type ComparisonRow = { feature: string; free: boolean; pro: boolean };
-
 export const pricing = {
   hero: {
     title: "Starte kostenlos. Hol dir mehr, wenn du mehr brauchst.",
@@ -88,21 +86,6 @@ export const pricing = {
       },
     },
   ] satisfies Plan[],
-
-  comparison: {
-    rows: [
-      { feature: "Inventar", free: true, pro: true },
-      { feature: "Suche & Filter", free: true, pro: true },
-      { feature: "Dashboard", free: true, pro: true },
-      { feature: "Packlisten", free: true, pro: true },
-      { feature: "Dokumente", free: true, pro: true },
-      { feature: "Online-Marktplätze", free: false, pro: true },
-      { feature: "Versicherungsschutz", free: false, pro: true },
-      { feature: "Reparaturservice", free: false, pro: true },
-      { feature: "Automatische Produkterkennung", free: false, pro: true },
-      { feature: "Smart Packing", free: false, pro: true },
-    ] satisfies ComparisonRow[],
-  },
 
   cta: {
     title: "Jetzt testen und kostenlos starten",
