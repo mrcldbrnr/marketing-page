@@ -23,7 +23,7 @@ export function PricingPlans() {
     <div className="mx-auto grid max-w-5xl gap-6 lg:grid-cols-2">
       {pricing.plans.map((plan) =>
         plan.kind === "free" ? (
-          <div key={plan.name} className="flex flex-col gap-6 rounded-3xl border border-border bg-surface p-8">
+          <div key={plan.name} className="flex flex-col gap-6 rounded-3xl border-2 border-[#0000ff] bg-surface p-8">
             <div className="flex flex-col gap-2">
               <h2 className="text-lg font-semibold">{plan.name}</h2>
               <p className="text-sm text-muted">{plan.description}</p>
@@ -46,12 +46,16 @@ export function PricingPlans() {
               </ul>
             </div>
 
-            <ButtonLink href={plan.cta.href} variant="secondary" className="mt-auto w-full">
+            <ButtonLink
+              href={plan.cta.href}
+              variant="primary"
+              className="mt-auto w-full bg-[#0000ff] text-white hover:bg-accent hover:text-accent-foreground"
+            >
               {plan.cta.label}
             </ButtonLink>
           </div>
         ) : (
-          <div key={plan.name} className="flex flex-col gap-6 rounded-3xl border-2 border-foreground bg-surface p-8">
+          <div key={plan.name} className="flex flex-col gap-6 rounded-3xl border border-border bg-surface p-8">
             <div className="flex flex-col gap-2">
               <div className="flex items-center justify-between gap-3">
                 <h2 className="text-lg font-semibold">{plan.name}</h2>
@@ -88,7 +92,7 @@ export function PricingPlans() {
 
             <div className="mt-auto flex flex-col gap-3">
               <p className="text-xs text-muted">{plan.cta.note}</p>
-              <ButtonLink href={plan.cta.href} variant="primary" className="w-full">
+              <ButtonLink href={plan.cta.href} variant="secondary" className="w-full">
                 {plan.cta.label}
               </ButtonLink>
             </div>
