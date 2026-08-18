@@ -29,7 +29,7 @@ export default function PricingPage() {
         title={pricing.cta.title}
         description={pricing.cta.description}
         primaryCta={{ label: pricing.cta.label, href: siteConfig.appUrl, external: true }}
-        secondaryCta={null}
+        secondaryCta={{ label: "Alle Funktionen ansehen", href: "/funktionen" }}
         className="pt-[60px] lg:pt-[60px]"
       />
     </>
