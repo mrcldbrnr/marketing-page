@@ -28,7 +28,7 @@ export function PricingTeaser() {
       <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
         <div className="flex flex-col gap-4 rounded-3xl border-2 border-[#0000ff] bg-background p-8">
           <h3 className="text-lg font-semibold">{pricingTeaser.free.title}</h3>
-          <ul className="flex flex-col gap-2.5 text-sm">
+          <ul className="flex flex-col gap-2.5 text-base">
             {pricingTeaser.free.items.map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />
@@ -45,7 +45,7 @@ export function PricingTeaser() {
               {pricingTeaser.pro.badge}
             </span>
           </div>
-          <ul className="flex flex-col gap-2.5 text-sm">
+          <ul className="flex flex-col gap-2.5 text-base">
             {pricingTeaser.pro.items.map((item) => (
               <li key={item} className="flex items-start gap-3">
                 <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />

@@ -37,7 +37,7 @@ export function Usecases() {
                   </blockquote>
                   <p className="mt-3 text-[18px] text-black">{usecase.person}</p>
                 </div>
-                <ul className="mt-6 flex flex-col gap-2.5 text-sm">
+                <ul className="mt-6 flex flex-col gap-2.5 text-base">
                   {usecase.benefits.map((benefit) => (
                     <li key={benefit} className="flex items-start gap-3">
                       <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />

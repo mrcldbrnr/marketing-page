@@ -36,7 +36,7 @@ export function PricingPlans() {
 
             <div className="flex flex-col gap-3">
               <p className="text-sm font-semibold text-muted">Enthalten:</p>
-              <ul className="flex flex-col gap-3 text-sm">
+              <ul className="flex flex-col gap-3 text-base">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-start gap-3">
                     <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />
@@ -69,7 +69,7 @@ export function PricingPlans() {
 
             <div className="flex flex-col gap-4">
               <p className="text-sm font-semibold text-muted">{plan.description}</p>
-              <ul className="flex flex-col gap-4 text-sm">
+              <ul className="flex flex-col gap-4 text-base">
                 {plan.highlights.map((highlight) => (
                   <li key={highlight.title} className="flex items-start gap-3">
                     <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />
