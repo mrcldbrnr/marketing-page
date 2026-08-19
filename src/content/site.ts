@@ -41,23 +41,20 @@ export const mainNav: NavItem[] = [
 /** Footer link groups. Add or remove groups freely — the layout adapts. */
 export const footerNav: { title: string; items: NavItem[] }[] = [
   {
-    title: "Unternehmen",
-    items: [{ label: "Kontakt", href: "/kontakt" }],
-  },
-  {
-    title: "Rechtliches",
-    items: [
-      { label: "Impressum", href: "/impressum" },
-      { label: "Datenschutz", href: "/datenschutz" },
-    ],
-  },
-  {
     title: "Produkt",
     items: [
       { label: "Funktionen", href: "/funktionen" },
       { label: "Preisplan", href: "/preisplan" },
       { label: "Warum myown", href: "/warum-myown" },
       { label: "FAQ", href: "/faq" },
+      { label: "Kontakt", href: "/kontakt" },
+    ],
+  },
+  {
+    title: "Rechtliches",
+    items: [
+      { label: "Impressum", href: "/impressum" },
+      { label: "Datenschutz", href: "/datenschutz" },
     ],
   },
 ];

@@ -12,10 +12,9 @@ export function SiteFooter() {
             <Logo tone="dark" />
           </div>
 
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div className="grid grid-cols-2 gap-8">
             {footerNav.map((group) => (
               <div key={group.title} className="flex flex-col gap-3">
-                <h2 className="text-sm font-semibold text-white">{group.title}</h2>
                 <ul className="flex flex-col gap-2">
                   {group.items.map((item) => (
                     <li key={item.href}>
