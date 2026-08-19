@@ -17,8 +17,9 @@ type FaqProps = {
 
 /**
  * Uses native <details>/<summary> — accessible and keyboard-operable without
- * any client-side JavaScript. The first item starts open so the accordion
- * doesn't read as fully collapsed/empty on load.
+ * any client-side JavaScript. All items share a `name`, which makes the
+ * browser treat them as an exclusive group (opening one closes the others),
+ * also without any JavaScript.
  */
 export function Faq({
   headingLevel = "h2",
@@ -35,8 +36,8 @@ export function Faq({
       <div
         className={`${headingLevel === "h1" ? "mt-22" : "mt-12"} divide-y divide-border border-y border-border`}
       >
-        {items.map((item, index) => (
-          <details key={item.question} className="group py-5" open={index === 0}>
+        {items.map((item) => (
+          <details key={item.question} name={`faq-${headingLevel}`} className="group py-5">
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-medium marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
               {item.question}
               <svg
