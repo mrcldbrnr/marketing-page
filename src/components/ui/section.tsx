@@ -74,7 +74,7 @@ export function SectionHeading({
         {title}
       </Heading>
       {description ? (
-        <p className="text-lg leading-relaxed text-muted text-pretty">{description}</p>
+        <p className="text-xl leading-relaxed text-muted text-pretty">{description}</p>
       ) : null}
     </div>
   );
