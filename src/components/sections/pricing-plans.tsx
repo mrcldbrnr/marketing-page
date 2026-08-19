@@ -1,4 +1,3 @@
-import { ButtonLink } from "@/components/ui/button";
 import { pricing } from "@/content/pricing";
 
 function CheckIcon({ className }: { className?: string }) {
@@ -82,12 +81,7 @@ export function PricingPlans() {
               </ul>
             </div>
 
-            <div className="mt-auto flex flex-col gap-3">
-              <p className="text-xs text-muted">{plan.cta.note}</p>
-              <ButtonLink href={plan.cta.href} variant="secondary" className="w-full">
-                {plan.cta.label}
-              </ButtonLink>
-            </div>
+            <p className="mt-auto text-xs text-muted">{plan.note}</p>
           </div>
         ),
       )}

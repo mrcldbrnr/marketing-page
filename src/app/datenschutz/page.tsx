@@ -29,7 +29,6 @@ export default function PrivacyPage() {
         <h2>Welche Daten wir bearbeiten</h2>
         <ul>
           <li>Server-Logdaten beim Aufruf der Website (IP-Adresse, Zeitpunkt, aufgerufene Seite)</li>
-          <li>Angaben, die du im Kontaktformular freiwillig übermittelst</li>
           <li>Ggf. Nutzungsstatistiken, sofern eine Analyse-Lösung eingesetzt wird</li>
         </ul>
 

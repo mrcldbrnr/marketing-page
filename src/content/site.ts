@@ -17,7 +17,7 @@ export const siteConfig = {
   /** Live app instance the header CTA links to. */
   appUrl: "https://web-app-zeta-ruddy-63.vercel.app",
   locale: "de_CH",
-  /** Shown in the footer and used by the contact page. */
+  /** Used on the legal pages (Impressum, Datenschutz). */
   contact: {
     email: "hallo@example.com",
     phone: "+41 44 000 00 00",
@@ -47,7 +47,6 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
       { label: "Preisplan", href: "/preisplan" },
       { label: "Warum myown", href: "/warum-myown" },
       { label: "FAQ", href: "/faq" },
-      { label: "Kontakt", href: "/kontakt" },
     ],
   },
   {

@@ -158,6 +158,6 @@ export const faq = {
 export const cta = {
   title: "Deine Sachen im Griff. Den Kopf frei.",
   description: "Alles im Blick. Alles am richtigen Ort. Bereit, wenn du es brauchst.",
-  primaryCta: { label: "myown jetzt live testen", href: "/kontakt" },
+  primaryCta: { label: "myown jetzt live testen", href: "/funktionen" },
   secondaryCta: null,
 };

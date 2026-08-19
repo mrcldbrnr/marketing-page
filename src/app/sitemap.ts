@@ -11,8 +11,6 @@ const routes: { path: string; priority: number; changeFrequency: "monthly" | "ye
   { path: "/preisplan", priority: 0.9, changeFrequency: "monthly" },
   { path: "/warum-myown", priority: 0.8, changeFrequency: "monthly" },
   { path: "/faq", priority: 0.7, changeFrequency: "monthly" },
-  { path: "/ueber-uns", priority: 0.6, changeFrequency: "monthly" },
-  { path: "/kontakt", priority: 0.6, changeFrequency: "yearly" },
   { path: "/impressum", priority: 0.3, changeFrequency: "yearly" },
   { path: "/datenschutz", priority: 0.3, changeFrequency: "yearly" },
 ];

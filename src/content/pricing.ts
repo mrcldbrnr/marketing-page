@@ -1,8 +1,8 @@
 /**
  * Copy for the /preisplan page. Free and Pro differ enough in shape (a plain
  * feature checklist vs. named highlight blocks with their own description,
- * plus a monthly/yearly price pair and a "coming soon" waitlist CTA) that
- * `Plan` is a discriminated union rather than one fixed shape.
+ * plus a monthly/yearly price pair) that `Plan` is a discriminated union
+ * rather than one fixed shape.
  */
 
 export type Plan =
@@ -23,7 +23,7 @@ export type Plan =
       intervalYearly: string;
       description: string;
       highlights: { title: string; description: string }[];
-      cta: { label: string; href: string; note: string };
+      note: string;
     };
 
 export const pricing = {
@@ -77,11 +77,7 @@ export const pricing = {
           description: "Packvorschläge anhand von Reiseziel, Wetter und bereits vorhandenen Gegenständen.",
         },
       ],
-      cta: {
-        label: "Auf Warteliste eintragen",
-        href: "/kontakt",
-        note: "Wir benachrichtigen dich, sobald myown Pro verfügbar ist.",
-      },
+      note: "Wir benachrichtigen dich, sobald myown Pro verfügbar ist.",
     },
   ] satisfies Plan[],
 

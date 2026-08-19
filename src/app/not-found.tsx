@@ -16,9 +16,6 @@ export default function NotFound() {
           <ButtonLink href="/" size="lg">
             Zur Startseite
           </ButtonLink>
-          <ButtonLink href="/kontakt" size="lg" variant="secondary">
-            Kontakt aufnehmen
-          </ButtonLink>
         </div>
       </div>
     </Section>
