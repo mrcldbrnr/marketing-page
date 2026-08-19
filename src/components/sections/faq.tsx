@@ -4,23 +4,26 @@ import { faq } from "@/content/landing";
 type FaqProps = {
   /** Pass "h1" when this section carries the page title (the /faq page). */
   headingLevel?: "h1" | "h2";
+  title?: string;
+  description?: string;
   className?: string;
 };
 
 /**
  * Uses native <details>/<summary> — accessible and keyboard-operable without
- * any client-side JavaScript.
+ * any client-side JavaScript. The first item starts open so the accordion
+ * doesn't read as fully collapsed/empty on load.
  */
-export function Faq({ headingLevel = "h2", className }: FaqProps) {
+export function Faq({ headingLevel = "h2", title = faq.title, description, className }: FaqProps) {
   return (
     <Section id="faq" containerWidth="narrow" className={className}>
-      <SectionHeading as={headingLevel} eyebrow={faq.eyebrow} title={faq.title} />
+      <SectionHeading as={headingLevel} eyebrow={faq.eyebrow} title={title} description={description} />
 
       <div
         className={`${headingLevel === "h1" ? "mt-22" : "mt-12"} divide-y divide-border border-y border-border`}
       >
-        {faq.items.map((item) => (
-          <details key={item.question} className="group py-5">
+        {faq.items.map((item, index) => (
+          <details key={item.question} className="group py-5" open={index === 0}>
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
               {item.question}
               <svg

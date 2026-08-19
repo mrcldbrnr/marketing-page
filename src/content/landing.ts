@@ -82,24 +82,73 @@ export const faq = {
   title: "Häufige Fragen",
   items: [
     {
-      question: "Wie lange dauert die Einrichtung?",
+      question: "Was ist myown?",
       answer:
-        "Die meisten Teams sind in unter einer Stunde startklar. Für Migrationen aus bestehenden Systemen unterstützen wir kostenlos.",
+        "myown ist eine App, mit der du deine physischen Gegenstände erfassen, organisieren, finden und für unterschiedliche Situationen nutzen kannst.",
     },
     {
-      question: "Wo liegen meine Daten?",
+      question: "Was kann ich mit myown erfassen?",
       answer:
-        "In Rechenzentren in der Schweiz oder der EU – du wählst die Region bei der Einrichtung.",
+        "Grundsätzlich alles, was dir gehört – von Möbeln und Kleidung bis zu Elektronik, Sportausrüstung oder Küchenutensilien.",
     },
     {
-      question: "Kann ich jederzeit kündigen?",
+      question: "Muss ich jeden Gegenstand vollständig dokumentieren?",
       answer:
-        "Ja. Monatsabos sind auf Monatsende kündbar, Jahresabos zum Ablauf der Laufzeit. Ein Datenexport ist immer möglich.",
+        "Nein. Nur der Name ist erforderlich. Alle weiteren Angaben wie Foto, Marke, Standort, Kaufpreis, Zustand oder Dokumente sind optional.",
     },
     {
-      question: "Gibt es Rabatte für Non-Profits?",
+      question: "Kann ich sehen, wo ein Gegenstand liegt?",
       answer:
-        "Ja, gemeinnützige Organisationen und Bildungseinrichtungen erhalten 50 % Rabatt. Melde dich einfach bei uns.",
+        "Ja. Standorte können zweistufig erfasst werden, zum Beispiel Keller → Werkzeugregal oder Küche → Vorratsschrank.",
+    },
+    {
+      question: "Wie finde ich einen Gegenstand?",
+      answer:
+        "Über die Live-Suche kannst du dein gesamtes Inventar durchsuchen. Dabei werden alle erfassten Felder berücksichtigt. Zusätzlich kannst du das Inventar nach Kategorie, Standort, Zustand, Status, Kaufpreis und weiteren Eigenschaften filtern.",
+    },
+    {
+      question: "Kann myown mir zeigen, wenn etwas gewartet werden muss?",
+      answer:
+        "Ja. Das Dashboard zeigt Gegenstände, die Aufmerksamkeit benötigen, zum Beispiel bei Wartungsbedarf, Reparaturen oder einem defekten Zustand.",
+    },
+    {
+      question: "Kann ich myown für Reisen nutzen?",
+      answer:
+        "Ja. Im Bereich «Ich verreise» kannst du Packlisten erstellen und dafür direkt Gegenstände aus deinem bestehenden Inventar auswählen.",
+    },
+    {
+      question: "Was passiert mit Dingen, die ich nicht mehr besitze?",
+      answer:
+        "Sie können als «Aussortiert» markiert werden, zum Beispiel weil sie verkauft, verschenkt, verloren, gestohlen, zerstört oder entsorgt wurden. Dadurch verschwinden sie aus dem aktiven Inventar, bleiben aber nachvollziehbar.",
+    },
+    {
+      question: "Was passiert, wenn ein aussortierter Gegenstand bereits auf einer Packliste steht?",
+      answer:
+        "Der Gegenstand bleibt auf der bestehenden Packliste sichtbar und erhält den Hinweis «Aussortiert». Er kann jedoch nicht neu zu einer Packliste hinzugefügt werden.",
+    },
+    {
+      question: "Kann ich zusammengehörende Gegenstände miteinander verbinden?",
+      answer:
+        "Ja. Du kannst Gegenstände miteinander verknüpfen, zum Beispiel Ski und Skischuhe, Velo und Helm oder Kamera und Stativ. Die Verknüpfung funktioniert in beide Richtungen.",
+    },
+    {
+      question: "Kann ich den Wert meines Inventars sehen?",
+      answer:
+        "myown summiert die hinterlegten Kaufpreise und zeigt den erfassten Kaufwert insgesamt sowie nach Kategorien. Es wird kein aktueller Zeitwert berechnet.",
+    },
+    {
+      question: "Ist myown auch auf dem Smartphone nutzbar?",
+      answer: "Ja. myown ist als responsive Web-App für Desktop, Tablet und Smartphone konzipiert.",
+    },
+    {
+      question: "Was kostet myown?",
+      answer:
+        "Der Free-Plan enthält alle aktuellen Kernfunktionen. Der Pro-Plan ergänzt zusätzliche Services wie automatisierte Erfassung von Gegenständen per Foto-Upload, Marktplatz-Anbindungen, Versicherungsschutz und Reparaturservices.",
+    },
+    {
+      question: "Gibt es geteilte Konten für mehrere Personen im gleichen Haushalt?",
+      answer:
+        "In der aktuellen Version nicht. Die Anwendung ist als Single-User-Applikation konzipiert. Multi-User-Funktionen sind derzeit nicht Bestandteil des Funktionsumfangs.",
     },
   ],
 };
