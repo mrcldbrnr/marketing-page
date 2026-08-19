@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/container";
 import { Logo } from "@/components/layout/logo";
-import { footerNav, siteConfig } from "@/content/site";
+import { footerNav } from "@/content/site";
 
 export function SiteFooter() {
   return (
@@ -28,13 +28,6 @@ export function SiteFooter() {
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="flex flex-col gap-2 border-t border-white py-6 text-sm text-white sm:flex-row sm:items-center sm:justify-between">
-          <p>
-            © {new Date().getFullYear()} {siteConfig.name}. Alle Rechte vorbehalten.
-          </p>
-          <p>{siteConfig.contact.address}</p>
         </div>
       </Container>
     </footer>
