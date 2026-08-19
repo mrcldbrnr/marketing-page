@@ -18,7 +18,7 @@ export function SiteFooter() {
                 <ul className="flex flex-col gap-2">
                   {group.items.map((item) => (
                     <li key={item.href}>
-                      <Link href={item.href} className="text-sm text-white hover:text-white/70">
+                      <Link href={item.href} className="text-base text-white hover:text-white/70">
                         {item.label}
                       </Link>
                     </li>
