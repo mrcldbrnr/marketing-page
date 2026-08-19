@@ -59,7 +59,7 @@ export function Faq({
 
       {cta ? (
         <div className="mt-10 flex justify-center">
-          <ButtonLink href={cta.href} variant="secondary" size="lg">
+          <ButtonLink href={cta.href} variant="primary" size="lg">
             {cta.label}
             <Icon name="arrowRight" className="size-4" />
           </ButtonLink>

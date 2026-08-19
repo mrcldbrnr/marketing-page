@@ -20,7 +20,7 @@ export function FeaturesTeaser() {
       </ul>
 
       <div className="mt-10 flex justify-center">
-        <ButtonLink href="/funktionen" variant="secondary" size="lg">
+        <ButtonLink href="/funktionen" variant="primary" size="lg">
           {featuresTeaser.cta}
           <Icon name="arrowRight" className="size-4" />
         </ButtonLink>

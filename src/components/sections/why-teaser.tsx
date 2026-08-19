@@ -22,7 +22,7 @@ export function WhyTeaser() {
       </ul>
 
       <div className="mt-10 flex justify-center">
-        <ButtonLink href="/warum-myown" variant="secondary" size="lg">
+        <ButtonLink href="/warum-myown" variant="primary" size="lg">
           {whyTeaser.cta}
           <Icon name="arrowRight" className="size-4" />
         </ButtonLink>

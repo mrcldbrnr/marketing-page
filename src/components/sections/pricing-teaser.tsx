@@ -57,7 +57,7 @@ export function PricingTeaser() {
       </div>
 
       <div className="mt-10 flex justify-center">
-        <ButtonLink href="/preisplan" variant="secondary" size="lg">
+        <ButtonLink href="/preisplan" variant="primary" size="lg">
           {pricingTeaser.cta}
           <Icon name="arrowRight" className="size-4" />
         </ButtonLink>
