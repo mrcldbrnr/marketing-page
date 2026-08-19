@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { why } from "@/content/why";
 
 function CheckIcon({ className }: { className?: string }) {
@@ -46,11 +47,14 @@ export function Usecases() {
                 </ul>
               </div>
 
-              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl border border-border bg-surface lg:col-span-7">
-                <div className="flex h-full flex-col items-center justify-center gap-1 text-center text-sm text-muted">
-                  <p>Screenshot / Produktvideo</p>
-                  <p>{usecase.title}</p>
-                </div>
+              <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl lg:col-span-7">
+                <Image
+                  src={usecase.visualSrc}
+                  alt={usecase.title}
+                  fill
+                  className="object-cover"
+                  sizes="(min-width: 1024px) 58vw, 100vw"
+                />
               </div>
             </div>
           </div>

@@ -9,6 +9,8 @@ export type Usecase = {
   quote: string;
   person: string;
   benefits: string[];
+  /** Path under /public to the usecase visual. */
+  visualSrc: string;
 };
 
 export type Testimonial = {
@@ -35,6 +37,7 @@ export const why = {
       quote: "Ich weiss endlich, was alles in meinem Keller liegt.",
       person: "Tom Bischofberger, Modellbauer",
       benefits: ["Standorte erfassen", "Gegenstände suchen", "nach Kategorien filtern", "Überblick behalten"],
+      visualSrc: "/usecases/usecase-1_keller_Gemini_Generated_Image_65f04o65f04o65f0.jpg",
     },
     {
       title: "Reisen ohne jedes Mal neu anzufangen",
@@ -47,6 +50,7 @@ export const why = {
         "Packfortschritt sehen",
         "nicht verfügbare Gegenstände erkennen",
       ],
+      visualSrc: "/usecases/usecase-2_reisen_Gemini_Generated_Image_dhxl81dhxl81dhxl.jpg",
     },
     {
       title: "Bereit fürs nächste Abenteuer",
@@ -54,6 +58,7 @@ export const why = {
       quote: "Vor dem Wochenend-Ausflug sehe ich sofort, ob Velo, Ski oder Campingausrüstung bereit sind.",
       person: "Samuel Wetzel, Outdoor-Fan",
       benefits: ["Wartungsbedarf", "Reparaturen", "Zustand", "Status", "Dashboard «Aufmerksamkeit erforderlich»"],
+      visualSrc: "/usecases/usecase-3_outdoor_Gemini_Generated_Image_ll0td9ll0td9ll0t.jpg",
     },
     {
       title: "Technik und Dokumente im Griff",
@@ -61,6 +66,7 @@ export const why = {
       quote: "Seriennummern, Kaufpreise und Belege sind endlich an einem Ort.",
       person: "Tamara Zimmermann, Technik-Sammlerin",
       benefits: ["Kaufpreis", "Seriennummern", "Dokumente", "Garantie", "Kaufdatum"],
+      visualSrc: "/usecases/usecase-4_technik_Gemini_Generated_Image_m9yj7jm9yj7jm9yj.jpg",
     },
   ] satisfies Usecase[],
 
