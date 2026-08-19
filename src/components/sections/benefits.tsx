@@ -8,7 +8,7 @@ export function Benefits() {
         {benefits.items.map((item) => (
           <li
             key={item.title}
-            className="flex flex-col gap-2 rounded-3xl border-2 border-[#0000ff] bg-background p-8 text-center"
+            className="flex flex-col gap-2 rounded-3xl border-2 border-border bg-background p-8 text-center"
           >
             <h3 className="text-xl font-bold">{item.title}</h3>
             <p className="text-lg text-muted">{item.description}</p>

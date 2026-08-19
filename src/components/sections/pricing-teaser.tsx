@@ -38,7 +38,7 @@ export function PricingTeaser() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4 rounded-3xl border-2 border-[#0000ff] bg-background p-8">
+        <div className="flex flex-col gap-4 rounded-3xl border-2 border-border bg-background p-8">
           <div className="flex items-center justify-between gap-3">
             <h3 className="text-lg font-semibold">{pricingTeaser.pro.title}</h3>
             <span className="rounded-full bg-foreground px-3 py-1 text-xs font-medium text-background">

@@ -14,7 +14,7 @@ export function WhyTeaser() {
         {whyTeaser.usecases.map((usecase) => (
           <li
             key={usecase}
-            className="rounded-full border-2 border-[#0000ff] bg-background px-5 py-2 text-sm font-medium text-[#0000ff]"
+            className="rounded-full border-2 border-border bg-background px-5 py-2 text-sm font-medium text-[#0000ff]"
           >
             {usecase}
           </li>

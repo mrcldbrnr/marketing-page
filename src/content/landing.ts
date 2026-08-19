@@ -34,6 +34,8 @@ export const benefits = {
 
 export const featuresTeaser = {
   title: "Alles, was du brauchst, um deine Sachen im Griff zu behalten.",
+  screenshotSrc: "/screenshots/funktion3_dashboard.png",
+  screenshotAlt: "Dashboard mit Kacheln, die Aufmerksamkeit brauchen",
   items: [
     "Persönliches Inventar",
     "Schnelle Suche und Filter",
