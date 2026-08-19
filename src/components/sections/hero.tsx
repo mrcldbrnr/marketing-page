@@ -1,6 +1,8 @@
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button";
+import { Icon } from "@/components/ui/icon";
 import { hero } from "@/content/landing";
+import { siteConfig } from "@/content/site";
 
 export function Hero() {
   return (
@@ -22,15 +24,14 @@ export function Hero() {
           </p>
 
           <div className="mt-2 flex w-full flex-col gap-3 sm:w-auto sm:flex-row">
-            <ButtonLink href={hero.primaryCta.href} size="lg">
-              {hero.primaryCta.label}
+            <ButtonLink href={siteConfig.appUrl} size="lg" target="_blank" rel="noopener noreferrer">
+              {hero.primaryCtaLabel}
+              <Icon name="external" className="size-4" />
             </ButtonLink>
             <ButtonLink href={hero.secondaryCta.href} size="lg" variant="secondary">
               {hero.secondaryCta.label}
             </ButtonLink>
           </div>
-
-          {hero.note ? <p className="text-sm text-muted">{hero.note}</p> : null}
         </div>
 
         {/* Product shot placeholder — replace with next/image once artwork exists. */}

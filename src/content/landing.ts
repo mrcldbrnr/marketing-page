@@ -1,80 +1,81 @@
 /**
  * Copy for the landing page. Sections read from here, so rewriting the page
- * means editing this file — not the components.
+ * means editing this file — not the components. The page is a teaser/router
+ * to the four subpages (Funktionen, Preisplan, Warum myown, FAQ); it doesn't
+ * explain every feature in depth.
  */
 
 export const hero = {
-  title: "Alles, was du hast. Bereit, wenn du es brauchst.",
+  title: "Alles im Blick. Alles am richtigen Ort. Bereit, wenn du es brauchst.",
   description:
     "myown bringt Ordnung in deine Sachen und Ruhe in deinen Kopf. Du weisst, was du besitzt, wo es liegt und ob es bereit ist, wenn du es brauchst.",
-  primaryCta: { label: "Kostenlos starten", href: "/kontakt" },
-  secondaryCta: { label: "Funktionen ansehen", href: "#funktionen" },
-  note: "Keine Kreditkarte nötig · 14 Tage testen",
+  primaryCtaLabel: "myown kostenlos testen",
+  secondaryCta: { label: "Funktionen ansehen", href: "/funktionen" },
 };
 
-export const features = {
-  eyebrow: "Funktionen",
-  title: "Gebaut für den Alltag, nicht für die Demo",
-  description:
-    "Jede Funktion löst ein konkretes Problem. Kein Feature-Zoo, den ohnehin niemand benutzt.",
-  items: [
-    {
-      title: "Klare Planung",
-      description:
-        "Roadmaps, Sprints und Aufgaben in einer Ansicht. Alle sehen, was als Nächstes zählt.",
-      icon: "map",
-    },
-    {
-      title: "Automatisierte Workflows",
-      description:
-        "Wiederkehrende Schritte laufen von selbst. Weniger Statusmeetings, mehr Fortschritt.",
-      icon: "bolt",
-    },
-    {
-      title: "Verlässliche Zahlen",
-      description: "Auslastung, Durchlaufzeit und Qualität – in Echtzeit statt im Monatsreport.",
-      icon: "chart",
-    },
-    {
-      title: "Sichere Zusammenarbeit",
-      description: "Rollen, SSO und Audit-Logs ab dem ersten Tag. Hosting in der Schweiz und EU.",
-      icon: "shield",
-    },
-    {
-      title: "Offene Schnittstellen",
-      description: "REST-API, Webhooks und fertige Integrationen für die Tools, die du schon hast.",
-      icon: "plug",
-    },
-    {
-      title: "Support, der antwortet",
-      description: "Echte Menschen, mittlere Antwortzeit unter zwei Stunden während der Bürozeiten.",
-      icon: "chat",
-    },
+export const problem = {
+  title: "Du musst dir nicht alles merken.",
+  situations: [
+    "Wo war nochmal die Powerbank?",
+    "Sind meine Skis bereit fürs Wochenende?",
+    "Was liegt eigentlich alles im Keller?",
+    "Habe ich nicht schon so ein Kabel?",
   ],
-} as const;
+  resolution: "myown behält deine Sachen im Blick, damit du es nicht musst.",
+};
 
-export const testimonials = {
-  eyebrow: "Kundenstimmen",
-  title: "Was Teams nach dem Umstieg sagen",
+export const benefits = {
   items: [
-    {
-      quote:
-        "Wir haben drei Tools ersetzt und trotzdem weniger Aufwand. Die Einführung dauerte einen Nachmittag.",
-      author: "Lena Moser",
-      role: "Head of Product, Northwind",
-    },
-    {
-      quote:
-        "Zum ersten Mal sehen wir ehrlich, wo ein Projekt steht – ohne dass jemand Zahlen zusammensucht.",
-      author: "Tobias Frei",
-      role: "CTO, Globex",
-    },
-    {
-      quote: "Der Support hat uns beim Datenimport begleitet. Genau so stellt man sich das vor.",
-      author: "Sara Keller",
-      role: "Operations Lead, Initech",
-    },
+    { title: "Weniger merken.", description: "Alles, was dir gehört, an einem Ort." },
+    { title: "Schneller finden.", description: "Finde sofort, was du brauchst." },
+    { title: "Alles im Blick.", description: "Sieh, was bereit ist oder Aufmerksamkeit braucht." },
   ],
+};
+
+export const featuresTeaser = {
+  title: "Alles, was du brauchst, um deine Sachen im Griff zu behalten.",
+  items: [
+    "Persönliches Inventar",
+    "Schnelle Suche und Filter",
+    "Dashboard mit Aufmerksamkeitshinweisen",
+    "Packlisten für Reisen",
+  ],
+  cta: "Alle Funktionen entdecken",
+};
+
+export const pricingTeaser = {
+  title: "Kostenlos starten. Bei Bedarf mehr rausholen.",
+  free: {
+    title: "Free",
+    items: ["Persönliches Inventar", "Suche und Filter", "Dashboard", "Packlisten", "alle aktuellen Kernfunktionen"],
+  },
+  pro: {
+    title: "Pro",
+    badge: "Coming soon",
+    items: [
+      "Automatische Produkterkennung mit KI",
+      "Belege automatisch erfassen",
+      "Marktplatz-Anbindungen",
+      "Intelligente Packvorschläge",
+    ],
+  },
+  cta: "Preispläne vergleichen",
+};
+
+export const whyTeaser = {
+  quote:
+    "Seit ich myown nutze, muss ich nicht mehr überlegen, wo ich was aufbewahre, in welchem Zustand es sich befindet und ob alles parat für den nächsten Einsatz ist.",
+  usecases: ["Ordnung im Keller", "Reisevorbereitung", "Wartung von Sportausrüstung"],
+  cta: "Mehr Usecases entdecken",
+};
+
+export const faqTeaser = {
+  questions: [
+    "Was kann ich mit myown erfassen?",
+    "Ist myown auch auf dem Smartphone nutzbar?",
+    "Was kostet myown?",
+  ],
+  cta: "Alle Fragen und Antworten",
 };
 
 export const faq = {
@@ -153,9 +154,10 @@ export const faq = {
   ],
 };
 
+/** Default fallback for `<Cta />` when used without explicit props (currently no page relies on this). */
 export const cta = {
-  title: "Bereit, es auszuprobieren?",
-  description: "Starte kostenlos oder lass dir in 20 Minuten zeigen, wie es für dich aussieht.",
-  primaryCta: { label: "Kostenlos starten", href: "/kontakt" },
-  secondaryCta: { label: "Funktionen ansehen", href: "/#funktionen" },
+  title: "Deine Sachen im Griff. Den Kopf frei.",
+  description: "Alles im Blick. Alles am richtigen Ort. Bereit, wenn du es brauchst.",
+  primaryCta: { label: "myown jetzt live testen", href: "/kontakt" },
+  secondaryCta: null,
 };

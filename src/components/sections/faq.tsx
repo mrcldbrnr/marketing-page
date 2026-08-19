@@ -1,4 +1,6 @@
 import { Section, SectionHeading } from "@/components/ui/section";
+import { ButtonLink } from "@/components/ui/button";
+import { Icon } from "@/components/ui/icon";
 import { faq } from "@/content/landing";
 
 type FaqProps = {
@@ -6,6 +8,10 @@ type FaqProps = {
   headingLevel?: "h1" | "h2";
   title?: string;
   description?: string;
+  /** Subset of `faq.items` to show, e.g. for the homepage teaser. Defaults to all items. */
+  items?: typeof faq.items;
+  /** Optional "view all" link below the accordion, e.g. to the full /faq page. */
+  cta?: { label: string; href: string };
   className?: string;
 };
 
@@ -14,7 +20,14 @@ type FaqProps = {
  * any client-side JavaScript. The first item starts open so the accordion
  * doesn't read as fully collapsed/empty on load.
  */
-export function Faq({ headingLevel = "h2", title = faq.title, description, className }: FaqProps) {
+export function Faq({
+  headingLevel = "h2",
+  title = faq.title,
+  description,
+  items = faq.items,
+  cta,
+  className,
+}: FaqProps) {
   return (
     <Section id="faq" containerWidth="narrow" className={className}>
       <SectionHeading as={headingLevel} eyebrow={faq.eyebrow} title={title} description={description} />
@@ -22,7 +35,7 @@ export function Faq({ headingLevel = "h2", title = faq.title, description, class
       <div
         className={`${headingLevel === "h1" ? "mt-22" : "mt-12"} divide-y divide-border border-y border-border`}
       >
-        {faq.items.map((item, index) => (
+        {items.map((item, index) => (
           <details key={item.question} className="group py-5" open={index === 0}>
             <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
               {item.question}
@@ -42,6 +55,15 @@ export function Faq({ headingLevel = "h2", title = faq.title, description, class
           </details>
         ))}
       </div>
+
+      {cta ? (
+        <div className="mt-10 flex justify-center">
+          <ButtonLink href={cta.href} variant="secondary" size="lg">
+            {cta.label}
+            <Icon name="arrowRight" className="size-4" />
+          </ButtonLink>
+        </div>
+      ) : null}
     </Section>
   );
 }

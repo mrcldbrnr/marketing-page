@@ -6,9 +6,9 @@
 export const siteConfig = {
   name: "myown",
   /** Used as the `%s | <tagline>` metadata template and in the footer. */
-  tagline: "Software für moderne Teams",
+  tagline: "Dein Besitz immer im Blick",
   description:
-    "myown hilft Teams, ihre Arbeit zu planen, umzusetzen und auszuliefern – ohne Tool-Chaos.",
+    "myown ist die App für dein persönliches Inventar: Gegenstände erfassen, finden und im Blick behalten – für mehr Ordnung im Alltag.",
   /**
    * Canonical production URL, without trailing slash.
    * On Vercel this is set automatically, see `src/lib/metadata.ts`.
