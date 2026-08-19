@@ -37,7 +37,7 @@ export function Faq({
       >
         {items.map((item, index) => (
           <details key={item.question} className="group py-5" open={index === 0}>
-            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 font-medium marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-xl font-medium marker:hidden focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">
               {item.question}
               <svg
                 aria-hidden
@@ -51,7 +51,7 @@ export function Faq({
                 <path d="M12 5v14M5 12h14" />
               </svg>
             </summary>
-            <p className="mt-3 leading-relaxed text-muted text-pretty">{item.answer}</p>
+            <p className="mt-3 text-[19px] leading-relaxed text-muted text-pretty">{item.answer}</p>
           </details>
         ))}
       </div>
