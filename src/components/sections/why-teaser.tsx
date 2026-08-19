@@ -6,7 +6,7 @@ import { whyTeaser } from "@/content/landing";
 export function WhyTeaser() {
   return (
     <Section tone="surface">
-      <blockquote className="mx-auto max-w-3xl text-center text-2xl leading-snug font-semibold text-balance sm:text-3xl">
+      <blockquote className="mx-auto max-w-3xl rounded-3xl border-2 border-[#0000ff] bg-background p-10 text-center text-2xl leading-snug font-semibold text-balance text-[#0000ff] sm:text-3xl">
         «{whyTeaser.quote}»
       </blockquote>
 
@@ -14,7 +14,7 @@ export function WhyTeaser() {
         {whyTeaser.usecases.map((usecase) => (
           <li
             key={usecase}
-            className="rounded-full border border-border bg-background px-5 py-2 text-sm font-medium"
+            className="rounded-full border-2 border-[#0000ff] bg-background px-5 py-2 text-sm font-medium text-[#0000ff]"
           >
             {usecase}
           </li>

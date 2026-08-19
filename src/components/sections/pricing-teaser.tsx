@@ -26,7 +26,7 @@ export function PricingTeaser() {
       <SectionHeading title={pricingTeaser.title} />
 
       <div className="mx-auto mt-12 grid max-w-3xl gap-6 sm:grid-cols-2">
-        <div className="flex flex-col gap-4 rounded-3xl border border-border bg-surface p-8">
+        <div className="flex flex-col gap-4 rounded-3xl border-2 border-[#0000ff] bg-background p-8">
           <h3 className="text-lg font-semibold">{pricingTeaser.free.title}</h3>
           <ul className="flex flex-col gap-2.5 text-sm">
             {pricingTeaser.free.items.map((item) => (
@@ -38,7 +38,7 @@ export function PricingTeaser() {
           </ul>
         </div>
 
-        <div className="flex flex-col gap-4 rounded-3xl border border-border bg-surface p-8">
+        <div className="flex flex-col gap-4 rounded-3xl border-2 border-[#0000ff] bg-background p-8">
           <div className="flex items-center justify-between gap-3">
             <h3 className="text-lg font-semibold">{pricingTeaser.pro.title}</h3>
             <span className="rounded-full bg-foreground px-3 py-1 text-xs font-medium text-background">

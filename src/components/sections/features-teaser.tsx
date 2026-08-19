@@ -12,7 +12,7 @@ export function FeaturesTeaser() {
         {featuresTeaser.items.map((item) => (
           <li
             key={item}
-            className="flex items-center justify-center rounded-3xl border border-border bg-background p-6 text-center font-medium text-pretty"
+            className="flex items-center justify-center rounded-3xl border-2 border-[#0000ff] bg-background p-6 text-center font-medium text-pretty"
           >
             {item}
           </li>
