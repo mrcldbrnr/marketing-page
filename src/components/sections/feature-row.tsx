@@ -22,7 +22,7 @@ export function FeatureRow({ feature, index }: FeatureRowProps) {
 
       <div className="mt-10 grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
         <div className={flip ? "lg:order-2 lg:col-span-5" : "lg:col-span-5"}>
-          <p className="leading-relaxed text-muted text-pretty">{feature.description}</p>
+          <p className="text-lg leading-relaxed text-muted text-pretty">{feature.description}</p>
           <div className="mt-6">
             <FeatureContentBlock content={feature.content} />
           </div>
