@@ -15,9 +15,9 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      <FeaturesTeaser />
-      <Benefits />
       <Problem />
+      <Benefits />
+      <FeaturesTeaser />
       <PricingTeaser />
       <WhyTeaser />
       <Faq items={faqTeaserItems} cta={{ label: faqTeaser.cta, href: "/faq" }} />
