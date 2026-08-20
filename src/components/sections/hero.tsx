@@ -15,7 +15,7 @@ export function Hero() {
 
       <Container>
         <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
-          <h1 className="text-4xl font-extrabold tracking-tight text-balance sm:text-5xl lg:text-6xl">
+          <h1 className="text-[1.75rem] font-extrabold tracking-tight text-balance sm:text-[2.5rem] lg:text-[3.25rem]">
             {hero.title}
           </h1>
 
