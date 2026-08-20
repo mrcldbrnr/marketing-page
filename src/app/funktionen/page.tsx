@@ -14,27 +14,26 @@ export const metadata = createMetadata({
 export default function FeaturesPage() {
   return (
     <>
-      <Section containerWidth="wide" className="pt-[2.25rem] pb-[3px] lg:pt-[4.25rem] lg:pb-[19px]">
+      <Section containerWidth="wide" tone="default" className="pt-[2.25rem] lg:pt-[4.25rem]">
         <SectionHeading
           as="h1"
           eyebrow="Funktionen"
           title={funktionen.intro.title}
           description={funktionen.intro.description}
         />
-
-        <div className="mt-26 flex flex-col">
-          {funktionen.features.map((feature, index) => (
-            <FeatureRow key={feature.title} feature={feature} index={index} />
-          ))}
-        </div>
       </Section>
+
+      {funktionen.features.map((feature, index) => (
+        <Section key={feature.title} containerWidth="wide" tone={index % 2 === 0 ? "surface" : "default"}>
+          <FeatureRow feature={feature} index={index} />
+        </Section>
+      ))}
 
       <Cta
         title={funktionen.cta.title}
         description={funktionen.cta.description}
         primaryCta={{ label: funktionen.cta.label, href: siteConfig.appUrl, external: true }}
         secondaryCta={{ label: "Usecases entdecken", href: "/warum-myown" }}
-        className="pt-[3px] lg:pt-[19px]"
       />
     </>
   );

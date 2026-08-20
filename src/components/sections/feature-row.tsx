@@ -12,7 +12,7 @@ export function FeatureRow({ feature, index }: FeatureRowProps) {
   const flip = index % 2 === 1;
 
   return (
-    <div className="border-t border-border py-16 first:border-t-0 first:pt-0 lg:py-20">
+    <>
       <div className="mx-auto max-w-2xl text-center">
         <p className="text-sm font-semibold tracking-wide text-accent uppercase">{feature.kicker}</p>
         <h2 className="mt-2 text-[1.625rem] font-extrabold tracking-tight text-balance sm:text-[2rem]">
@@ -39,7 +39,7 @@ export function FeatureRow({ feature, index }: FeatureRowProps) {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
