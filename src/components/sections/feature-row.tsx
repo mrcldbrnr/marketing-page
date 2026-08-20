@@ -62,7 +62,7 @@ function CheckIcon({ className }: { className?: string }) {
 
 function BulletList({ items }: { items: string[] }) {
   return (
-    <ul className="flex flex-col gap-2.5 text-base">
+    <ul className="flex flex-col gap-2.5 text-lg">
       {items.map((item) => (
         <li key={item} className="flex items-start gap-3">
           <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />
@@ -106,7 +106,7 @@ function FeatureContentBlock({ content }: { content: Feature["content"] }) {
     case "statusExamples":
       return (
         <div className="flex flex-col gap-5">
-          <ul className="flex flex-col gap-2.5 text-base">
+          <ul className="flex flex-col gap-2.5 text-lg">
             {content.items.map((item) => (
               <li key={item.label} className="flex items-center justify-between gap-3">
                 {item.label}
@@ -126,7 +126,7 @@ function FeatureContentBlock({ content }: { content: Feature["content"] }) {
     case "pairs":
       return (
         <div className="flex flex-col gap-4">
-          <ul className="flex flex-col gap-2.5 text-base">
+          <ul className="flex flex-col gap-2.5 text-lg">
             {content.pairs.map((pair) => (
               <li key={`${pair.from}-${pair.to}`}>
                 {pair.from} {content.arrow} {pair.to}

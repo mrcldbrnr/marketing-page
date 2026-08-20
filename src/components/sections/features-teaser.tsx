@@ -37,7 +37,7 @@ export function FeaturesTeaser() {
           />
         </div>
 
-        <ul className="flex flex-col gap-4 text-base lg:col-span-5">
+        <ul className="flex flex-col gap-4 text-lg lg:col-span-5">
           {featuresTeaser.items.map((item) => (
             <li key={item} className="flex items-start gap-3">
               <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />
