@@ -22,7 +22,7 @@ export default function WhyPage() {
         <SectionHeading as="h1" eyebrow="Warum myown" title={why.hero.title} description={why.hero.description} />
       </Section>
 
-      <Section className="border-y border-border">
+      <Section className="border-y border-border bg-[#ffffff]">
         <UsecaseSlider />
       </Section>
 
