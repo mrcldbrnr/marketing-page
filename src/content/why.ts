@@ -5,6 +5,8 @@
 
 export type Usecase = {
   title: string;
+  /** Short label for the slider tab, e.g. "Ordnen". */
+  tabLabel: string;
   persona: string;
   quote: string;
   person: string;
@@ -33,6 +35,7 @@ export const why = {
   usecases: [
     {
       title: "Ordnung im Keller",
+      tabLabel: "Ordnen",
       persona: "Der Organisierte",
       quote: "Ich weiss endlich, was alles in meinem Keller liegt.",
       person: "Tom Bischofberger, Modellbauer",
@@ -41,6 +44,7 @@ export const why = {
     },
     {
       title: "Reisen ohne jedes Mal neu anzufangen",
+      tabLabel: "Vorbereiten",
       persona: "Die Reisende",
       quote: "Meine Packlisten beginnen nicht mehr jedes Mal bei null.",
       person: "Lina Greter, Travel-Bloggerin",
@@ -54,6 +58,7 @@ export const why = {
     },
     {
       title: "Bereit fürs nächste Abenteuer",
+      tabLabel: "Erinnern",
       persona: "Der Outdoor-Fan",
       quote: "Vor dem Wochenend-Ausflug sehe ich sofort, ob Velo, Ski oder Campingausrüstung bereit sind.",
       person: "Samuel Wetzel, Outdoor-Fan",
@@ -62,6 +67,7 @@ export const why = {
     },
     {
       title: "Technik und Dokumente im Griff",
+      tabLabel: "Dokumentieren",
       persona: "Die Technik-Sammlerin",
       quote: "Seriennummern, Kaufpreise und Belege sind endlich an einem Ort.",
       person: "Tamara Zimmermann, Technik-Sammlerin",
@@ -69,6 +75,24 @@ export const why = {
       visualSrc: "/usecases/usecase-4_technik_Gemini_Generated_Image_m9yj7jm9yj7jm9yj.jpg",
     },
   ] satisfies Usecase[],
+
+  /**
+   * A longer narrative usecase. Paragraphs use `**text**` for inline
+   * emphasis (rendered as bold by `UsecaseStory`) so the copy stays plain,
+   * editable prose rather than JSX.
+   */
+  story: {
+    title: "Ein Tag mit myown",
+    paragraphs: [
+      "Anna ist 32 Jahre alt, selbstständige Architektur-Fotografin und viel unterwegs. Sie lebt in einer 3,5-Zimmer-Wohnung am Stadtrand und mag es, wenn ihre Sachen ihren Platz haben – ohne dass sie ständig darüber nachdenken muss. Zwischen Fotoequipment, Sportausrüstung, Technik und Alltagsgegenständen hilft ihr **myown**, den Überblick zu behalten.",
+      "Annas Tag startet mit Kaffee – und einer kleinen Erinnerung: Ihre Kolbenmaschine könnte dringend wieder einmal gepflegt werden. Gerade keine Zeit. Also kurz myown öffnen, Status auf **«Wartung notwendig»** setzen – erledigt und aus dem Kopf.",
+      "Später trifft sie sich mit der Architektin eines neuen Schulhauses zur Besichtigung und zum Briefing für das kommende Shooting. Noch vor Ort erstellt Anna eine **Packliste** für den Fototermin: Kamera, Stativ, Akkus, Objektive, Fernauslöser. myown schlägt ihr dazu passende **verknüpfte Gegenstände** vor. Dabei fällt ihr auf, dass eines ihrer Objektive noch an ihren Kollegen Nik ausgeliehen ist. Gut, dass sie es jetzt merkt – sie plant einfach mit einem anderen.",
+      "Am Nachmittag besorgt Anna noch einen Polarisationsfilter, den sie fürs Shooting brauchen kann. Sie erfasst ihn direkt in der App. Name, Hersteller, Kategorie und Kaufpreis reichen fürs Erste – den Rest kann sie später ergänzen.",
+      "Zurück zuhause fragt sie sich: «Habe ich nicht noch irgendwo ein USB-C-Kabel herumliegen?» Die **Live-Suche** sagt: ja – im Arbeitszimmer, in der Schreibtischschublade. Kein Suchen, kein Rätseln.",
+      "Vor dem Feierabend noch ein Blick aufs Dashboard: Bei ihren Inlineskates steht **«Wartung notwendig»**. Die Räder müssen gewechselt werden. Also kurz Werkzeug holen, neue Rollen montieren, Status zurück auf **«Einsatzbereit»** – und wenig später rollt Anna mit ihrem Freund Sven entspannt in den Sonnenuntergang.",
+    ],
+    closing: "myown behält ihre Sachen im Blick, damit Anna es nicht muss.",
+  },
 
   testimonials: [
     {

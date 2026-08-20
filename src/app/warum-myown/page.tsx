@@ -1,5 +1,6 @@
 import { Section, SectionHeading } from "@/components/ui/section";
-import { Usecases } from "@/components/sections/usecases";
+import { UsecaseSlider } from "@/components/sections/usecase-slider";
+import { UsecaseStory } from "@/components/sections/usecase-story";
 import { TestimonialGrid } from "@/components/sections/testimonial-grid";
 import { PressMentions } from "@/components/sections/press-mentions";
 import { Cta } from "@/components/sections/cta";
@@ -20,9 +21,11 @@ export default function WhyPage() {
       <Section className="pt-[2.25rem] lg:pt-[4.25rem]">
         <SectionHeading as="h1" eyebrow="Warum myown" title={why.hero.title} description={why.hero.description} />
         <div className="mt-26">
-          <Usecases />
+          <UsecaseSlider />
         </div>
       </Section>
+
+      <UsecaseStory />
 
       <Section tone="surface">
         <p className="text-center text-sm font-semibold tracking-wide text-accent uppercase">Kundenstimmen</p>
