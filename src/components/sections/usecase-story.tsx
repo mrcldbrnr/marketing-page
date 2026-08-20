@@ -25,7 +25,7 @@ export function UsecaseStory() {
       <div className="mx-auto mt-12 flex max-w-2xl flex-col gap-6 text-lg leading-relaxed text-muted text-pretty">
         <p>{renderWithBold(firstParagraph)}</p>
 
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl">
+        <div className="relative h-[404px] w-full overflow-hidden rounded-3xl">
           <Image
             src={why.story.imageSrc}
             alt={why.story.imageAlt}
