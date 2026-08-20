@@ -14,16 +14,10 @@ export const hero = {
 };
 
 export const problem = {
-  title: "Du musst dir nicht alles merken.",
+  title: "Dein Hab und Gut – nur einen Klick entfernt",
   imageSrc: "/usecases/userstory_anna_Gemini_Generated_Image_xgzmquxgzmquxgzm.jpg",
   imageAlt: "Anna, Architektur-Fotografin",
-  situations: [
-    "Wo war nochmal die Powerbank?",
-    "Sind meine Skis bereit fürs Wochenende?",
-    "Was liegt eigentlich alles im Keller?",
-    "Habe ich nicht schon so ein Kabel?",
-  ],
-  resolution: "myown behält deine Sachen im Blick, damit du es nicht musst.",
+  description: "Du musst dir nicht alles merken. myown behält deine Sachen im Blick.",
   cta: "Usecases entdecken",
 };
 
