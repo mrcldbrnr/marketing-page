@@ -1,6 +1,7 @@
 import { Container } from "@/components/ui/container";
 import { ButtonLink } from "@/components/ui/button";
 import { Icon } from "@/components/ui/icon";
+import { HeroMarquee } from "@/components/sections/hero-marquee";
 import { hero } from "@/content/landing";
 import { siteConfig } from "@/content/site";
 
@@ -14,11 +15,19 @@ export function Hero() {
       />
 
       <Container>
-        <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
+        <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-[1.75rem] font-extrabold tracking-tight text-balance sm:text-[2.5rem] lg:text-[3.25rem]">
             {hero.title}
           </h1>
+        </div>
+      </Container>
 
+      <div className="my-8 lg:my-10">
+        <HeroMarquee />
+      </div>
+
+      <Container>
+        <div className="mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">
           <p className="max-w-2xl text-lg leading-relaxed text-muted text-pretty sm:text-xl">
             {hero.description}
           </p>

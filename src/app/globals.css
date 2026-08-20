@@ -29,6 +29,18 @@
   /* Vertical rhythm shared by every <Section>. */
   --spacing-section: 6rem;
   --spacing-section-lg: 8rem;
+
+  /* Hero image marquee: 5 images per set, 7s to cross per image. */
+  --animate-hero-marquee: hero-marquee 35s linear infinite;
+}
+
+@keyframes hero-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 :root {
