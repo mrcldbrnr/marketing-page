@@ -15,6 +15,8 @@ export const hero = {
 
 export const problem = {
   title: "Du musst dir nicht alles merken.",
+  imageSrc: "/usecases/userstory_anna_Gemini_Generated_Image_xgzmquxgzmquxgzm.jpg",
+  imageAlt: "Anna, Architektur-Fotografin",
   situations: [
     "Wo war nochmal die Powerbank?",
     "Sind meine Skis bereit fürs Wochenende?",
@@ -22,6 +24,7 @@ export const problem = {
     "Habe ich nicht schon so ein Kabel?",
   ],
   resolution: "myown behält deine Sachen im Blick, damit du es nicht musst.",
+  cta: "Usecases entdecken",
 };
 
 export const benefits = {
