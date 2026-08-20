@@ -20,9 +20,10 @@ export default function WhyPage() {
     <>
       <Section className="pt-[2.25rem] lg:pt-[4.25rem]">
         <SectionHeading as="h1" eyebrow="Warum myown" title={why.hero.title} description={why.hero.description} />
-        <div className="mt-26">
-          <UsecaseSlider />
-        </div>
+      </Section>
+
+      <Section className="border-y border-border">
+        <UsecaseSlider />
       </Section>
 
       <UsecaseStory />
