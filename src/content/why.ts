@@ -26,6 +26,9 @@ export const why = {
     title: "Weniger suchen. Schneller finden. Mehr nutzen.",
     description:
       "Ob Keller, Reisegepäck, Sportausrüstung oder Technik: myown hilft dir dabei, deine Sachen so zu organisieren, dass sie im richtigen Moment zur Hand sind. Entdecke typische Alltagssituationen, in denen ein persönliches Inventar den Unterschied macht.",
+    /** Shorter variant for the meta description — the paragraph above is too long for a SERP snippet. */
+    metaDescription:
+      "Vier Alltagsbeispiele zeigen, wie myown beim Ordnen, Reisen, Erinnern und Dokumentieren hilft – von Keller bis Reisegepäck.",
   },
 
   examplesIntro: {

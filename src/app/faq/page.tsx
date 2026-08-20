@@ -9,7 +9,7 @@ import { siteConfig } from "@/content/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "FAQ",
+  title: "Häufige Fragen",
   description: faqPage.hero.description,
   path: "/faq",
 });

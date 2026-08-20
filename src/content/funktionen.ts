@@ -40,6 +40,9 @@ export const funktionen = {
     title: "Alles, was du brauchst, um deine Sachen im Blick zu behalten.",
     description:
       "Erfassen, finden, vorbereiten, erinnern: myown macht aus deinen Gegenständen ein persönliches Inventar, das dir im Alltag Arbeit abnimmt. Du weisst, was du hast, wo es ist und ob es bereit ist, wenn du es brauchst.",
+    /** Shorter variant for the meta description — the paragraph above is too long for a SERP snippet. */
+    metaDescription:
+      "myown macht aus deinen Gegenständen ein persönliches Inventar: erfassen, finden, vorbereiten, erinnern – alles an einem Ort.",
   },
 
   features: [

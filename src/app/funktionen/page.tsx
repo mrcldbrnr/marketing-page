@@ -6,8 +6,8 @@ import { siteConfig } from "@/content/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Funktionen",
-  description: funktionen.intro.description,
+  title: "Funktionen – Inventar, Suche, Dashboard",
+  description: funktionen.intro.metaDescription,
   path: "/funktionen",
 });
 

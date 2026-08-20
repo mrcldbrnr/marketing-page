@@ -3,7 +3,7 @@ import { Figtree } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/content/site";
 import { getBaseUrl } from "@/lib/metadata";
-import { organizationAndWebsiteSchema } from "@/lib/schema";
+import { organizationAndWebsiteSchema, softwareApplicationSchema } from "@/lib/schema";
 import { JsonLd } from "@/components/seo/json-ld";
 import { SiteHeader } from "@/components/layout/site-header";
 import { SiteFooter } from "@/components/layout/site-footer";
@@ -43,6 +43,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
     <html lang="de-CH" className={`${figtree.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
         <JsonLd data={organizationAndWebsiteSchema()} />
+        <JsonLd data={softwareApplicationSchema()} />
         <a
           href="#inhalt"
           className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-100 focus:rounded-full focus:bg-accent focus:px-4 focus:py-2 focus:text-accent-foreground"

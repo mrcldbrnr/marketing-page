@@ -26,6 +26,22 @@ export function organizationAndWebsiteSchema() {
   };
 }
 
+/** WebApplication schema for the app itself, rendered once sitewide. */
+export function softwareApplicationSchema() {
+  const baseUrl = getBaseUrl();
+  return {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    name: siteConfig.name,
+    url: siteConfig.appUrl,
+    description: siteConfig.description,
+    applicationCategory: "UtilitiesApplication",
+    operatingSystem: "Web",
+    offers: { "@type": "Offer", price: "0", priceCurrency: "CHF" },
+    publisher: { "@id": `${baseUrl}/#organization` },
+  };
+}
+
 /** FAQPage schema from a question/answer list — pass the exact items shown on the page. */
 export function faqPageSchema(items: { question: string; answer: string }[]) {
   return {

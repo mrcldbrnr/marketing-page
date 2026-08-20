@@ -8,8 +8,8 @@ import { siteConfig } from "@/content/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Warum myown",
-  description: why.hero.description,
+  title: why.hero.title,
+  description: why.hero.metaDescription,
   path: "/warum-myown",
 });
 

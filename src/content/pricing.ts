@@ -28,6 +28,9 @@ export const pricing = {
     title: "Jetzt kostenlos starten.",
     description:
       "Die Kernfunktionen von myown sind im Free-Plan kostenlos verfügbar. Für noch mehr Komfort, zusätzliche Funktionen und Services steht dir schon bald myown Pro zur Verfügung.",
+    /** Shorter variant for the meta description — the paragraph above is too long for a SERP snippet. */
+    metaDescription:
+      "myown Free ist dauerhaft kostenlos: unbegrenzt Gegenstände erfassen, Dashboard, Packlisten. myown Pro folgt mit weiteren Komfortfunktionen.",
   },
 
   plans: [

@@ -6,8 +6,8 @@ import { siteConfig } from "@/content/site";
 import { createMetadata } from "@/lib/metadata";
 
 export const metadata = createMetadata({
-  title: "Preisplan",
-  description: pricing.hero.description,
+  title: "Preisplan – kostenlos starten",
+  description: pricing.hero.metaDescription,
   path: "/preisplan",
 });
 
