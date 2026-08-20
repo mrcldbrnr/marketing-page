@@ -70,8 +70,8 @@ export const pricingTeaser = {
 export const whyTeaser = {
   quote:
     "Seit ich myown nutze, muss ich nicht mehr überlegen, wo ich was aufbewahre, in welchem Zustand es sich befindet und ob alles parat für den nächsten Einsatz ist.",
-  usecases: ["Ordnung im Keller", "Reisevorbereitung", "Wartung von Sportausrüstung"],
-  cta: "Mehr Usecases entdecken",
+  person: "Marcel Debrunner",
+  role: "myown-Gründer",
 };
 
 export const faqTeaser = {
