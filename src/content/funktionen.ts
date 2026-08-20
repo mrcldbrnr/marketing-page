@@ -39,14 +39,15 @@ export const funktionen = {
   intro: {
     title: "Alles, was du brauchst, um deine Sachen im Blick zu behalten.",
     description:
-      "myown hilft dir, alle deine Gegenstände zentral zu erfassen, zu organisieren und zu verwalten. So behältst du immer den Überblick und weisst jederzeit, wo was zu finden ist.",
+      "Erfassen, finden, vorbereiten, erinnern: myown macht aus deinen Gegenständen ein persönliches Inventar, das dir im Alltag Arbeit abnimmt. Du weisst, was du hast, wo es ist und ob es bereit ist, wenn du es brauchst.",
   },
 
   features: [
     {
       kicker: "Persönliches Inventar",
-      title: "Alles, was dir gehört. An einem Ort.",
-      description: "Erfasse genau diejenigen Informationen zu deinen Gegenständen, die du benötigst.",
+      title: "Alles, was dir wichtig ist. An einem Ort.",
+      description:
+        "Du musst nicht deinen ganzen Haushalt katalogisieren. Starte mit den Dingen, die du häufig suchst, verleihst oder unterwegs brauchst. Für einen neuen Gegenstand genügt zunächst ein Name – Bilder, Standort, Kaufpreis und weitere Angaben ergänzt du nur, wenn sie für dich nützlich sind.",
       visualSrc: "/screenshots/funktion1_erfassen.png",
       visualCaption: "Detailkarte eines erfassten Gegenstands in myown",
       content: {
@@ -184,20 +185,20 @@ export const funktionen = {
       kicker: "Kaufwerte",
       title: "Wissen, was du investiert hast.",
       description:
-        "myown zeigt die Summe der hinterlegten Kaufpreise. Das hilft dir beispielsweise, den Versicherungswert deines Besitzes realistisch einzuordnen.",
+        "myown summiert die hinterlegten Kaufpreise deiner Gegenstände. So siehst du auf einen Blick, welchen Kaufwert du in deinem Inventar erfasst hast – insgesamt oder nach einzelnen Kategorien.",
       visualSrc: "/screenshots/funktion9_wert.png",
       visualCaption: "Kaufpreissumme, nach Kategorie gefiltert",
       content: {
         kind: "sumList",
-        items: ["gesamtes Inventar", "nach Kategorien"],
+        items: ["gesamtes Inventar", "einzelne Kategorien"],
       },
     },
   ] satisfies Feature[],
 
   cta: {
-    title: "Jetzt testen und kostenlos starten",
+    title: "myown selbst ausprobieren",
     description:
-      "Erlebe die Funktionen von myown in unserer Live-Demo – ganz ohne Login, Anmeldung und Registrierung. Unverbindlich und garantiert kostenlos.",
-    label: "myown jetzt live testen",
+      "Entdecke die aktuellen Funktionen in der Live-Demo. Du brauchst weder ein Konto noch eine Registrierung – einfach öffnen und ausprobieren.",
+    label: "Live-Demo öffnen",
   },
 } as const;

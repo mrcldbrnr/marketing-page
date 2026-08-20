@@ -1,8 +1,6 @@
 import { Section, SectionHeading } from "@/components/ui/section";
 import { UsecaseSlider } from "@/components/sections/usecase-slider";
 import { UsecaseStory } from "@/components/sections/usecase-story";
-import { TestimonialGrid } from "@/components/sections/testimonial-grid";
-import { PressMentions } from "@/components/sections/press-mentions";
 import { Cta } from "@/components/sections/cta";
 import { why } from "@/content/why";
 import { pricing } from "@/content/pricing";
@@ -23,23 +21,16 @@ export default function WhyPage() {
       </Section>
 
       <Section className="border-y border-border bg-[#ffffff]">
-        <UsecaseSlider />
+        <SectionHeading title={why.examplesIntro.title} description={why.examplesIntro.description} />
+        <div className="mt-12">
+          <UsecaseSlider />
+        </div>
       </Section>
 
       <UsecaseStory />
 
       <Section tone="surface">
-        <p className="text-center text-sm font-semibold tracking-wide text-accent uppercase">Kundenstimmen</p>
-        <div className="mt-10">
-          <TestimonialGrid />
-        </div>
-      </Section>
-
-      <Section className="pb-[60px] lg:pb-[60px]">
-        <p className="text-center text-sm font-semibold tracking-wide text-accent uppercase">Medienberichte</p>
-        <div className="mt-10">
-          <PressMentions />
-        </div>
+        <SectionHeading title={why.closingTeaser.title} description={why.closingTeaser.description} />
       </Section>
 
       <Cta
@@ -47,7 +38,6 @@ export default function WhyPage() {
         description={pricing.cta.description}
         primaryCta={{ label: pricing.cta.label, href: siteConfig.appUrl, external: true }}
         secondaryCta={{ label: "Alle Funktionen ansehen", href: "/funktionen" }}
-        className="pt-[60px] lg:pt-[60px]"
       />
     </>
   );

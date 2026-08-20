@@ -70,7 +70,7 @@ export function SiteHeader() {
                 size="sm"
                 className="bg-[#0a0a0a] text-white hover:bg-[#0000ff] hover:text-white"
               >
-                myown jetzt live testen
+                Live-Demo öffnen
                 <Icon name="external" className="size-4" />
               </ButtonLink>
             </div>
@@ -112,7 +112,7 @@ export function SiteHeader() {
                 onClick={() => setOpen(false)}
                 className="mt-3 w-full bg-[#0a0a0a] text-white hover:bg-[#0000ff] hover:text-white"
               >
-                myown jetzt live testen
+                Live-Demo öffnen
                 <Icon name="external" className="size-4" />
               </ButtonLink>
             </nav>

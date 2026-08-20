@@ -1,6 +1,6 @@
 /**
- * Copy for the /warum-myown page: concrete usecases, short testimonials and
- * fictional press mentions, showing myown in everyday situations.
+ * Copy for the /warum-myown page: concrete usecases, presented as worked
+ * examples, plus a longer narrative usecase ("Ein Tag mit myown").
  */
 
 export type Usecase = {
@@ -15,21 +15,23 @@ export type Usecase = {
   visualSrc: string;
 };
 
-export type Testimonial = {
-  quote: string;
-  author: string;
-};
-
-export type PressMention = {
-  outlet: string;
-  quote: string;
+export type StoryBeat = {
+  /** e.g. "07:30 – Wartung? Für später merken." */
+  heading: string;
+  paragraphs: string[];
 };
 
 export const why = {
   hero: {
     title: "Weniger suchen. Schneller finden. Mehr nutzen.",
     description:
-      "Über 10’000 Personen nutzen myown bereits täglich, um den Überblick über ihren Besitz zu behalten, diesen effizient zu verwalten und ihren Alltag zu erleichtern. Erfahre, was für sie den Unterschied macht.",
+      "Ob Keller, Reisegepäck, Sportausrüstung oder Technik: myown hilft dir dabei, deine Sachen so zu organisieren, dass sie im richtigen Moment zur Hand sind. Entdecke typische Alltagssituationen, in denen ein persönliches Inventar den Unterschied macht.",
+  },
+
+  examplesIntro: {
+    title: "So kann myown deinen Alltag erleichtern.",
+    description:
+      "Nicht jeder besitzt die gleichen Dinge – und nicht jeder braucht myown für dasselbe. Vier Beispiele zeigen, wie unterschiedlich ein persönliches Inventar im Alltag eingesetzt werden kann.",
   },
 
   usecases: [
@@ -76,50 +78,54 @@ export const why = {
     },
   ] satisfies Usecase[],
 
-  /**
-   * A longer narrative usecase. Paragraphs use `**text**` for inline
-   * emphasis (rendered as bold by `UsecaseStory`) so the copy stays plain,
-   * editable prose rather than JSX.
-   */
+  /** A longer narrative usecase, told as a series of timestamped beats through Anna's day. */
   story: {
     title: "Ein Tag mit myown",
     imageSrc: "/usecases/userstory_anna_Gemini_Generated_Image_xgzmquxgzmquxgzm.jpg",
     imageAlt: "Anna, Architektur-Fotografin",
-    paragraphs: [
-      "Anna ist 32 Jahre alt, selbstständige Architektur-Fotografin und viel unterwegs. Sie lebt in einer 3,5-Zimmer-Wohnung am Stadtrand und mag es, wenn ihre Sachen ihren Platz haben – ohne dass sie ständig darüber nachdenken muss. Zwischen Fotoequipment, Sportausrüstung, Technik und Alltagsgegenständen hilft ihr **myown**, den Überblick zu behalten.",
-      "Annas Tag startet mit Kaffee – und einer kleinen Erinnerung: Ihre Kolbenmaschine könnte dringend wieder einmal gepflegt werden. Gerade keine Zeit. Also kurz myown öffnen, Status auf **«Wartung notwendig»** setzen – erledigt und aus dem Kopf.",
-      "Später trifft sie sich mit der Architektin eines neuen Schulhauses zur Besichtigung und zum Briefing für das kommende Shooting. Noch vor Ort erstellt Anna eine **Packliste** für den Fototermin: Kamera, Stativ, Akkus, Objektive, Fernauslöser. myown schlägt ihr dazu passende **verknüpfte Gegenstände** vor. Dabei fällt ihr auf, dass eines ihrer Objektive noch an ihren Kollegen Nik ausgeliehen ist. Gut, dass sie es jetzt merkt – sie plant einfach mit einem anderen.",
-      "Am Nachmittag besorgt Anna noch einen Polarisationsfilter, den sie fürs Shooting brauchen kann. Sie erfasst ihn direkt in der App. Name, Hersteller, Kategorie und Kaufpreis reichen fürs Erste – den Rest kann sie später ergänzen.",
-      "Zurück zuhause fragt sie sich: «Habe ich nicht noch irgendwo ein USB-C-Kabel herumliegen?» Die **Live-Suche** sagt: ja – im Arbeitszimmer, in der Schreibtischschublade. Kein Suchen, kein Rätseln.",
-      "Vor dem Feierabend noch ein Blick aufs Dashboard: Bei ihren Inlineskates steht **«Wartung notwendig»**. Die Räder müssen gewechselt werden. Also kurz Werkzeug holen, neue Rollen montieren, Status zurück auf **«Einsatzbereit»** – und wenig später rollt Anna mit ihrem Freund Sven entspannt in den Sonnenuntergang.",
-    ],
-    closing: "myown behält ihre Sachen im Blick, damit Anna es nicht muss.",
+    intro:
+      "Anna ist 32 Jahre alt, selbstständige Architektur-Fotografin und viel unterwegs. Zwischen Fotoequipment, Sportausrüstung, Technik und Alltagsgegenständen hilft ihr myown, den Überblick zu behalten – ohne dass sie ständig darüber nachdenken muss.",
+    beats: [
+      {
+        heading: "07:30 – Wartung? Für später merken.",
+        paragraphs: [
+          "Annas Tag startet mit Kaffee – und einer kleinen Erinnerung: Ihre Kolbenmaschine könnte dringend wieder einmal gepflegt werden. Gerade keine Zeit. Also kurz myown öffnen, Status auf «Wartung notwendig» setzen – erledigt und aus dem Kopf.",
+        ],
+      },
+      {
+        heading: "10:15 – Vorbereiten, bevor etwas fehlt.",
+        paragraphs: [
+          "Später trifft sie sich mit der Architektin eines neuen Schulhauses zum Briefing für ein Shooting. Noch vor Ort erstellt Anna eine Packliste: Kamera, Stativ, Akkus, Objektive und Fernauslöser.",
+          "myown schlägt ihr passende verknüpfte Gegenstände vor. Dabei fällt ihr auf, dass eines ihrer Objektive noch bei ihrem Kollegen Nik ist. Gut, dass sie es jetzt merkt – sie plant einfach mit einem anderen.",
+        ],
+      },
+      {
+        heading: "15:40 – Neu gekauft, schnell erfasst.",
+        paragraphs: [
+          "Am Nachmittag kauft Anna noch einen Polarisationsfilter. Sie erfasst ihn direkt in myown. Name, Hersteller, Kategorie und Kaufpreis reichen fürs Erste – alles Weitere kann sie später ergänzen.",
+        ],
+      },
+      {
+        heading: "18:10 – Finden statt suchen.",
+        paragraphs: [
+          "Zurück zuhause fragt sie sich: «Habe ich nicht noch irgendwo ein USB-C-Kabel herumliegen?»",
+          "Ein kurzer Blick in die Live-Suche: Arbeitszimmer, Schreibtischschublade. Kein Suchen, kein Rätseln.",
+        ],
+      },
+      {
+        heading: "18:30 – Erledigen und abhaken.",
+        paragraphs: [
+          "Vor dem Feierabend zeigt das Dashboard: Bei Annas Inlineskates steht noch «Wartung notwendig». Die Räder müssen gewechselt werden.",
+          "Werkzeug holen, neue Rollen montieren, Status zurück auf «Einsatzbereit» – und wenig später rollt Anna mit ihrem Freund Sven entspannt in den Sonnenuntergang.",
+        ],
+      },
+    ] satisfies StoryBeat[],
+    closing: "myown behält Annas Sachen im Blick, damit sie es nicht muss.",
   },
 
-  testimonials: [
-    {
-      quote: "Ich habe nicht weniger Sachen als vorher. Aber sie brauchen deutlich weniger Platz in meinem Kopf.",
-      author: "Nina, 34",
-    },
-    {
-      quote: "Die Suche nach Dingen hat bei uns zuhause tatsächlich aufgehört.",
-      author: "Marco, 41",
-    },
-    {
-      quote: "Vor einer Reise sehe ich in fünf Minuten, was bereit ist und was noch fehlt.",
-      author: "Sarah, 29",
-    },
-    {
-      quote:
-        "Gerade bei Sportausrüstung ist es praktisch zu wissen, ob etwas gewartet werden muss, bevor ich es brauche.",
-      author: "David, 38",
-    },
-  ] satisfies Testimonial[],
-
-  press: [
-    { outlet: "Digital Living", quote: "Die App, die Ordnung nicht mit Minimalismus verwechselt." },
-    { outlet: "Tech & Home", quote: "myown macht aus dem eigenen Besitz ein persönliches System." },
-    { outlet: "Everyday", quote: "Weniger suchen, weniger merken: So funktioniert digitales Besitzmanagement." },
-    { outlet: "Future Home", quote: "Ein digitaler Überblick über die Dinge, die unseren Alltag begleiten." },
-  ] satisfies PressMention[],
+  closingTeaser: {
+    title: "Dein Besitz ist persönlich. Dein System darf es auch sein.",
+    description:
+      "Du entscheidest selbst, was du in myown erfasst und wie genau du es dokumentieren möchtest. Vom einzelnen Lieblingsstück bis zum umfassenden Inventar.",
+  },
 } as const;

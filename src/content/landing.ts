@@ -8,8 +8,8 @@
 export const hero = {
   title: "Alles im Blick. Alles am richtigen Ort. Bereit, wenn du es brauchst.",
   description:
-    "myown bringt Ordnung in deine Sachen und Ruhe in deinen Kopf. Du weisst, was du besitzt, wo es liegt und ob es bereit ist, wenn du es brauchst.",
-  primaryCtaLabel: "myown kostenlos testen",
+    "myown ist dein persönliches Inventar für alles, was dir gehört. Erfasse deine Sachen, finde sie wieder und behalte im Blick, was deine Aufmerksamkeit braucht. So hast du weniger von deinen Dingen im Kopf – und mehr davon im Alltag.",
+  primaryCtaLabel: "Live-Demo öffnen",
   secondaryCta: { label: "Funktionen ansehen", href: "/funktionen" },
 };
 
@@ -49,20 +49,23 @@ export const featuresTeaser = {
 };
 
 export const pricingTeaser = {
-  title: "Kostenlos starten. Bei Bedarf mehr rausholen.",
+  title: "myown kostenlos ausprobieren.",
   free: {
     title: "Free",
-    items: ["Persönliches Inventar", "Suche und Filter", "Dashboard", "Packlisten", "alle aktuellen Kernfunktionen"],
+    description: "Die Kernfunktionen von myown werden dauerhaft kostenlos nutzbar sein.",
+    items: [
+      "Persönliches Inventar",
+      "Suche und Filter",
+      "Dashboard",
+      "Packlisten",
+      "Zustand und Status",
+      "Verknüpfte Gegenstände",
+    ],
   },
   pro: {
     title: "Pro",
-    badge: "Coming soon",
-    items: [
-      "Automatische Produkterkennung mit KI",
-      "Belege automatisch erfassen",
-      "Marktplatz-Anbindungen",
-      "Intelligente Packvorschläge",
-    ],
+    badge: "Geplant",
+    description: "Zusätzliche Komfortfunktionen sind später in einem optionalen Pro-Plan vorgesehen.",
   },
   cta: "Preispläne vergleichen",
 };
@@ -98,9 +101,9 @@ export const faq = {
         "Grundsätzlich alles, was dir gehört – von Möbeln und Kleidung bis zu Elektronik, Sportausrüstung oder Küchenutensilien.",
     },
     {
-      question: "Muss ich jeden Gegenstand vollständig dokumentieren?",
+      question: "Muss ich wirklich alle meine Sachen erfassen?",
       answer:
-        "Nein. Nur der Name ist erforderlich. Alle weiteren Angaben wie Foto, Marke, Standort, Kaufpreis, Zustand oder Dokumente sind optional.",
+        "Nein. Du entscheidest selbst, welche Gegenstände du in myown aufnehmen möchtest. Starte zum Beispiel mit Dingen, die du häufig suchst, verleihst, wartest oder für Reisen brauchst. Auch bei der Erfassung selbst bleibt es einfach: Nur der Name ist erforderlich. Alle weiteren Angaben sind optional und können jederzeit ergänzt werden.",
     },
     {
       question: "Kann ich sehen, wo ein Gegenstand liegt?",
@@ -118,9 +121,9 @@ export const faq = {
         "Ja. Das Dashboard zeigt Gegenstände, die Aufmerksamkeit benötigen, zum Beispiel bei Wartungsbedarf, Reparaturen oder einem defekten Zustand.",
     },
     {
-      question: "Kann ich myown für Reisen nutzen?",
+      question: "Wofür kann ich Packlisten verwenden?",
       answer:
-        "Ja. Im Bereich «Ich verreise» kannst du Packlisten erstellen und dafür direkt Gegenstände aus deinem bestehenden Inventar auswählen.",
+        "Mit Packlisten stellst du direkt aus deinem Inventar zusammen, was du für eine Reise, einen Ausflug, einen Arbeitstermin oder einen anderen Anlass brauchst. Du kannst Gegenstände hinzufügen, Eingepacktes abhaken und siehst sofort, wenn etwas momentan nicht verfügbar ist.",
     },
     {
       question: "Was passiert mit Dingen, die ich nicht mehr besitze?",
@@ -140,7 +143,7 @@ export const faq = {
     {
       question: "Kann ich den Wert meines Inventars sehen?",
       answer:
-        "myown summiert die hinterlegten Kaufpreise und zeigt den erfassten Kaufwert insgesamt sowie nach Kategorien. Es wird kein aktueller Zeitwert berechnet.",
+        "myown summiert die von dir hinterlegten Kaufpreise – für das gesamte Inventar oder einzelne Kategorien. Angezeigt wird damit der erfasste Kaufwert; einen aktuellen Zeit- oder Wiederbeschaffungswert berechnet myown nicht.",
     },
     {
       question: "Ist myown auch auf dem Smartphone nutzbar?",
@@ -149,7 +152,7 @@ export const faq = {
     {
       question: "Was kostet myown?",
       answer:
-        "Der Free-Plan enthält alle aktuellen Kernfunktionen. Der Pro-Plan ergänzt zusätzliche Services wie automatisierte Erfassung von Gegenständen per Foto-Upload, Marktplatz-Anbindungen, Versicherungsschutz und Reparaturservices.",
+        "Die aktuelle Version kannst du kostenlos als Live-Demo ausprobieren. Für eine spätere Veröffentlichung ist ein Free-Plan mit allen Kernfunktionen sowie ein optionaler Pro-Plan vorgesehen. Geplante Pro-Funktionen sind unter anderem automatische Produkterkennung, Belegerfassung, Marktplatz-Anbindungen und intelligente Packvorschläge.",
     },
     {
       question: "Gibt es geteilte Konten für mehrere Personen im gleichen Haushalt?",
@@ -159,10 +162,14 @@ export const faq = {
   ],
 };
 
-/** Default fallback for `<Cta />` when used without explicit props (currently no page relies on this). */
+/**
+ * The closing CTA, used identically on the homepage and every subpage (see
+ * `funktionen.cta` / `pricing.cta`, which carry the same title/description/label).
+ */
 export const cta = {
-  title: "Deine Sachen im Griff. Den Kopf frei.",
-  description: "Alles im Blick. Alles am richtigen Ort. Bereit, wenn du es brauchst.",
-  primaryCta: { label: "myown jetzt live testen", href: "/funktionen" },
+  title: "myown selbst ausprobieren",
+  description:
+    "Entdecke die aktuellen Funktionen in der Live-Demo. Du brauchst weder ein Konto noch eine Registrierung – einfach öffnen und ausprobieren.",
+  primaryCta: { label: "Live-Demo öffnen", href: "/funktionen" },
   secondaryCta: null,
 };

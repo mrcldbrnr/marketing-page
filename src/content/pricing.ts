@@ -1,8 +1,8 @@
 /**
  * Copy for the /preisplan page. Free and Pro differ enough in shape (a plain
- * feature checklist vs. named highlight blocks with their own description,
- * plus a monthly/yearly price pair) that `Plan` is a discriminated union
- * rather than one fixed shape.
+ * feature checklist with a real price vs. named highlight blocks with their
+ * own description, marked "Geplant" with no price yet) that `Plan` is a
+ * discriminated union rather than one fixed shape.
  */
 
 export type Plan =
@@ -17,10 +17,7 @@ export type Plan =
   | {
       kind: "pro";
       name: string;
-      price: string;
-      interval: string;
-      priceYearly: string;
-      intervalYearly: string;
+      badge: string;
       description: string;
       highlights: { title: string; description: string }[];
       note: string;
@@ -28,7 +25,7 @@ export type Plan =
 
 export const pricing = {
   hero: {
-    title: "Starte kostenlos. Hol dir mehr, wenn du mehr brauchst.",
+    title: "Jetzt kostenlos starten.",
     description:
       "Die Kernfunktionen von myown sind im Free-Plan kostenlos verfügbar. Für noch mehr Komfort, zusätzliche Funktionen und Services steht dir schon bald myown Pro zur Verfügung.",
   },
@@ -54,27 +51,24 @@ export const pricing = {
     {
       kind: "pro",
       name: "myown Pro",
-      price: "CHF 8",
-      interval: "/ Monat",
-      priceYearly: "CHF 79",
-      intervalYearly: "/ Jahr",
-      description: "Alles aus dem Free-Plan plus folgende Zusatzfunktionen:",
+      badge: "Geplant",
+      description: "Alles aus myown Free plus zusätzliche Komfortfunktionen:",
       highlights: [
         {
-          title: "Automatische Produkterkennung mit KI",
-          description: "Foto aufnehmen und Produktdetails automatisch ergänzen.",
+          title: "Automatische Produkterkennung",
+          description: "Fotografiere einen Gegenstand und lass grundlegende Produktinformationen automatisch erkennen und ergänzen.",
         },
         {
           title: "Belege automatisch erfassen",
-          description: "Quittungen fotografieren und Kaufpreis, Kaufdatum und Garantie automatisch übernehmen.",
+          description: "Fotografiere Quittungen und übernimm Angaben wie Kaufpreis, Kaufdatum oder Garantie direkt in myown.",
         },
         {
           title: "Direkt verkaufen",
-          description: "Gegenstände direkt aus myown auf angebundene Online-Marktplätze übertragen.",
+          description: "Übertrage aussortierte Gegenstände direkt an angebundene Online-Marktplätze.",
         },
         {
           title: "Smart Packing",
-          description: "Packvorschläge anhand von Reiseziel, Wetter und bereits vorhandenen Gegenständen.",
+          description: "Erhalte Packvorschläge passend zu Reiseziel, Wetter und den Gegenständen, die du bereits besitzt.",
         },
       ],
       note: "Wir benachrichtigen dich, sobald myown Pro verfügbar ist.",
@@ -82,9 +76,9 @@ export const pricing = {
   ] satisfies Plan[],
 
   cta: {
-    title: "Jetzt testen und kostenlos starten",
+    title: "myown selbst ausprobieren",
     description:
-      "Erlebe die Funktionen von myown in unserer Live-Demo – ganz ohne Login, Anmeldung und Registrierung. Unverbindlich und garantiert kostenlos.",
-    label: "myown jetzt live testen",
+      "Entdecke die aktuellen Funktionen in der Live-Demo. Du brauchst weder ein Konto noch eine Registrierung – einfach öffnen und ausprobieren.",
+    label: "Live-Demo öffnen",
   },
 } as const;

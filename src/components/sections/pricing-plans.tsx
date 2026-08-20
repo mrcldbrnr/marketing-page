@@ -51,19 +51,9 @@ export function PricingPlans() {
               <div className="flex items-center justify-between gap-3">
                 <h2 className="text-lg font-semibold">{plan.name}</h2>
                 <span className="rounded-full bg-foreground px-3 py-1 text-xs font-medium text-background">
-                  Coming Soon
+                  {plan.badge}
                 </span>
               </div>
-            </div>
-
-            <div className="flex flex-col gap-1">
-              <p className="flex items-baseline gap-2">
-                <span className="text-4xl font-extrabold tracking-tight">{plan.price}</span>
-                <span className="text-sm text-muted">{plan.interval}</span>
-              </p>
-              <p className="text-sm text-muted">
-                oder {plan.priceYearly} {plan.intervalYearly}
-              </p>
             </div>
 
             <div className="flex flex-col gap-4">
