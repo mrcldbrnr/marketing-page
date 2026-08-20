@@ -75,6 +75,18 @@
     -webkit-font-smoothing: antialiased;
   }
 
+  /* !important: Tailwind's text-size utilities (e.g. text-xl) bundle their own
+     line-height and live in the later "utilities" layer, which would otherwise
+     win over this base-layer rule regardless of selector specificity. */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.1 !important;
+  }
+
   /* Anchor links land below the sticky header instead of behind it. */
   :target {
     scroll-margin-top: 6rem;
