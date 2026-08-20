@@ -83,6 +83,8 @@ export const why = {
    */
   story: {
     title: "Ein Tag mit myown",
+    imageSrc: "/usecases/userstory_anna_Gemini_Generated_Image_xgzmquxgzmquxgzm.jpg",
+    imageAlt: "Anna, Architektur-Fotografin",
     paragraphs: [
       "Anna ist 32 Jahre alt, selbstständige Architektur-Fotografin und viel unterwegs. Sie lebt in einer 3,5-Zimmer-Wohnung am Stadtrand und mag es, wenn ihre Sachen ihren Platz haben – ohne dass sie ständig darüber nachdenken muss. Zwischen Fotoequipment, Sportausrüstung, Technik und Alltagsgegenständen hilft ihr **myown**, den Überblick zu behalten.",
       "Annas Tag startet mit Kaffee – und einer kleinen Erinnerung: Ihre Kolbenmaschine könnte dringend wieder einmal gepflegt werden. Gerade keine Zeit. Also kurz myown öffnen, Status auf **«Wartung notwendig»** setzen – erledigt und aus dem Kopf.",
