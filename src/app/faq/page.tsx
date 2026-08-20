@@ -1,6 +1,9 @@
 import { Faq } from "@/components/sections/faq";
 import { Cta } from "@/components/sections/cta";
+import { JsonLd } from "@/components/seo/json-ld";
+import { faqPageSchema } from "@/lib/schema";
 import { faqPage } from "@/content/faq";
+import { faq } from "@/content/landing";
 import { funktionen } from "@/content/funktionen";
 import { siteConfig } from "@/content/site";
 import { createMetadata } from "@/lib/metadata";
@@ -14,6 +17,7 @@ export const metadata = createMetadata({
 export default function FaqPage() {
   return (
     <>
+      <JsonLd data={faqPageSchema(faq.items)} />
       <Faq
         headingLevel="h1"
         title={faqPage.hero.title}
