@@ -7,7 +7,7 @@ import { siteConfig } from "@/content/site";
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden pt-20 pb-section lg:pt-28 lg:pb-section-lg">
+    <section className="relative overflow-hidden pt-[60px] pb-section lg:pt-[92px] lg:pb-section-lg">
       {/* Decorative background wash. */}
       <div
         aria-hidden
@@ -16,13 +16,13 @@ export function Hero() {
 
       <Container>
         <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-[1.75rem] font-extrabold tracking-tight text-balance sm:text-[2.5rem] lg:text-[3.25rem]">
+          <h1 className="text-[2.0625rem] font-extrabold tracking-tight text-balance sm:text-[2.8125rem] lg:text-[3.5625rem]">
             {hero.title}
           </h1>
         </div>
       </Container>
 
-      <div className="my-8 lg:my-10">
+      <div className="mt-[52px] mb-8 lg:mt-[60px] lg:mb-10">
         <HeroMarquee />
       </div>
 
