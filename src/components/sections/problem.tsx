@@ -22,7 +22,12 @@ export function Problem() {
         </div>
 
         <div className="flex flex-col gap-6 lg:col-span-5">
-          <p className="text-xl leading-relaxed text-muted text-pretty">{problem.description}</p>
+          <ul className="flex flex-col gap-3 text-lg text-muted">
+            {problem.situations.map((situation) => (
+              <li key={situation}>{situation}</li>
+            ))}
+          </ul>
+          <p className="text-2xl font-semibold text-balance">{problem.resolution}</p>
         </div>
       </div>
 
