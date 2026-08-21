@@ -50,8 +50,6 @@ export function UsecaseSlider() {
     return () => clearInterval(timer);
   }, [index, goTo]);
 
-  const usecase = why.usecases[index];
-
   return (
     <div>
       <div role="tablist" aria-label="Usecases" className="flex flex-wrap justify-center gap-3">
@@ -62,7 +60,7 @@ export function UsecaseSlider() {
             role="tab"
             id={`usecase-tab-${i}`}
             aria-selected={i === index}
-            aria-controls="usecase-panel"
+            aria-controls={`usecase-panel-${i}`}
             onClick={() => goTo(i)}
             className={cn(
               "rounded-full border-2 px-5 py-2 text-sm font-medium transition-colors",
@@ -76,45 +74,53 @@ export function UsecaseSlider() {
         ))}
       </div>
 
-      <div
-        id="usecase-panel"
-        role="tabpanel"
-        aria-labelledby={`usecase-tab-${index}`}
-        className={cn(
-          "mt-10 grid items-center gap-10 transition-opacity duration-500 ease-in-out lg:grid-cols-12 lg:gap-16",
-          visible ? "opacity-100" : "opacity-0",
-        )}
-      >
-        <div className="lg:col-span-5">
-          <h2 className="text-[1.625rem] font-extrabold tracking-tight text-balance sm:text-[2rem]">
-            {usecase.title}
-          </h2>
-          <div className="mt-4 border-l-2 border-accent pl-4">
-            <blockquote className="text-[1.5rem] leading-relaxed text-[#0000ff] text-pretty">
-              «{usecase.quote}»
-            </blockquote>
-            <p className="mt-3 text-[18px] text-black">{usecase.person}</p>
-          </div>
-          <ul className="mt-6 flex flex-col gap-2.5 text-lg">
-            {usecase.benefits.map((benefit) => (
-              <li key={benefit} className="flex items-start gap-3">
-                <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />
-                {benefit}
-              </li>
-            ))}
-          </ul>
-        </div>
+      {/* All panels are stacked in the same grid cell so the row's height is always
+          the tallest panel — this keeps content below the slider from jumping
+          vertically when a shorter/taller panel fades in on mobile. */}
+      <div className="mt-10 grid">
+        {why.usecases.map((usecase, i) => (
+          <div
+            key={usecase.title}
+            id={`usecase-panel-${i}`}
+            role="tabpanel"
+            aria-labelledby={`usecase-tab-${i}`}
+            aria-hidden={i !== index}
+            className={cn(
+              "col-start-1 row-start-1 grid items-center gap-10 transition-opacity duration-500 ease-in-out lg:grid-cols-12 lg:gap-16",
+              i === index && visible ? "opacity-100" : "pointer-events-none opacity-0",
+            )}
+          >
+            <div className="lg:col-span-5">
+              <h2 className="text-[1.625rem] font-extrabold tracking-tight text-balance sm:text-[2rem]">
+                {usecase.title}
+              </h2>
+              <div className="mt-4 border-l-2 border-accent pl-4">
+                <blockquote className="text-[1.5rem] leading-relaxed text-[#0000ff] text-pretty">
+                  «{usecase.quote}»
+                </blockquote>
+                <p className="mt-3 text-[18px] text-black">{usecase.person}</p>
+              </div>
+              <ul className="mt-6 flex flex-col gap-2.5 text-lg">
+                {usecase.benefits.map((benefit) => (
+                  <li key={benefit} className="flex items-start gap-3">
+                    <CheckIcon className="mt-0.5 size-4 shrink-0 text-accent" />
+                    {benefit}
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-        <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl lg:col-span-7">
-          <Image
-            key={usecase.visualSrc}
-            src={usecase.visualSrc}
-            alt={usecase.title}
-            fill
-            className="object-cover"
-            sizes="(min-width: 1024px) 58vw, 100vw"
-          />
-        </div>
+            <div className="relative aspect-[4/3] w-full overflow-hidden rounded-3xl lg:col-span-7">
+              <Image
+                src={usecase.visualSrc}
+                alt={usecase.title}
+                fill
+                className="object-cover"
+                sizes="(min-width: 1024px) 58vw, 100vw"
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );
