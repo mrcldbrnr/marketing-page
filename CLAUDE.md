@@ -51,7 +51,8 @@ Everything a marketer would want to change lives in `src/content/`:
   **and** the full FAQ question/answer list, shared between the homepage teaser and `/faq`
 - `funktionen.ts` — the 9 features shown on `/funktionen`
 - `pricing.ts` — Free/Pro plans shown on `/preisplan`
-- `why.ts` — usecases, the "Ein Tag mit myown" story, testimonials and press mentions on `/warum-myown`
+- `why.ts` — usecases (shown in `UsecaseSlider`), the "Ein Tag mit myown" story, and the
+  closing teaser on `/warum-myown`
 - `faq.ts` — hero copy for `/faq` (the questions themselves live in `landing.ts`)
 
 Sections import their own content module directly, so page files stay a plain list
@@ -118,9 +119,10 @@ Merge incoming `className` props with `cn()` from `@/lib/cn` so callers can over
   intentional: the homepage's title is identical to the root layout's `default` title,
   and a plain string would get run through the `"%s | myown"` template and double up
   the brand name. Don't "simplify" this back to `createMetadata()`.
-- `organizationAndWebsiteSchema()` and `faqPageSchema()` in `src/lib/schema.ts` build
-  JSON-LD objects; render them with `<JsonLd data={…} />` from `src/components/seo/`.
-  `Organization`/`WebSite` is rendered once, sitewide, in the root layout.
+- `organizationAndWebsiteSchema()`, `softwareApplicationSchema()` and `faqPageSchema()`
+  in `src/lib/schema.ts` build JSON-LD objects; render them with `<JsonLd data={…} />`
+  from `src/components/seo/`. `Organization`/`WebSite` and `WebApplication` are each
+  rendered once, sitewide, in the root layout.
   `FAQPage` is rendered on `/faq` (all questions) and on the homepage (only the 3
   questions actually shown in the teaser — keep the schema in sync with what's
   visible, don't mark up hidden/unrelated questions).
@@ -170,3 +172,45 @@ deployments stay out of search results. Keep that behaviour.
   `<Faq>` instance share a `name` attribute, which makes the browser treat them as an
   exclusive accordion group (opening one closes the others) natively, with no
   JavaScript. Don't replace any of this with a JS accordion without a reason.
+- `UsecaseSlider` renders **all** usecase panels at once, stacked in the same grid cell
+  (`col-start-1 row-start-1`), and cross-fades between them with opacity instead of
+  conditionally rendering only the active one. This is deliberate: with panels of
+  different content length, conditional rendering makes the row's height jump on every
+  tab switch, which visibly shifts the content below it on mobile. Stacking all panels
+  in one cell makes the row auto-size to the tallest panel, so switching tabs never
+  changes the layout height. Don't "simplify" this back to rendering only
+  `why.usecases[index]`.
+
+## Security
+
+Security headers are set in `next.config.ts` via `headers()`: Content-Security-Policy,
+`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, and
+`Strict-Transport-Security`, applied to every route.
+
+- The CSP's `script-src`/`style-src` include `'unsafe-inline'`. This is required, not a
+  shortcut: the site has no middleware (see "Project" above — no server-side runtime
+  code), so there's no nonce to hand to Next's inline hydration payload scripts or to
+  the inline `style={{ width: … }}` progress bar in `feature-row.tsx`. Adding a strict
+  nonce-based CSP would mean introducing `middleware.ts`, which is an architecture
+  change, not a header tweak — don't do it without being asked.
+- `script-src` additionally gets `'unsafe-eval'` in development only (`NODE_ENV !==
+  "production"`), because React dev mode uses `eval()` for its debugging/stack-trace
+  tooling. Production never needs it — don't widen the production policy to work around
+  a dev-only console warning.
+- If a new external domain is ever needed (an embed, a font CDN, an analytics script),
+  extend the relevant CSP source list in `next.config.ts` with that specific origin.
+  Don't relax a directive to `'unsafe-inline'`-everywhere or `*` to make an error go
+  away.
+- Since the site has no auth, no database, and no API routes/Server Actions (see
+  "Project"), most checklist items from a typical Next.js/Vercel security review
+  (RLS, session cookies, per-route authorization, CORS, rate limiting) are not
+  applicable **by design**. If any of those get added later (a form, an API route, a
+  database), that changes this and a fresh security pass is needed — don't assume the
+  "N/A" status still holds once server-side code exists.
+- Last full review: 2026-08-21. Found no secrets in code/repo/bundle/history, clean
+  `npm audit`, no insecure dependencies. The security headers above were added as a
+  result. Items that need periodic manual re-checking in the Vercel/GitHub dashboards
+  (not verifiable from the repo, so not something a future session can check either):
+  Vercel Deployment Protection, Vercel Spend Management/Usage Alerts, GitHub Secret
+  Scanning & Push Protection, branch protection on `main`, Dependabot alerts. See
+  [README.md](README.md#security) for the human-facing summary.
