@@ -53,7 +53,9 @@
   --accent-foreground: oklch(1 0 0);
 }
 
-@media (prefers-color-scheme: dark) {
+/* Dark mode is desktop-only: below the md breakpoint the site always renders
+   in the light theme, regardless of the OS colour scheme. */
+@media (prefers-color-scheme: dark) and (min-width: 768px) {
   :root {
     --background: oklch(0.16 0 0);
     --surface: oklch(0.21 0 0);

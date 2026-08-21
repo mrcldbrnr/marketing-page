@@ -102,8 +102,11 @@ pattern rather than "fixing" it back to semantic tokens. Components that were *n
 explicitly pinned (plain body text, some borders, legal-page prose) still use the
 semantic tokens and do still follow `prefers-color-scheme`.
 
-Dark mode follows the OS setting; there is no toggle. Adding one means switching the
-media query to a `data-theme` selector plus a client-side toggle.
+Dark mode follows the OS setting, but only from the `md` breakpoint (768px) up — the
+dark-mode media query in `globals.css` is `(prefers-color-scheme: dark) and
+(min-width: 768px)`, so mobile viewports always render the light theme regardless of
+OS setting. There is no toggle. Adding one means switching the media query to a
+`data-theme` selector plus a client-side toggle.
 
 Merge incoming `className` props with `cn()` from `@/lib/cn` so callers can override.
 
