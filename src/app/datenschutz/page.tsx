@@ -15,11 +15,6 @@ export default function PrivacyPage() {
       <SectionHeading as="h1" title="Datenschutzerklärung" align="left" />
 
       <Prose className="mt-18">
-        <p className="rounded-xl border border-border bg-surface p-4 text-sm">
-          Diese Erklärung beschreibt die tatsächliche technische Umsetzung dieser Website (siehe
-          auch das <a href="/impressum">Impressum</a>). Sie ersetzt keine Rechtsberatung.
-        </p>
-
         <h2>Verantwortliche Person</h2>
         <p>
           Marcel Debrunner
