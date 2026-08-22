@@ -42,13 +42,6 @@ export function Hero() {
             </ButtonLink>
           </div>
         </div>
-
-        {/* Product shot placeholder — replace with next/image once artwork exists. */}
-        <div className="mx-auto mt-16 aspect-[16/9] w-full max-w-4xl rounded-3xl border border-border bg-surface">
-          <div className="flex h-full items-center justify-center text-sm text-muted">
-            Screenshot / Produktvideo
-          </div>
-        </div>
       </Container>
     </section>
   );

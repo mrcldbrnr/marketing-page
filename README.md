@@ -96,7 +96,5 @@ Dashboard kontrollieren:
   Livegang durch geprüfte Inhalte ersetzt werden.
 - Kontaktdaten in `site.ts` (E-Mail, Telefon, Adresse) sind noch Platzhalter.
 - `siteConfig.url` zeigt noch auf `https://example.com` statt auf die echte Domain.
-- Der Produkt-Screenshot im Hero-Bereich der Startseite ist weiterhin ein
-  Platzhalter ("Screenshot / Produktvideo").
 
 Konventionen und Architektur für die Arbeit mit Claude Code: siehe [CLAUDE.md](CLAUDE.md).

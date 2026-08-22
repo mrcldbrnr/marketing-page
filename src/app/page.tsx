@@ -48,12 +48,17 @@ export default function HomePage() {
       <FeaturesTeaser />
       <PricingTeaser />
       <WhyTeaser />
-      <Faq items={faqTeaserItems} cta={{ label: faqTeaser.cta, href: "/faq" }} />
+      <Faq
+        items={faqTeaserItems}
+        cta={{ label: faqTeaser.cta, href: "/faq" }}
+        className="pb-[36px] lg:pb-[68px]"
+      />
       <Cta
         title={ctaContent.title}
         description={ctaContent.description}
         primaryCta={{ label: ctaContent.primaryCta.label, href: siteConfig.appUrl, external: true }}
         secondaryCta={null}
+        className="pt-[36px] lg:pt-[68px]"
       />
     </>
   );
