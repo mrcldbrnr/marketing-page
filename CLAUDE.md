@@ -46,9 +46,9 @@ src/
 This is the most important convention here. Components contain **no marketing copy**.
 Everything a marketer would want to change lives in `src/content/`:
 
-- `site.ts` — brand name, tagline, header/footer navigation. `siteConfig.contact`
-  (email/phone/address) is currently unused dead config — the legal pages hardcode
-  Marcel Debrunner's real contact details directly instead (see Gotchas below)
+- `site.ts` — brand name, tagline, header/footer navigation. The legal pages hardcode
+  Marcel Debrunner's real contact details directly rather than pulling from here (see
+  Gotchas below) — there's no shared `siteConfig.contact` to keep in sync
 - `landing.ts` — homepage sections (hero, problem, benefits, teasers, closing CTA)
   **and** the full FAQ question/answer list, shared between the homepage teaser and `/faq`
 - `funktionen.ts` — the 9 features shown on `/funktionen`
@@ -150,9 +150,11 @@ Zero-config: Vercel detects Next.js, `npm run build` is the build command. No
 
 `getBaseUrl()` in `src/lib/metadata.ts` resolves absolute URLs in this order:
 `NEXT_PUBLIC_SITE_URL` → `VERCEL_PROJECT_PRODUCTION_URL` (production) → `VERCEL_URL`
-(previews) → `localhost:3000` in dev → `siteConfig.url`. Set `NEXT_PUBLIC_SITE_URL`
-to the real domain in Vercel once it is known; until then update `siteConfig.url`
-(currently still the placeholder `https://example.com`).
+(previews) → `localhost:3000` in dev → `siteConfig.url`. This is a class project with no
+real company or domain, so `siteConfig.url` and `siteConfig.appUrl` deliberately point at
+the Vercel project URLs (`marketing-page-blond.vercel.app` and the separate app
+deployment) rather than a custom domain — that's the intended final state, not a
+placeholder to replace.
 
 `robots.ts` disallows crawling on any non-production Vercel environment, so preview
 deployments stay out of search results. Keep that behaviour.
@@ -179,7 +181,9 @@ deployments stay out of search results. Keep that behaviour.
   separate application outside this privacy policy's scope). Both are still not
   legally reviewed content — don't present them as such — but they're no longer Lorem
   Ipsum-style filler either, so don't reintroduce generic placeholder boilerplate
-  ("Ergänze deine echten Angaben…") when editing these pages.
+  ("Ergänze deine echten Angaben…") when editing these pages. Legal review is
+  deliberately out of scope for this project (fictional CAS coursework, not a real
+  company) — don't flag "get this reviewed by a lawyer" as an open task.
 - The FAQ uses native `<details>`/`<summary>` — accessible without JS. All items in one
   `<Faq>` instance share a `name` attribute, which makes the browser treat them as an
   exclusive accordion group (opening one closes the others) natively, with no
@@ -221,8 +225,11 @@ Security headers are set in `next.config.ts` via `headers()`: Content-Security-P
   "N/A" status still holds once server-side code exists.
 - Last full review: 2026-08-21. Found no secrets in code/repo/bundle/history, clean
   `npm audit`, no insecure dependencies. The security headers above were added as a
-  result. Items that need periodic manual re-checking in the Vercel/GitHub dashboards
-  (not verifiable from the repo, so not something a future session can check either):
-  Vercel Deployment Protection, Vercel Spend Management/Usage Alerts, GitHub Secret
-  Scanning & Push Protection, branch protection on `main`, Dependabot alerts. See
-  [README.md](README.md#security) for the human-facing summary.
+  result and verified live on securityheaders.com with a grade of **A**. Vercel
+  Deployment Protection was manually confirmed active. Vercel Spend Management/Usage
+  Alerts is not available on the Hobby/Free plan this project runs on — not
+  applicable, not an open item. Items that still need periodic manual re-checking in
+  the GitHub dashboard (not verifiable from the repo, so not something a future
+  session can check either): Secret Scanning & Push Protection, branch protection on
+  `main`, Dependabot alerts. See [README.md](README.md#security) for the human-facing
+  summary.

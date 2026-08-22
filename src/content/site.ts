@@ -13,16 +13,10 @@ export const siteConfig = {
    * Canonical production URL, without trailing slash.
    * On Vercel this is set automatically, see `src/lib/metadata.ts`.
    */
-  url: "https://example.com",
+  url: "https://marketing-page-blond.vercel.app",
   /** Live app instance the header CTA links to. */
   appUrl: "https://web-app-zeta-ruddy-63.vercel.app",
   locale: "de_CH",
-  /** Used on the legal pages (Impressum, Datenschutz). */
-  contact: {
-    email: "hallo@example.com",
-    phone: "+41 44 000 00 00",
-    address: "Musterstrasse 1, 8000 Zürich",
-  },
 } as const;
 
 export type NavItem = {
