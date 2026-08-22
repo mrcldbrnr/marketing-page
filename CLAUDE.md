@@ -46,7 +46,9 @@ src/
 This is the most important convention here. Components contain **no marketing copy**.
 Everything a marketer would want to change lives in `src/content/`:
 
-- `site.ts` — brand name, tagline, legal contact details, header/footer navigation
+- `site.ts` — brand name, tagline, header/footer navigation. `siteConfig.contact`
+  (email/phone/address) is currently unused dead config — the legal pages hardcode
+  Marcel Debrunner's real contact details directly instead (see Gotchas below)
 - `landing.ts` — homepage sections (hero, problem, benefits, teasers, closing CTA)
   **and** the full FAQ question/answer list, shared between the homepage teaser and `/faq`
 - `funktionen.ts` — the 9 features shown on `/funktionen`
@@ -166,8 +168,18 @@ deployments stay out of search results. Keep that behaviour.
   navigation, adjust state during render (see `SiteHeader`) instead of `useEffect`.
 - Tailwind classes do not work inside `opengraph-image.tsx` — `ImageResponse` only
   supports inline styles and a flex-based subset of CSS.
-- Legal pages (`/impressum`, `/datenschutz`) contain clearly marked placeholder text.
-  Never present them as reviewed legal content.
+- Legal pages are **not** generic placeholder text anymore. `/impressum` discloses that
+  the whole site/app is a fictional project for the CAS Artificial Intelligence in
+  Media Production at FH Graubünden, credits Marcel Debrunner (with Claude and ChatGPT)
+  for conception/implementation, and gives his real contact email — no Handelsregister,
+  no Haftungsausschluss section. `/datenschutz` accurately describes the actual
+  technical setup (static Next.js, no database, no forms, hosted on Vercel with its
+  standard access logs, no cookies/tracking/localStorage, `next/font` self-hosts
+  Figtree so there's no runtime call to Google, and the "Live-Demo" button links to a
+  separate application outside this privacy policy's scope). Both are still not
+  legally reviewed content — don't present them as such — but they're no longer Lorem
+  Ipsum-style filler either, so don't reintroduce generic placeholder boilerplate
+  ("Ergänze deine echten Angaben…") when editing these pages.
 - The FAQ uses native `<details>`/`<summary>` — accessible without JS. All items in one
   `<Faq>` instance share a `name` attribute, which makes the browser treat them as an
   exclusive accordion group (opening one closes the others) natively, with no
