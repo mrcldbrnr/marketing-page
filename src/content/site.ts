@@ -32,9 +32,9 @@ export type NavItem = {
 
 /** Primary navigation, rendered in the header and the mobile menu. */
 export const mainNav: NavItem[] = [
+  { label: "Warum myown", href: "/warum-myown" },
   { label: "Funktionen", href: "/funktionen" },
   { label: "Preisplan", href: "/preisplan" },
-  { label: "Warum myown", href: "/warum-myown" },
   { label: "FAQ", href: "/faq" },
 ];
 
@@ -43,9 +43,9 @@ export const footerNav: { title: string; items: NavItem[] }[] = [
   {
     title: "Produkt",
     items: [
+      { label: "Warum myown", href: "/warum-myown" },
       { label: "Funktionen", href: "/funktionen" },
       { label: "Preisplan", href: "/preisplan" },
-      { label: "Warum myown", href: "/warum-myown" },
       { label: "FAQ", href: "/faq" },
     ],
   },
