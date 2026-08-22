@@ -15,34 +15,27 @@ export default function ImprintPage() {
       <SectionHeading as="h1" title="Impressum" align="left" />
 
       <Prose className="mt-18">
-        <p className="rounded-xl border border-border bg-surface p-4 text-sm">
-          <strong>Platzhalter.</strong> Diese Seite enthält Beispieltext. Ergänze die tatsächlichen
-          Angaben deines Unternehmens und lass sie rechtlich prüfen, bevor die Website live geht.
+        <h2>Disclaimer</h2>
+        <p>
+          Die App «myown» sowie sämtliche auf dieser Website dargestellten Funktionen, Angebote und
+          Inhalte sind rein fiktiv. Sie wurden als Projektarbeit im Rahmen des CAS Artificial
+          Intelligence in Media Production an der FH Graubünden entwickelt.
+        </p>
+        <p>
+          Jegliche Ähnlichkeit mit bestehenden Produkten, Dienstleistungen, Unternehmen oder Marken
+          mit vergleichbarem Charakter oder ähnlichen Eigenschaften ist rein zufällig und
+          unbeabsichtigt. Aus den dargestellten Inhalten können keine Ansprüche, Forderungen oder
+          sonstigen Rechte abgeleitet werden.
         </p>
 
-        <h2>Verantwortlich für den Inhalt</h2>
-        <p>
-          {siteConfig.name}
-          <br />
-          {siteConfig.contact.address}
-          <br />
-          Schweiz
-        </p>
+        <h2>Konzeption, Umsetzung und Inhalte</h2>
+        <p>Marcel Debrunner, in Zusammenarbeit mit Claude und ChatGPT</p>
 
         <h2>Kontakt</h2>
         <p>
-          E-Mail: {siteConfig.contact.email}
+          Marcel Debrunner
           <br />
-          Telefon: {siteConfig.contact.phone}
-        </p>
-
-        <h2>Handelsregister</h2>
-        <p>UID: CHE-000.000.000 · Eingetragen im Handelsregister des Kantons Zürich.</p>
-
-        <h2>Haftungsausschluss</h2>
-        <p>
-          Hier folgt der Haftungsausschluss für Inhalte, Links und Urheberrechte. Ersetze diesen
-          Abschnitt durch eine geprüfte Fassung.
+          E-Mail: marcel.debrunner@students.fhgr.ch
         </p>
       </Prose>
     </Section>
