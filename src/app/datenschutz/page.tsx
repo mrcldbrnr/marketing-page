@@ -16,38 +16,58 @@ export default function PrivacyPage() {
 
       <Prose className="mt-18">
         <p className="rounded-xl border border-border bg-surface p-4 text-sm">
-          <strong>Platzhalter.</strong> Diese Seite enthält Beispieltext und ist keine
-          Rechtsberatung. Erstelle eine auf deine tatsächliche Datenverarbeitung zugeschnittene
-          Erklärung (revDSG, ggf. DSGVO) und lass sie prüfen.
+          Diese Erklärung beschreibt die tatsächliche technische Umsetzung dieser Website (siehe
+          auch das <a href="/impressum">Impressum</a>). Sie ersetzt keine Rechtsberatung.
         </p>
 
-        <h2>Verantwortliche Stelle</h2>
+        <h2>Verantwortliche Person</h2>
         <p>
-          {siteConfig.name}, {siteConfig.contact.address}. Kontakt: {siteConfig.contact.email}
+          Marcel Debrunner
+          <br />
+          E-Mail: marcel.debrunner@students.fhgr.ch
         </p>
 
-        <h2>Welche Daten wir bearbeiten</h2>
-        <ul>
-          <li>Server-Logdaten beim Aufruf der Website (IP-Adresse, Zeitpunkt, aufgerufene Seite)</li>
-          <li>Ggf. Nutzungsstatistiken, sofern eine Analyse-Lösung eingesetzt wird</li>
-        </ul>
-
-        <h2>Zweck und Rechtsgrundlage</h2>
+        <h2>Hosting und Server-Logs</h2>
         <p>
-          Ergänze hier, zu welchem Zweck du die Daten bearbeitest und worauf sich die Bearbeitung
-          stützt.
+          Diese Website ist eine vollständig statische Next.js-Anwendung ohne eigene Datenbank und
+          ohne Server-Logik: Es gibt keine Formulare, keine Benutzerkonten und keine Möglichkeit,
+          direkt über diese Website personenbezogene Daten einzugeben.
+        </p>
+        <p>
+          Gehostet wird die Website bei Vercel Inc. (USA), das die Seiten über ein globales
+          Content-Delivery-Netzwerk ausliefert. Wie bei jedem Website-Aufruf üblich, verarbeitet
+          Vercel dabei automatisch technische Zugriffsdaten (u. a. IP-Adresse, Zeitpunkt, aufgerufene
+          URL, User-Agent) in Server-Logs, um den Betrieb sicherzustellen und Missbrauch zu erkennen.
+          Eine Datenübermittlung in die USA ist damit nicht ausgeschlossen.
         </p>
 
-        <h2>Weitergabe an Dritte</h2>
+        <h2>Cookies und Tracking</h2>
         <p>
-          Nenne hier eingesetzte Auftragsbearbeiter, etwa Hosting (Vercel), E-Mail-Versand oder
-          Analyse-Dienste, samt Standort der Datenbearbeitung.
+          Diese Website setzt keine Cookies und keine Analyse-, Tracking- oder Marketing-Tools ein.
+          Es findet keine Auswertung des Nutzungsverhaltens statt, und es wird nichts im
+          Local Storage des Browsers gespeichert.
+        </p>
+
+        <h2>Schriftarten</h2>
+        <p>
+          Die verwendete Schrift («Figtree») wird beim Build in die Website eingebettet und lokal von
+          dieser Website ausgeliefert. Beim Seitenaufruf findet keine Verbindung zu Google-Servern
+          statt.
+        </p>
+
+        <h2>Live-Demo</h2>
+        <p>
+          Der Button «Live-Demo öffnen» führt zu einer separaten Webapplikation ausserhalb dieser
+          Website. Für die dortige Datenverarbeitung gelten die Bestimmungen dieser Anwendung, nicht
+          diese Erklärung.
         </p>
 
         <h2>Deine Rechte</h2>
         <p>
-          Du hast das Recht auf Auskunft, Berichtigung, Löschung sowie Widerspruch. Wende dich dazu
-          an {siteConfig.contact.email}.
+          Da diese Website selbst keine personenbezogenen Daten erhebt oder speichert, bestehen hier
+          in der Regel keine Auskunfts- oder Löschungsansprüche gegenüber ihr. Fragen zur
+          Datenverarbeitung beim Hosting-Anbieter richtest du an Vercel Inc.; allgemeine Fragen zu
+          dieser Website an marcel.debrunner@students.fhgr.ch.
         </p>
       </Prose>
     </Section>
