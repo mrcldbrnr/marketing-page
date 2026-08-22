@@ -17,9 +17,10 @@ export default function ImprintPage() {
       <Prose className="mt-18">
         <h2>Disclaimer</h2>
         <p>
-          Die App «myown» sowie sämtliche auf dieser Website dargestellten Funktionen, Angebote und
-          Inhalte sind rein fiktiv. Sie wurden als Projektarbeit im Rahmen des CAS Artificial
-          Intelligence in Media Production an der FH Graubünden entwickelt.
+          Die App <strong>«myown»</strong> sowie sämtliche auf dieser Website dargestellten
+          Funktionen, Angebote und Inhalte sind <strong>rein fiktiv</strong>. Sie wurden als
+          Projektarbeit im Rahmen des <strong>CAS Artificial Intelligence in Media Production</strong>{" "}
+          an der FH Graubünden entwickelt.
         </p>
         <p>
           Jegliche Ähnlichkeit mit bestehenden Produkten, Dienstleistungen, Unternehmen oder Marken
