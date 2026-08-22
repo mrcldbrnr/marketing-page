@@ -67,15 +67,18 @@ Für die Web-App wurden bei Claude Code 118 Prompts/Nutzernachrichten eingegeben
 
 
 ## SPEC-File
-Das finale SPEC-File der Web-App ist in dessen Repository als separate Datei beigelegt
+Das finale SPEC-File der Web-App ist in dessen Repository als separate Datei beigelegt:
+
+https://github.com/mrcldbrnr/web-app
 (PRD_Persoenliches-Inventar_final.md)
 
 
 ## Security-Checkliste
 
-Sowohl Web-App als auch Marketing-Website wurden anhand der Security Checkliste durch
-Claude Code geprüft. Die Ergebnisse sind in den jeweiligen README.md-Dateien eingetragen.
-Für die Web-App liegt zudem die Security Checkliste als separate Datei bei.
+Sowohl Web-App als auch Marketing-Website wurden anhand der Security Checkliste durch Claude Code geprüft. Die Ergebnisse sind in den jeweiligen README.md-Dateien eingetragen.
+
+Für die Web-App liegt zudem die Security Checkliste als separate Datei bei: https://github.com/mrcldbrnr/web-app
+
 
 ## Persönliche Reflexion
 
